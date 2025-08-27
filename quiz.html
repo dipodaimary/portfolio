@@ -59,10 +59,22 @@
       font-style: italic;
       color: #333;
     }
+    #question-index-container {
+      margin-bottom: 20px;
+    }
+    #question-index-container button {
+      margin-right: 5px;
+      margin-bottom: 5px;
+    }
+    .active-question {
+      background-color: #007BFF;
+      color: white;
+    }
   </style>
 </head>
 <body>
   <h1 id="quiz-title">Quiz</h1>
+  <div id="question-index-container"></div>
   <div id="question-container">
     <p id="question-id"></p>
     <p id="question-text"></p>
@@ -125,11 +137,40 @@ const quizTitleMap = {
         // Display the first question
         if (questions.length > 0) {
           displayQuestion(currentQuestionIndex);
+          displayQuestionIndex();
         } else {
           document.getElementById('question-container').innerHTML = '<p>No questions available for the selected level.</p>';
         }
       })
       .catch(error => console.error('Error loading questions:', error));
+
+    // Display the question index
+    function displayQuestionIndex() {
+      const indexContainer = document.getElementById('question-index-container');
+      indexContainer.innerHTML = ''; // Clear existing index
+      questions.forEach((question, index) => {
+        const button = document.createElement('button');
+        button.textContent = index + 1;
+        button.classList.add('link-button');
+        if (index === currentQuestionIndex) {
+          button.classList.add('active-question');
+        }
+        button.addEventListener('click', () => {
+          currentQuestionIndex = index;
+          displayQuestion(currentQuestionIndex);
+          // Update active question in index
+          const buttons = indexContainer.querySelectorAll('button');
+          buttons.forEach((btn, i) => {
+            if (i === currentQuestionIndex) {
+              btn.classList.add('active-question');
+            } else {
+              btn.classList.remove('active-question');
+            }
+          });
+        });
+        indexContainer.appendChild(button);
+      });
+    }
 
     // Display the current question
     function displayQuestion(index) {
@@ -156,6 +197,17 @@ const quizTitleMap = {
       showAnswerButton.classList.remove('hidden');
       prevButton.style.display = index > 0 ? 'inline' : 'none';
       nextButton.style.display = index < questions.length - 1 ? 'inline' : 'none';
+
+      // Update active question in index
+      const indexContainer = document.getElementById('question-index-container');
+      const buttons = indexContainer.querySelectorAll('button');
+      buttons.forEach((btn, i) => {
+        if (i === index) {
+          btn.classList.add('active-question');
+        } else {
+          btn.classList.remove('active-question');
+        }
+      });
     }
 
     // Event listeners for buttons
