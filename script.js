@@ -33,11 +33,12 @@ document.getElementById('quiz-title').textContent = quizTitleMap[file] || 'Quiz'
 fetch(file)
   .then(response => response.json())
   .then(data => {
+    let allQuestions = data.questions || data;
     // Filter questions by level if specified
     if (level) {
-      questions = data.filter(question => question.level === level);
+      questions = allQuestions.filter(question => question.level === level);
     } else {
-      questions = data;
+      questions = allQuestions;
     }
 
     // Ensure questions are sorted by ID

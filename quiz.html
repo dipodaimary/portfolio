@@ -31,6 +31,32 @@
     .link-button:hover {
       color: #0056b3;
     }
+    #question-ids-container {
+      margin: 15px auto;
+      max-width: 80%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5px;
+    }
+    .question-id-button {
+      display: inline-block;
+      padding: 5px 10px;
+      margin: 2px;
+      background-color: #f0f0f0;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    .question-id-button:hover {
+      background-color: #e0e0e0;
+    }
+    .question-id-button.active {
+      background-color: #007BFF;
+      color: white;
+      border-color: #0056b3;
+    }
     #options-list {
       list-style-type: none;
       padding: 0;
@@ -59,22 +85,11 @@
       font-style: italic;
       color: #333;
     }
-    #question-index-container {
-      margin-bottom: 20px;
-    }
-    #question-index-container button {
-      margin-right: 5px;
-      margin-bottom: 5px;
-    }
-    .active-question {
-      background-color: #007BFF;
-      color: white;
-    }
   </style>
 </head>
 <body>
   <h1 id="quiz-title">Quiz</h1>
-  <div id="question-index-container"></div>
+  <div id="question-ids-container"></div>
   <div id="question-container">
     <p id="question-id"></p>
     <p id="question-text"></p>
@@ -85,6 +100,11 @@
     <button id="show-answer" class="link-button hidden">Show Answer</button>
     <button id="prev-question" class="link-button hidden">Previous Question</button>
     <button id="next-question" class="link-button hidden">Next Question</button>
+    <div id="question-nav" style="margin-top: 15px;">
+      <label for="question-id-input">Go to Question ID: </label>
+      <input type="number" id="question-id-input" min="1" style="width: 60px;">
+      <button id="go-to-question" class="link-button">Go</button>
+    </div>
     <button id="back-to-toc" class="link-button">Return to Table of Contents</button>
   </div>
 
@@ -134,41 +154,33 @@ const quizTitleMap = {
         // Ensure questions are sorted by ID
         questions.sort((a, b) => a.id - b.id);
 
+        // Generate question ID buttons
+        generateQuestionIdButtons();
+
         // Display the first question
         if (questions.length > 0) {
           displayQuestion(currentQuestionIndex);
-          displayQuestionIndex();
         } else {
           document.getElementById('question-container').innerHTML = '<p>No questions available for the selected level.</p>';
         }
       })
       .catch(error => console.error('Error loading questions:', error));
 
-    // Display the question index
-    function displayQuestionIndex() {
-      const indexContainer = document.getElementById('question-index-container');
-      indexContainer.innerHTML = ''; // Clear existing index
+    // Generate clickable buttons for all question IDs
+    function generateQuestionIdButtons() {
+      const container = document.getElementById('question-ids-container');
+      container.innerHTML = '';
+      
       questions.forEach((question, index) => {
-        const button = document.createElement('button');
-        button.textContent = index + 1;
-        button.classList.add('link-button');
-        if (index === currentQuestionIndex) {
-          button.classList.add('active-question');
-        }
+        const button = document.createElement('div');
+        button.className = 'question-id-button';
+        button.textContent = question.id;
+        button.setAttribute('data-index', index);
         button.addEventListener('click', () => {
           currentQuestionIndex = index;
           displayQuestion(currentQuestionIndex);
-          // Update active question in index
-          const buttons = indexContainer.querySelectorAll('button');
-          buttons.forEach((btn, i) => {
-            if (i === currentQuestionIndex) {
-              btn.classList.add('active-question');
-            } else {
-              btn.classList.remove('active-question');
-            }
-          });
         });
-        indexContainer.appendChild(button);
+        container.appendChild(button);
       });
     }
 
@@ -183,8 +195,18 @@ const quizTitleMap = {
       const showAnswerButton = document.getElementById('show-answer');
 
       // Update question text and options
-      //questionText.textContent = `ID: ${question.id} - ${question.question}`;
+      document.getElementById('question-id').textContent = `Question ID: ${question.id}`;
       questionText.textContent = `${question.question}`;
+      
+      // Highlight current question ID button
+      const idButtons = document.querySelectorAll('.question-id-button');
+      idButtons.forEach(button => {
+        if (parseInt(button.getAttribute('data-index')) === index) {
+          button.classList.add('active');
+        } else {
+          button.classList.remove('active');
+        }
+      });
       optionsList.innerHTML = question.options
         .map((option, i) => `<li data-option="${String.fromCharCode(65 + i)}">${option}</li>`)
         .join('');
@@ -197,17 +219,11 @@ const quizTitleMap = {
       showAnswerButton.classList.remove('hidden');
       prevButton.style.display = index > 0 ? 'inline' : 'none';
       nextButton.style.display = index < questions.length - 1 ? 'inline' : 'none';
+    }
 
-      // Update active question in index
-      const indexContainer = document.getElementById('question-index-container');
-      const buttons = indexContainer.querySelectorAll('button');
-      buttons.forEach((btn, i) => {
-        if (i === index) {
-          btn.classList.add('active-question');
-        } else {
-          btn.classList.remove('active-question');
-        }
-      });
+    // Function to find question index by ID
+    function findQuestionIndexById(id) {
+      return questions.findIndex(q => q.id === id);
     }
 
     // Event listeners for buttons
@@ -227,6 +243,26 @@ const quizTitleMap = {
         currentQuestionIndex++;
         displayQuestion(currentQuestionIndex);
       }
+    });
+
+    document.getElementById('go-to-question').addEventListener('click', () => {
+      const idInput = document.getElementById('question-id-input');
+      const questionId = parseInt(idInput.value);
+      
+      if (isNaN(questionId) || questionId < 1) {
+        alert('Please enter a valid question ID (must be a positive number)');
+        return;
+      }
+      
+      const index = findQuestionIndexById(questionId);
+      
+      if (index === -1) {
+        alert(`Question with ID ${questionId} not found`);
+        return;
+      }
+      
+      currentQuestionIndex = index;
+      displayQuestion(currentQuestionIndex);
     });
 
     document.getElementById('back-to-toc').addEventListener('click', () => {
