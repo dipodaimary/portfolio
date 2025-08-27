@@ -1,0 +1,407 @@
+[
+  {
+    "id": 1,
+    "question": "What was the primary innovation of the perceptron in 1958?",
+    "options": [
+      "First neural network to classify data",
+      "Ability to solve non-linear problems",
+      "Introduction of convolutional layers",
+      "Ability to model time-dependent sequences"
+    ],
+    "correct": [0],
+    "explanation": "The perceptron was the first neural network designed for binary classification tasks.",
+    "level": "basic"
+  },
+  {
+    "id": 2,
+    "question": "What was the key limitation of the perceptron?",
+    "options": [
+      "It was computationally expensive",
+      "It could not solve non-linear problems like XOR",
+      "It required massive datasets",
+      "It could not handle sequential data"
+    ],
+    "correct": [1],
+    "explanation": "The perceptron was limited to solving linear problems, as highlighted by the XOR problem.",
+    "level": "basic"
+  },
+{
+  "id": 9,
+  "question": "What was the primary contribution of backpropagation to the success of deep neural networks?",
+  "options": [
+    "It allowed neural networks to train without requiring labeled data",
+    "It eliminated the vanishing gradient problem entirely",
+    "It enabled efficient computation of gradients for multi-layer networks",
+    "It introduced convolutional layers for image processing tasks"
+  ],
+  "correct": [2],
+  "explanation": "Backpropagation revolutionized deep neural networks by providing an efficient algorithm to compute gradients for multi-layer networks. This enabled the training of deep architectures and contributed significantly to the modern success of DNNs. However, it does not completely eliminate challenges like vanishing gradients.",
+  "level": "basic"
+},
+
+  {
+    "id": 4,
+    "question": "Which 1997 model introduced the concept of memory gates to solve vanishing gradients?",
+    "options": [
+      "Recurrent Neural Networks (RNNs)",
+      "Long Short-Term Memory (LSTM)",
+      "Transformers",
+      "Restricted Boltzmann Machines"
+    ],
+    "correct": [1],
+    "explanation": "LSTMs introduced memory gates to address the vanishing gradient problem in recurrent networks.",
+    "level": "basic"
+  },
+  {
+    "id": 5,
+    "question": "What was the key application space for LSTMs in the late 1990s?",
+    "options": [
+      "Language modeling",
+      "Image classification",
+      "Reinforcement learning",
+      "Graph processing"
+    ],
+    "correct": [0],
+    "explanation": "LSTMs were primarily used for language modeling and sequence data processing.",
+    "level": "basic"
+  },
+  {
+    "id": 6,
+    "question": "Which reinforcement learning model used deep neural networks to play Atari games in 2013?",
+    "options": [
+      "Deep Q-Network (DQN)",
+      "AlphaGo",
+      "Policy Gradient Methods",
+      "Proximal Policy Optimization"
+    ],
+    "correct": [0],
+    "explanation": "Deep Q-Networks (DQN) by DeepMind combined reinforcement learning with deep neural networks to play Atari games.",
+    "level": "basic"
+  },
+  {
+    "id": 7,
+    "question": "What was the major contribution of AlphaGo in 2016?",
+    "options": [
+      "Mastering the game of Go using supervised learning",
+      "Combining reinforcement learning with Monte Carlo Tree Search",
+      "Introducing policy gradient methods",
+      "Solving the Rubik's Cube autonomously"
+    ],
+    "correct": [1],
+    "explanation": "AlphaGo combined reinforcement learning with Monte Carlo Tree Search to master the game of Go.",
+    "level": "basic"
+  },
+  {
+    "id": 8,
+    "question": "What is the key difference between AlphaGo and AlphaZero?",
+    "options": [
+      "AlphaZero uses supervised learning exclusively",
+      "AlphaZero focuses on natural language tasks",
+      "AlphaZero learns without human data",
+      "AlphaZero requires less computational power"
+    ],
+    "correct": [2],
+    "explanation": "AlphaZero learns to play games from scratch without using human gameplay data, unlike AlphaGo.",
+    "level": "advanced"
+  },
+  {
+    "id": 9,
+    "question": "Which hardware advancement in the 2010s significantly boosted deep learning research?",
+    "options": [
+      "Quantum processors",
+      "Graphics Processing Units (GPUs)",
+      "Neural Processing Units (NPUs)",
+      "Field Programmable Gate Arrays (FPGAs)"
+    ],
+    "correct": [1],
+    "explanation": "GPUs enabled efficient matrix computations, making deep learning training feasible for large datasets.",
+    "level": "basic"
+  },
+  {
+    "id": 10,
+    "question": "What is the primary role of TPUs (Tensor Processing Units) introduced by Google?",
+    "options": [
+      "Speeding up matrix computations for deep learning",
+      "Enhancing unsupervised learning algorithms",
+      "Handling quantum computing workloads",
+      "Reducing data preprocessing time"
+    ],
+    "correct": [0],
+    "explanation": "TPUs are specialized hardware for speeding up matrix computations used in deep learning models.",
+    "level": "basic"
+  },
+  {
+    "id": 11,
+    "question": "What motivated the development of Generative Adversarial Networks (GANs) in 2014?",
+    "options": [
+      "To solve overfitting in classification tasks",
+      "To enhance reinforcement learning strategies",
+      "To improve image generation quality",
+      "To reduce computational costs in training"
+    ],
+    "correct": [2],
+    "explanation": "GANs were introduced to generate high-quality images by pitting a generator network against a discriminator.",
+    "level": "basic"
+  },
+  {
+    "id": 12,
+    "question": "What makes GANs different from traditional generative models?",
+    "options": [
+      "They are supervised learning models",
+      "They use an adversarial training setup",
+      "They rely exclusively on pre-trained networks",
+      "They require reinforcement learning techniques"
+    ],
+    "correct": [1],
+    "explanation": "GANs use adversarial training where the generator and discriminator compete to improve output quality.",
+    "level": "basic"
+  },
+  {
+    "id": 13,
+    "question": "What was the primary use case of self-supervised learning methods like SimCLR?",
+    "options": [
+      "Improving sequence-to-sequence tasks",
+      "Enhancing reinforcement learning models",
+      "Learning representations without labeled data",
+      "Building large-scale language models"
+    ],
+    "correct": [2],
+    "explanation": "Self-supervised learning methods like SimCLR learn feature representations without labeled data.",
+    "level": "advanced"
+  },
+  {
+    "id": 14,
+    "question": "What was the primary goal of multitask learning in deep neural networks?",
+    "options": [
+      "Increasing model interpretability",
+      "Reducing overfitting in single tasks",
+      "Improving training speed",
+      "Training a single model to solve multiple related tasks"
+    ],
+    "correct": [3],
+    "explanation": "Multitask learning trains a single model to solve multiple related tasks, leveraging shared representations.",
+    "level": "basic"
+  },
+ 
+{
+  "id": 15,
+  "question": "How does knowledge distillation work in teacher-student training?",
+  "options": [
+    "The student model learns from the hard labels provided by the teacher model",
+    "The student model learns from the soft probabilities provided by the teacher model",
+    "The teacher model trains the student model using reinforcement learning",
+    "The student model is trained independently of the teacher model"
+  ],
+  "correct": [0,1],
+  "explanation": "In knowledge distillation, the student model primarily learns from the soft probabilities (soft labels) provided by the teacher model. However, the student model may also use hard labels (ground truth) to ensure robustness, creating a training process that balances teacher predictions with ground truth data.",
+  "level": "basic"
+},
+{
+  "id": 16,
+  "question": "What is the difference between a Variational Autoencoder (VAE) and a standard autoencoder?",
+  "options": [
+    "A standard autoencoder requires labeled data, while a VAE does not",
+    "A VAE is used only for dimensionality reduction, while a standard autoencoder is used for generative tasks",
+    "A VAE learns a probability distribution over the latent space, while a standard autoencoder learns a fixed mapping",
+    "A standard autoencoder can generate new samples, while a VAE cannot"
+  ],
+  "correct": [2],
+  "explanation": "A VAE learns a probability distribution over the latent space, enabling the generation of new data by sampling from the distribution, whereas a standard autoencoder learns a deterministic mapping between input and output.",
+  "level": "advanced"
+},
+{
+  "id": 17,
+  "question": "How does the reparameterization trick in VAEs help with training?",
+  "options": [
+    "It speeds up training by reducing the size of the network",
+    "It eliminates the need for a decoder network",
+    "It removes the need to sample from the latent space",
+    "It ensures gradients can backpropagate through stochastic latent variables"
+  ],
+  "correct": [3],
+  "explanation": "The reparameterization trick allows gradients to flow through stochastic latent variables by re-expressing the sampling process as a differentiable operation, enabling end-to-end backpropagation.",
+  "level": "advanced"
+},
+{
+  "id": 18,
+  "question": "What kind of tasks can autoencoders be used for? (Multiple answers may apply)",
+  "options": [
+    "Dimensionality reduction",
+    "Data denoising",
+    "Anomaly detection",
+    "Data classification"
+  ],
+  "correct": [0, 1, 2],
+  "explanation": "Autoencoders can be used for dimensionality reduction, data denoising, and anomaly detection by learning efficient representations of the data. They are not typically used for classification tasks.",
+  "level": "basic"
+},
+{
+  "id": 19,
+  "question": "How do denoising autoencoders differ from standard autoencoders?",
+  "options": [
+    "Denoising autoencoders require labeled data, while standard autoencoders do not",
+    "Denoising autoencoders compress data more efficiently than standard autoencoders",
+    "Denoising autoencoders reconstruct clean data from corrupted input data",
+    "Denoising autoencoders only work with image data"
+  ],
+  "correct": [2],
+  "explanation": "Denoising autoencoders are trained to reconstruct clean input data from corrupted versions, making them robust to noise.",
+  "level": "basic"
+},
+{
+  "id": 20,
+  "question": "What is the primary goal of model compression?",
+  "options": [
+    "To increase the accuracy of the model",
+    "To train a model with fewer labeled data",
+    "To reduce the model size and computational requirements",
+    "To replace neural networks with simpler algorithms"
+  ],
+  "correct": [2],
+  "explanation": "Model compression aims to reduce the size and computational demands of a model while retaining its performance, making it suitable for deployment on resource-constrained devices.",
+  "level": "basic"
+},
+{
+  "id": 21,
+  "question": "How does knowledge distillation achieve model compression?",
+  "options": [
+    "By transferring knowledge from a larger teacher model to a smaller student model",
+    "By reducing the number of parameters in the teacher model",
+    "By pruning weights with low magnitudes",
+    "By reducing the training data size"
+  ],
+  "correct": [0],
+  "explanation": "Knowledge distillation transfers the knowledge of a large teacher model to a smaller student model by training the student to mimic the teacher's outputs, including soft labels.",
+  "level": "basic"
+},
+{
+  "id": 22,
+  "question": "What is the key advantage of quantization in model compression?",
+  "options": [
+    "It reduces the number of bits used to represent weights and activations",
+    "It improves the accuracy of the model on noisy datasets",
+    "It eliminates the need for floating-point operations",
+    "It increases the size of the training dataset"
+  ],
+  "correct": [0],
+  "explanation": "Quantization reduces the number of bits used to represent weights and activations, which decreases model size and accelerates inference by enabling efficient integer computations.",
+  "level": "basic"
+},
+{
+  "id": 23,
+  "question": "What is weight pruning in the context of model compression?",
+  "options": [
+    "Reducing the learning rate during training",
+    "Replacing dense layers with convolutional layers",
+    "Removing weights with low magnitudes to create a sparse model",
+    "Using dropout to reduce model complexity"
+  ],
+  "correct": [2],
+  "explanation": "Weight pruning involves removing weights with low magnitudes, creating a sparse model that maintains performance while reducing computational and memory requirements.",
+  "level": "advanced"
+},
+{
+  "id": 24,
+  "question": "What are the challenges of quantization in model compression? (Multiple answers may apply)",
+  "options": [
+    "Loss of accuracy due to reduced precision",
+    "Compatibility with hardware for lower-bit operations",
+    "Increased training time",
+    "Difficulty in optimizing sparse models"
+  ],
+  "correct": [0, 1],
+  "explanation": "Quantization can lead to a loss of accuracy due to reduced precision, and hardware compatibility for efficient integer operations can be a significant challenge.",
+  "level": "advanced"
+},
+{
+  "id": 25,
+  "question": "What is structured pruning in model compression?",
+  "options": [
+    "Reducing the precision of weights to integers",
+    "Replacing dense layers with sparse layers",
+    "Using teacher-student training for compression",
+    "Removing entire neurons, filters, or layers instead of individual weights"
+  ],
+  "correct": [3],
+  "explanation": "Structured pruning removes larger components like neurons, filters, or layers, which simplifies the model architecture and accelerates inference.",
+  "level": "advanced"
+},
+{
+  "id": 26,
+  "question": "What are adversarial examples in robust learning?",
+  "options": [
+    "Noisy data that occurs naturally in a dataset",
+    "Data samples from classes outside the training set",
+    "Data points that are intentionally perturbed to fool a model",
+    "Randomly generated data points with no labels"
+  ],
+  "correct": [2],
+  "explanation": "Adversarial examples are data points that have been intentionally perturbed, often imperceptibly, to deceive a machine learning model into making incorrect predictions.",
+  "level": "basic"
+},
+{
+  "id": 27,
+  "question": "Which modern machine learning techniques are commonly used for anomaly detection? (Multiple answers may apply)",
+  "options": [
+    "Autoencoders",
+    "One-class SVMs",
+    "Isolation Forests",
+    "Adversarial training"
+  ],
+  "correct": [0, 1, 2],
+  "explanation": "Autoencoders, one-class SVMs, and isolation forests are widely used techniques for anomaly detection. Adversarial training is a robust learning technique, not primarily for anomaly detection.",
+  "level": "advanced"
+},
+{
+  "id": 29,
+  "question": "How do autoencoders help in anomaly detection?",
+  "options": [
+    "By classifying anomalous data directly",
+    "By generating new anomalous data for training",
+    "By reconstructing input data and measuring reconstruction error",
+    "By eliminating outliers during training"
+  ],
+  "correct": [2],
+  "explanation": "Autoencoders detect anomalies by attempting to reconstruct input data. High reconstruction error for certain data points indicates that they do not conform to the normal data distribution.",
+  "level": "basic"
+},
+{
+  "id": 30,
+  "question": "What are key challenges in anomaly detection? (Multiple answers may apply)",
+  "options": [
+    "Imbalanced datasets with very few anomalies",
+    "Defining what constitutes 'normal' behavior",
+    "High dimensionality of data",
+    "Adversarial attacks during training"
+  ],
+  "correct": [0, 1, 2],
+  "explanation": "Challenges in anomaly detection include dealing with imbalanced datasets, defining normal behavior in complex systems, and managing high-dimensional data. Adversarial attacks are more relevant to robust learning than anomaly detection.",
+  "level": "advanced"
+},
+{
+  "id": 31,
+  "question": "How does adversarial learning relate to robust anomaly detection?",
+  "options": [
+    "It eliminates anomalies during training",
+    "It generates synthetic anomalies to improve model robustness",
+    "It classifies anomalies into predefined categories",
+    "It reduces the dimensionality of data for better anomaly detection"
+  ],
+  "correct": [1],
+  "explanation": "Adversarial learning can generate synthetic anomalies, which are used to train models that are robust to both natural and adversarial outliers.",
+  "level": "advanced"
+},
+{
+  "id": 32,
+  "question": "How does One-Class SVM detect anomalies?",
+  "options": [
+    "By clustering data points and identifying outliers",
+    "By reducing data dimensions for anomaly visualization",
+    "By reconstructing input data and computing reconstruction error",
+    "By learning a decision boundary that separates normal data from the origin"
+  ],
+  "correct": [3],
+  "explanation": "One-Class SVM learns a decision boundary in feature space that encompasses normal data while identifying points outside this boundary as anomalies.",
+  "level": "advanced"
+}
+]

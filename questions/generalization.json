@@ -1,0 +1,354 @@
+[
+  {
+    "id": 1,
+    "question": "What does the bias-variance tradeoff describe in machine learning?",
+    "options": [
+      "The balance between model training time and test accuracy",
+      "The tradeoff between underfitting and overfitting",
+      "The relationship between model complexity and computational efficiency",
+      "The balance between training data size and test data size"
+    ],
+    "correct": [1],
+    "explanation": "The bias-variance tradeoff highlights the balance between underfitting (high bias) and overfitting (high variance) in models.",
+    "level": "basic"
+  },
+  {
+    "id": 2,
+    "question": "Which of the following increases model variance? (Multiple answers are allowed)",
+    "options": [
+      "Using a very complex model",
+      "Training on insufficient data",
+      "Increasing regularization strength",
+      "Using noisy data"
+    ],
+    "correct": [0, 1, 3],
+    "explanation": "Complex models, insufficient data, and noisy data all increase variance, making models less stable.",
+    "level": "advanced"
+  },
+  {
+    "id": 3,
+    "question": "How does regularization help in controlling overfitting?",
+    "options": [
+      "By reducing the effective model complexity",
+      "By increasing the training set size",
+      "By adding noise to the data",
+      "By optimizing the validation loss directly"
+    ],
+    "correct": [0],
+    "explanation": "Regularization penalizes overly complex models, reducing their tendency to overfit the training data.",
+    "level": "basic"
+  },
+  {
+    "id": 4,
+    "question": "Which of the following are examples of regularization techniques? (Multiple answers are allowed)",
+    "options": [
+      "L2 regularization",
+      "Dropout",
+      "Cross-validation",
+      "Batch normalization"
+    ],
+    "correct": [0, 1],
+    "explanation": "L2 regularization and dropout are common techniques used to prevent overfitting.",
+    "level": "basic"
+  },
+{
+  "id": 5,
+  "question": "What is the main purpose of cross-validation? (Multiple answers may apply.)",
+  "options": [
+    "To assess the model's performance on unseen data",
+    "To improve the training speed of the model",
+    "To tune hyperparameters and prevent overfitting",
+    "To reduce the size of the training dataset"
+  ],
+  "correct": [0, 2],
+  "explanation": "The main purpose of cross-validation is to assess the model's performance on unseen data by splitting the data into training and validation subsets. It also helps in hyperparameter tuning and reducing overfitting by ensuring that the model generalizes well to new data.",
+  "level": "basic"
+},
+  {
+    "id": 6,
+    "question": "What is the effect of increasing the regularization strength (e.g., larger lambda in L2 regularization)? (Multiple answers may apply.)",
+    "options": [
+      "The model becomes more biased",
+      "The model complexity decreases",
+      "The variance of the model increases",
+      "The training error decreases"
+    ],
+  "correct": [0, 1],
+  "explanation": "Increasing the regularization strength penalizes large weights, reducing the complexity of the model. This typically increases bias as the model becomes simpler and less flexible. However, it reduces variance, helping to prevent overfitting. The training error may increase, as the model trades off fitting the training data for generalization.",
+  "level": "basic"
+  },
+  {
+    "id": 7,
+    "question": "Which of the following describes the phenomenon of 'double descent'?",
+    "options": [
+      "Model performance improves, degrades, and then improves again as model complexity increases",
+      "Model performance improves, degrades, and then improves again as training data size increases",
+      "Model performance improves, degrades, and then improves again as the method is accelerated",
+      "Model performance improves, degrades, and then improves again as more models are ensembled"
+    ],
+    "correct": [0],
+    "explanation": "Double descent occurs when test error decreases, increases, and then decreases again as model complexity grows.",
+    "level": "advanced"
+  },
+  {
+    "id": 8,
+    "question": "What happens when model complexity is too low?",
+    "options": [
+      "The model overfits the training data",
+      "The model underfits the training data",
+      "The model achieves perfect generalization",
+      "The model becomes unstable"
+    ],
+    "correct": [1],
+    "explanation": "Low complexity leads to underfitting, where the model cannot capture the underlying data patterns.",
+    "level": "basic"
+  },
+  {
+    "id": 9,
+    "question": "Which of the following methods reduce overfitting? (Multiple answers are allowed)",
+    "options": [
+      "Early stopping",
+      "Increasing training data size",
+      "Using a deeper model",
+      "Adding noise to input data"
+    ],
+    "correct": [0, 1, 3],
+    "explanation": "Early stopping, more training data, and data augmentation (e.g., adding noise) help mitigate overfitting.",
+    "level": "basic"
+  },
+  {
+    "id": 10,
+    "question": "What is a hyperparameter in machine learning?",
+    "options": [
+      "A parameter learned during training",
+      "A parameter set by the user before training",
+      "A parameter that optimizes the training loss",
+      "A parameter that evaluates test performance"
+    ],
+    "correct": [1],
+    "explanation": "Hyperparameters are set by the user, such as learning rate, regularization strength, and number of layers.",
+    "level": "basic"
+  } ,
+  {
+    "id": 11,
+    "question": "Which of the following statements is true about an unbiased estimator?",
+    "options": [
+      "It is biased towards zero.",
+      "It always gives the correct parameter value.",
+      "It is always equal to the maximum likelihood estimator.",
+      "The expected value of the estimator equals the parameter it estimates."
+    ],
+    "correct": [3],
+    "explanation": "An unbiased estimator has an expected value equal to the true value of the parameter being estimated.",
+    "level": "basic"
+  },
+  {
+    "id": 12,
+    "question": "Which of the following correctly describes the sample variance?",
+    "options": [
+      "The sample variance is always greater than the population variance.",
+      "The sample variance equals the population variance for any sample size.",
+      "The sample variance equals the sum of squared deviations from the sample mean.",
+      "The sample variance is biased towards zero."
+    ],
+    "correct": [3],
+    "explanation": "The sample variance is often smaller than the population variance, which can make it appear biased towards zero.",
+    "level": "basic"
+  },
+  {
+    "id": 13,
+    "question": "What is the purpose of minimizing generalization error in machine learning?",
+    "options": [
+      "To improve training error on the dataset.",
+      "To enhance the performance of the model on unseen data.",
+      "To increase the complexity of the model.",
+      "To maximize the number of features used in the model."
+    ],
+    "correct": [1],
+    "explanation": "Minimizing generalization error ensures better performance on new, unseen data.",
+    "level": "basic"
+  },
+  {
+    "id": 14,
+    "question": "What is the main tradeoff that must be managed in model generalization?",
+    "options": [
+      "Accuracy vs. Precision",
+      "Bias vs. Variance",
+      "Speed vs. Accuracy",
+      "Memory complexity vs. Computational complexity"
+    ],
+    "correct": [1],
+    "explanation": "Model generalization involves balancing bias and variance to achieve optimal performance.",
+    "level": "basic"
+  },
+  {
+    "id": 15,
+    "question": "In the context of bias and variance, what happens to the variance as the amount of training data increases?",
+    "options": [
+      "Variance increases",
+      "Variance decreases",
+      "Variance stays the same",
+      "Variance becomes zero"
+    ],
+    "correct": [1],
+    "explanation": "Variance typically decreases as more training data is provided, leading to more stable predictions.",
+    "level": "basic"
+  },
+  {
+    "id": 16,
+    "question": "In K-fold cross-validation, why can't the test set be used to tune hyperparameters?",
+    "options": [
+      "Because it would lead to overfitting the hyperparameters to the test data.",
+      "Because the test set is meant for training.",
+      "Because the test set is too small.",
+      "Because cross-validation does not involve hyperparameters."
+    ],
+    "correct": [0],
+    "explanation": "Using the test set to tune hyperparameters causes overfitting to the test data, reducing model generalization.",
+    "level": "intermediate"
+  },
+  {
+    "id": 17,
+    "question": "How does increasing the degree of a polynomial in regression affect model complexity?",
+    "options": [
+      "Decreases model complexity and bias",
+      "Increases both model complexity and bias",
+      "Increases model complexity and reduces variance",
+      "Increases model complexity and variance"
+    ],
+    "correct": [3],
+    "explanation": "Increasing polynomial degree increases model complexity, leading to reduced bias but higher variance."
+  },
+  {
+    "id": 18,
+    "question": "What is the purpose of the MAP estimator in the presence of a prior?",
+    "options": [
+      "To minimize variance at the cost of higher bias",
+      "To incorporate prior knowledge into the estimation process",
+      "To maximize the likelihood of the data",
+      "To ignore noisy data during optimization"
+    ],
+    "correct": [1],
+    "explanation": "The MAP estimator balances prior information with data evidence to make robust estimates."
+  },
+  {
+    "id": 19,
+    "question": "What is a primary indicator of overfitting in a decision tree model?",
+    "options": [
+      "High depth with good training accuracy but poor test accuracy",
+      "Low depth with poor training and test accuracy",
+      "Moderate depth with good training and test accuracy",
+      "High depth with poor training and test accuracy"
+    ],
+    "correct": [0],
+    "explanation": "Deep decision trees can overfit training data, leading to instability and poor generalization."
+  },
+  {
+    "id": 20,
+    "question": "How does the parameter sigma in an RBF kernel affect model complexity?",
+    "options": [
+      "Lower sigma increases model complexity",
+      "Higher sigma increases model complexity",
+      "sigma has no impact on model complexity",
+      "sigma only affects training speed"
+    ],
+    "correct": [0],
+    "explanation": "Smaller sigma in an RBF kernel sharpens decision boundaries, increasing model complexity."
+  },
+  {
+    "id": 21,
+    "question": "What is a key benefit of model weakening?",
+    "options": [
+      "It ensures higher training accuracy",
+      "It reduces model variance by simplifying the model",
+      "It increases model variance for better generalization",
+      "It eliminates the need for regularization"
+    ],
+    "correct": [1],
+    "explanation": "Model weakening, such as limiting tree depth or using early stopping, simplifies the model and reduces variance."
+  },
+  {
+    "id": 22,
+    "question": "How does LoRA (Low-Rank Adaptation) reduce training costs?",
+    "options": [
+      "By freezing all model weights during training",
+      "By using low-rank matrices to update only part of the model",
+      "By eliminating the need for hyperparameter tuning",
+      "By reducing model size during inference"
+    ],
+    "correct": [1],
+    "explanation": "LoRA reduces trainable parameters by updating low-rank matrices, enabling efficient fine-tuning."
+  },
+  {
+    "id": 23,
+    "question": "What is the relationship between model complexity and generalization error?",
+    "options": [
+      "Higher model complexity always reduces generalization error",
+      "Lower model complexity always reduces generalization error",
+      "Model complexity influences the balance between bias and variance",
+      "Model complexity does not affect generalization error"
+    ],
+    "correct": [2],
+    "explanation": "Model complexity impacts the tradeoff between bias and variance, directly influencing generalization error."
+  },
+  {
+    "id": 24,
+    "question": "What is the impact of underfitting on bias and variance?",
+    "options": [
+      "High bias and low variance",
+      "Low bias and high variance",
+      "High bias and high variance",
+      "Low bias and low variance"
+    ],
+    "correct": [0],
+    "explanation": "Underfitting occurs when the model is too simple, resulting in high bias and low variance."
+  },
+  {
+    "id": 25,
+    "question": "What is a key characteristic of overfitting?",
+    "options": [
+      "Low training error and low test error",
+      "High training error and high test error",
+      "Low training error and high test error",
+      "High training error and low test error"
+    ],
+    "correct": [2],
+    "explanation": "Overfitting is characterized by low training error but high test error, as the model fails to generalize to unseen data."
+  },
+  {
+    "id": 26,
+    "question": "What is the effect of adding irrelevant features to the training data?",
+    "options": [
+      "Increases bias and decreases variance",
+      "Decreases bias and increases variance",
+      "Increases both bias and variance",
+      "Decreases both bias and variance"
+    ],
+    "correct": [1],
+    "explanation": "Adding irrelevant features increases variance by introducing noise and decreases bias by allowing the model to capture more patterns in the data, even if they are irrelevant."
+  },
+  {
+    "id": 27,
+    "question": "What does model capacity refer to?",
+    "options": [
+      "The maximum depth of a decision tree",
+      "The degree of a polynomial in regression",
+      "The number of parameters in a neural network",
+      "All of the above"
+    ],
+    "correct": [3],
+    "explanation": "Model capacity refers to the ability of a model to fit a wide variety of functions. It can be quantified by factors such as the depth of a decision tree, the degree of a polynomial, or the number of parameters in a neural network."
+  },
+{
+  "id": 28,
+  "question": "What is typically used as a prior in machine learning? (Multiple answers may apply)",
+  "options": [
+    "0 (e.g., L2 regularization)",
+    "A pretrained model",
+    "Domain knowledge encoded as constraints",
+    "A uniform distribution over model parameters"
+  ],
+  "correct": [0, 1, 2, 3],
+  "explanation": "Common priors include L2 regularization, which assumes weights are close to 0; pretrained models that encode knowledge from a related task; and domain knowledge, often expressed as constraints or regularization terms. A uniform distribution can also act as a prior, such as in entropy regularization or Bayesian settings, encouraging smoothness or exploration."
+}
+]

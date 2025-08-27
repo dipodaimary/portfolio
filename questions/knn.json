@@ -1,0 +1,449 @@
+[
+  {
+    "id": 1,
+    "question": "What does K in K-Nearest Neighbors (KNN) represent?",
+    "options": [
+      "The number of features",
+      "The number of neighbors",
+      "The distance metric",
+      "The size of the dataset"
+    ],
+    "correct": 1,
+    "explanation": "K represents the number of nearest neighbors considered for classification or regression.",
+	"level": "basic"
+  },
+{
+  "id": 2,
+  "question": "KNN is more likely to overfit when:",
+  "options": [
+    "K is very large",
+    "K is very small",
+    "Neither; KNN never overfits",
+    "Both; KNN always overfits"
+  ],
+  "correct": [1],
+  "explanation": "KNN is more likely to overfit when K is very small because the model becomes too sensitive to individual data points, capturing noise instead of the general pattern.",
+  "level": "basic"
+},
+  {
+    "id": 3,
+    "question": "KNN is a type of which machine learning paradigm?",
+    "options": [
+      "Supervised Learning",
+      "Unsupervised Learning",
+      "Reinforcement Learning",
+      "Semi-supervised Learning"
+    ],
+    "correct": 0,
+    "explanation": "KNN is a supervised learning algorithm because it requires labeled data.",
+	"level": "basic"
+  },
+{
+  "id": 4,
+  "question": "How does KNN classify or predict for a new data point? Select all that apply.",
+  "options": [
+    "By training a linear model",
+    "By averaging the labels of the K nearest neighbors",
+    "By voting among the labels of the K nearest neighbors",
+    "By averaging the labels of all the neighbors"
+  ],
+  "correct": [1, 2],
+  "explanation": "KNN predicts for regression tasks by averaging the labels of the K nearest neighbors and classifies for classification tasks by taking a majority vote among the K nearest neighbors.",
+  "level": "basic"
+},
+  {
+    "id": 5,
+    "question": "What is a potential drawback of using a very large value of K in KNN?",
+    "options": [
+      "It increases overfitting",
+      "It makes the model sensitive to outliers",
+      "It makes the decision boundary smoother but can lead to underfitting",
+      "It does not affect the performance"
+    ],
+    "correct": 2,
+    "explanation": "A large K results in a smoother decision boundary but may lead to underfitting.",
+	"level": "basic"
+  },
+{
+  "id": 6,
+  "question": "What is the time complexity of a KNN query in the naive implementation, where n is the number of features and m is the number of training datapoints?",
+  "options": [
+    "O(n^2)",
+    "O(m)",
+    "O(m log n)",
+    "O(m n)"
+  ],
+  "correct": 3,
+  "explanation": "The naive implementation of KNN involves computing distances from the query point to all m training datapoints, which results in a time complexity of O(m n).",
+  "level": "basic"
+},
+  {
+    "id": 7,
+    "question": "Which of the following techniques can improve the efficiency of KNN?",
+    "options": [
+      "Using a smaller K value",
+      "Normalizing the dataset",
+      "Using a KD-Tree or Ball-Tree",
+      "Increasing the size of the dataset"
+    ],
+    "correct": 2,
+    "explanation": "Using data structures like KD-Tree or Ball-Tree can significantly improve the efficiency of KNN for low-dimensional data.",
+	"level": "basic"
+  },
+  {
+    "id": 8,
+    "question": "Why is feature scaling important for KNN?",
+    "options": [
+      "It reduces the number of features",
+      "It makes the algorithm more efficient",
+      "It ensures that all features contribute equally to the distance calculation",
+      "It is not important for KNN"
+    ],
+    "correct": 2,
+    "explanation": "Feature scaling ensures that features with larger ranges do not dominate the distance calculations.",
+	"level": "basic"
+  },
+  {
+    "id": 9,
+    "question": "What happens if K=1 in KNN?",
+    "options": [
+      "The model will underfit",
+      "The model will overfit",
+      "The model will classify randomly",
+      "The decision boundary becomes linear"
+    ],
+    "correct": 1,
+    "explanation": "With K=1, KNN assigns the class of the nearest neighbor, which can lead to overfitting.",
+	"level": "basic"
+  },
+  {
+    "id": 10,
+    "question": "Which type of data is KNN most suited for?",
+    "options": [
+      "High-dimensional data",
+      "Data with categorical features only",
+      "Small to medium-sized datasets with numeric features",
+      "Extremely large datasets"
+    ],
+    "correct": 2,
+    "explanation": "KNN is most effective for small to medium-sized datasets with numeric features, as it suffers from the curse of dimensionality and computational inefficiency with large datasets.",
+	"level": "basic"
+  },
+  {
+    "id": 11,
+    "question": "Which preprocessing step is crucial for KNN?",
+    "options": [
+      "Feature scaling",
+      "Dimensionality reduction",
+      "Outlier removal",
+      "PCA decomposition"
+    ],
+    "correct": 0,
+    "explanation": "Feature scaling is crucial to ensure all features contribute equally to the distance calculation.",
+	"level": "basic"
+  },
+  {
+    "id": 12,
+    "question": "KNN can be used for which of the following tasks?",
+    "options": [
+      "Classification",
+      "Regression",
+      "Both Classification and Regression",
+      "Neither Classification nor Regression"
+    ],
+    "correct": 2,
+    "explanation": "KNN can be used for both classification and regression tasks.",
+	"level": "basic"
+  },
+  {
+    "id": 13,
+    "question": "What is the primary disadvantage of KNN?",
+    "options": [
+      "Requires a lot of training time",
+      "Requires a lot of query time",
+      "Is not interpretable",
+      "Does not support multi-class classification"
+    ],
+    "correct": 1,
+    "explanation": "KNN requires a lot of query time since it needs to compute distances for all training points.",
+	"level": "basic"
+  },
+{
+  "id": 14,
+  "question": "What is the main benefit of KNN?",
+  "options": [
+    "It is computationally efficient because it does not require any complex training process before predictions.",
+    "It is easy to implement and involves a straightforward approach to classify or predict data points.",
+    "It can adapt to data with complex and arbitrary distributions, provided an appropriate distance metric is used.",
+    "It does not require labeled data since predictions are based solely on proximity to neighbors."
+  ],
+  "correct": 2,
+  "explanation": "The main benefit of KNN is its flexibility to adapt to data with arbitrary geometries as long as a suitable distance metric is defined, making it versatile for various types of data distributions.",
+  "level": "basic"
+},
+  {
+    "id": 15,
+    "question": "What is a primary characteristic of KNN regarding training and inference complexity?",
+    "options": [
+      "Low complexity for both training and inference",
+      "High complexity for both training and inference",
+      "Low training complexity, high inference complexity",
+      "High training complexity, low inference complexity"
+    ],
+    "correct": 2,
+    "explanation": "KNN has low training complexity as no model is trained, but high inference complexity due to the distance computations required for each test point.",
+	"level": "basic"
+  },
+  {
+    "id": 16,
+    "question": "In KNN, what is the purpose of the aggregation function in classification tasks?",
+    "options": [
+      "To compute distances between points",
+      "To determine the majority vote among K neighbors",
+      "To reduce the dimensionality of data",
+      "To project data into a feature space"
+    ],
+    "correct": 1,
+    "explanation": "In classification, the aggregation function typically performs a majority vote among the K nearest neighbors to assign a class.",
+	"level": "basic"
+  },
+  {
+    "id": 17,
+    "question": "What is the effect of using weighted aggregation in KNN?",
+    "options": [
+      "Reduces the number of neighbors considered",
+      "Makes closer neighbors have more influence",
+      "Removes outliers from the dataset",
+      "Increases inference complexity"
+    ],
+    "correct": 1,
+    "explanation": "Weighted aggregation gives more influence to closer neighbors, improving classification accuracy in some cases.",
+	"level": "basic"
+  },
+  {
+    "id": 18,
+    "question": "How can the parameter K be selected in KNN?",
+    "options": [
+      "Using random selection",
+      "Through cross-validation",
+      "Using the training accuracy",
+      "Setting it arbitrarily"
+    ],
+    "correct": 1,
+    "explanation": "Cross-validation is commonly used to select the optimal value of K to balance underfitting and overfitting.",
+	"level": "basic"
+  },
+  {
+    "id": 19,
+    "question": "What are Voronoi regions in the context of KNN?",
+    "options": [
+      "Areas of influence for each training point when K=1",
+      "Boundaries between decision regions for all classes",
+      "Regions where outliers are located",
+      "Clusters formed by the training data"
+    ],
+    "correct": 0,
+    "explanation": "Voronoi regions represent areas of influence for each training point when K=1, forming the decision boundaries.",
+	"level": "basic"
+  },
+  {
+    "id": 20,
+    "question": "What is Johnson-Lindenstrauss random hashing used for in KNN?",
+    "options": [
+      "To reduce the number of neighbors considered",
+      "To approximate distances in a lower-dimensional space",
+      "To handle missing values in the dataset",
+      "To optimize feature scaling"
+    ],
+    "correct": 1,
+    "explanation": "Johnson-Lindenstrauss random hashing is used to project data into a lower-dimensional space while preserving distance relationships.",
+	"level": "basic"
+  },
+  {
+    "id": 21,
+    "question": "Which type of data might cause KNN to fail due to the curse of dimensionality?",
+    "options": [
+      "Low-dimensional data",
+      "Data with missing values",
+      "High-dimensional data",
+      "Categorical data"
+    ],
+    "correct": 2,
+    "explanation": "High-dimensional data causes the curse of dimensionality, where distances become less meaningful.",
+	"level": "basic"
+  },
+  {
+    "id": 22,
+    "question": "In KNN, how can outliers affect predictions?",
+    "options": [
+      "Outliers always improve predictions",
+      "Outliers may skew the majority vote or aggregation",
+      "Outliers have no effect on KNN",
+      "Outliers reduce inference complexity"
+    ],
+    "correct": 1,
+    "explanation": "Outliers can skew the majority vote or aggregation, leading to incorrect predictions.",
+	"level": "basic"
+  },
+  {
+    "id": 23,
+    "question": "What is a common limitation of KNN when applied to large datasets?",
+    "options": [
+      "Low training accuracy",
+      "Prohibitive inference time",
+      "Inability to handle categorical data",
+      "Requirement for feature selection"
+    ],
+    "correct": 1,
+    "explanation": "Inference time becomes prohibitive for large datasets because distances to all points must be calculated.",
+	"level": "basic"
+  },
+{
+  "id": 24,
+  "question": "Why might KNN predictions be biased on unbalanced datasets?",
+  "options": [
+    "KNN predictions are heavily influenced by the proximity of the majority class due to its higher frequency in the dataset.",
+    "KNN incorrectly assumes that the features are distributed uniformly across all classes.",
+    "KNN tends to completely ignore features, if they come from the minority class.",
+    "KNN requires dimensionality reduction to properly handle datasets with unbalanced classes."
+  ],
+  "correct": 0,
+  "explanation": "In unbalanced datasets, KNN is biased toward the majority class because more neighbors are likely to belong to it, affecting the prediction.",
+  "level": "basic"
+},
+  {
+    "id": 25,
+    "question": "What is one way to handle categorical features in KNN?",
+    "options": [
+      "Only use them as class labels",
+      "Convert them into numeric values using one-hot encoding",
+      "Ignore them entirely",
+      "Use Euclidean distance directly"
+    ],
+    "correct": 1,
+    "explanation": "Categorical features can be converted into numeric values using techniques like one-hot encoding for distance computation.",
+	"level": "basic"
+  },  
+  {
+    "id": 26,
+    "question": "What preprocessing steps are essential for KNN? (Multiple answers are allowed)",
+    "options": [
+      "Normalization or standardization of features",
+      "Removing outliers",
+      "One-hot encoding for categorical variables",
+      "Dimensionality reduction for high-dimensional datasets"
+    ],
+    "correct": [0, 2, 3],
+    "explanation": "Normalization, one-hot encoding for categorical variables, and dimensionality reduction are key preprocessing steps.",
+	"level": "basic"
+  },
+  {
+    "id": 27,
+    "question": "Which tasks can KNN perform? (Multiple answers are allowed)",
+    "options": [
+      "Classification",
+      "Regression",
+      "Clustering",
+      "Dimensionality reduction"
+    ],
+    "correct": [0, 1],
+    "explanation": "KNN can perform classification and regression but is not suitable for clustering or dimensionality reduction.",
+	"level": "advanced"
+  }, 
+  {
+    "id": 28,
+    "question": "What is a key characteristic of KNN compared to parametric models?",
+    "options": [
+      "KNN assumes a specific functional form for the data",
+      "KNN adapts to complex decision boundaries",
+      "KNN is computationally faster for inference",
+      "KNN uses probabilistic methods"
+    ],
+    "correct": 1,
+    "explanation": "KNN is non-parametric and can adapt to complex decision boundaries without assuming a functional form.",
+	"level": "advanced"
+  },
+  {
+    "id": 29,
+    "question": "How does adding more training data typically affect KNN performance?",
+    "options": [
+      "Improves prediction accuracy",
+      "Increases inference time",
+      "Reduces the impact of noise",
+      "Improves decision boundary smoothness"
+    ],
+    "correct": [0, 1, 3],
+    "explanation": "Adding more data improves accuracy, increases inference time, and smooths decision boundaries.",
+	"level": "advanced"
+  },
+  {
+    "id": 30,
+    "question": "Which visualization technique is commonly used to demonstrate KNN's decision boundary?",
+    "options": [
+      "t-SNE",
+      "PCA scatter plots",
+      "Voronoi diagrams",
+      "ROC curves"
+    ],
+    "correct": 2,
+    "explanation": "Voronoi diagrams are commonly used to visualize KNN decision boundaries, as they show the regions of influence for each point.",
+	"level": "advanced"
+  },
+  {
+    "id": 31,
+    "question": "How does the choice of distance function affect the performance of a KNN classifier?",
+    "options": [
+      "It determines the speed of the classifier.",
+      "It influences which points are considered neighbors, affecting classification accuracy.",
+      "None of the above.",
+      "All of the above."
+    ],
+    "correct": [3],
+    "explanation": "The distance function impacts both the accuracy of KNN and computational performance, influencing classification and runtime.",
+    "level": "advanced"
+  },
+  {
+    "id": 32,
+    "question": "What happens to the KNN classifier's performance as the number of neighbors K increases?",
+    "options": [
+      "It always improves, regardless of the dataset.",
+      "It may lead to overfitting on the training data.",
+      "It may lead to a more generalized model but can also introduce bias.",
+      "It becomes more sensitive to noise in the data."
+    ],
+    "correct": [2],
+    "explanation": "Increasing K can create a more generalized model but may introduce bias, reducing flexibility.",
+    "level": "advanced"
+  },
+  {
+    "id": 33,
+    "question": "What is the primary goal of the K-nearest neighbors (KNN) method?",
+    "options": [
+      "To classify data points by finding the nearest labeled points.",
+      "To reduce the dimensionality of the dataset.",
+      "To cluster data points into different groups.",
+      "To perform linear regression on the dataset."
+    ],
+    "correct": [0],
+    "explanation": "KNN classifies a point based on the majority class of its nearest neighbors.",
+    "level": "basic"
+  },
+  {
+    "id": 34,
+    "question": "How does KNN classify a new data point?",
+    "options": [
+      "By training a decision tree",
+      "By averaging the labels of all data points",
+      "By voting among the labels of the K nearest neighbors",
+      "By creating a linear model"
+    ],
+    "correct": 2,
+    "explanation": "KNN classifies by taking a majority vote among the K nearest neighbors.",
+    "level": "basic"
+  }
+]
+
+
+
+
+ 

@@ -1,0 +1,333 @@
+[
+  {
+  "id": 1,
+  "question": "What is the primary goal of robust optimization?",
+  "options": [
+    "To minimize the average error across the training dataset",
+    "To ensure the model performs well across a range of possible data distributions",
+    "To improve computational efficiency of training algorithms",
+    "To maximize the capacity of the model"
+  ],
+  "correct": [1],
+  "explanation": "Robust optimization aims to make models resilient to variations or uncertainties in the data distribution.",
+  "level": "basic"
+},
+
+{
+  "id": 2,
+  "question": "In robust optimization, what is the role of the uncertainty set?",
+  "options": [
+    "To define the range of possible model parameters",
+    "To specify the range of input perturbations the model should be robust to",
+    "To constrain the computational cost of optimization",
+    "To guide the selection of hyperparameters"
+  ],
+  "correct": [1],
+  "explanation": "The uncertainty set defines the range of input variations or perturbations the model is expected to handle effectively.",
+  "level": "advanced"
+},
+{
+  "id": 3,
+  "question": "How does robust optimization differ from regularization?",
+  "options": [
+    "Robust optimization focuses on reducing overfitting, while regularization minimizes bias",
+    "Regularization penalizes large model parameters, while robust optimization accounts for variations in the data distribution",
+    "Robust optimization is only used for unsupervised learning tasks",
+    "There is no difference between robust optimization and regularization"
+  ],
+  "correct": [1],
+  "explanation": "Regularization addresses overfitting by constraining model complexity, while robust optimization ensures performance across varying data distributions.",
+  "level": "advanced"
+},
+{
+  "id": 4,
+  "question": "Which type of data distribution changes does robust optimization aim to address?",
+  "options": [
+    "Covariate shift only",
+    "Concept drift only",
+    "Both covariate shift and concept drift",
+    "None of the above"
+  ],
+  "correct": [2],
+  "explanation": "Robust optimization addresses data distribution changes such as covariate shift and concept drift to ensure resilience.",
+  "level": "basic"
+},
+{
+  "id": 5,
+  "question": "What is the primary purpose of data augmentation?",
+  "options": [
+    "To increase the size and diversity of the training dataset",
+    "To reduce the computational complexity of the model",
+    "To eliminate overfitting completely",
+    "To automate the feature selection process"
+  ],
+  "correct": [0],
+  "explanation": "Data augmentation is used to artificially increase the size and diversity of the training dataset by applying transformations.",
+  "level": "basic"
+},
+{
+  "id": 6,
+  "question": "Which of the following is an example of data augmentation in image processing?",
+  "options": [
+    "Feature scaling",
+    "Gaussian noise injection",
+    "Principal Component Analysis (PCA)",
+    "Randomized grid search"
+  ],
+  "correct": [1],
+  "explanation": "Gaussian noise injection is a common data augmentation technique used to make models more robust to noise.",
+  "level": "advanced"
+},
+{
+  "id": 7,
+  "question": "Which data augmentation technique is commonly used for text data?",
+  "options": [
+    "Random rotation",
+    "Synonym replacement",
+    "Color jitter",
+    "Horizontal flipping"
+  ],
+  "correct": [1],
+  "explanation": "Synonym replacement involves substituting words with their synonyms to augment text data.",
+  "level": "basic"
+},
+{
+  "id": 8,
+  "question": "How does data augmentation help mitigate overfitting?",
+  "options": [
+    "By increasing the model’s capacity",
+    "By reducing the size of the training dataset",
+    "By introducing variations that prevent the model from memorizing the training data",
+    "By simplifying the decision boundary"
+  ],
+  "correct": [2],
+  "explanation": "Data augmentation prevents overfitting by introducing new variations, encouraging the model to generalize better.",
+  "level": "advanced"
+},
+{
+  "id": 9,
+  "question": "Which of the following is a benefit of using data augmentation?",
+  "options": [
+    "Reduces training time",
+    "Improves model generalization",
+    "Increases test data accuracy directly",
+    "Eliminates the need for large datasets"
+  ],
+  "correct": [1],
+  "explanation": "Data augmentation improves generalization by exposing the model to diverse training data.",
+  "level": "basic"
+},
+  {
+  "id": 10,
+  "question": "Which of the following scenarios demonstrate out-of-distribution generalization? (Multiple answers are allowed)",
+  "options": [
+    "A model trained on cat images from one dataset accurately classifies cat images from another dataset with different lighting conditions",
+    "A model trained on English text sentiment analysis performs well on a test set sampled from the same source",
+    "A model trained to predict house prices in one city generalizes to accurately predict house prices in another city with a different housing market",
+    "A model trained on handwritten digits generalizes to correctly classify similar digits from a different handwriting dataset"
+  ],
+  "correct": [0, 2, 3],
+  "explanation": "Out-of-distribution generalization occurs when a model successfully applies learned patterns to data that differs in distribution from its training set. Examples include classifying cat images with different lighting, predicting house prices in a different housing market, or classifying digits from a different handwriting dataset. In-distribution generalization refers to scenarios where the test data distribution matches the training data, as in the sentiment analysis example.",
+  "level": "advanced"
+},
+{
+  "id": 11,
+  "question": "What is domain shift in machine learning? Pick the best answer.",
+  "options": [
+    "The process of transferring a model trained on one task to another",
+    "The fine-tuning of a pretrained model on a specific dataset",
+    "A scenario where the training and test data distributions are slightly different, such as varying lighting conditions or image styles",
+    "A scenario where the training and test data distributions are very different, such as training on images and testing on speech"
+  ],
+  "correct": [2],
+  "explanation": "Domain shift refers to situations where the training and test data distributions differ, making generalization challenging. Usually, it refers to slight domain shifts, such as variations in lighting or image styles.",
+  "level": "advanced"
+},
+
+  {
+    "id": 12,
+    "question": "What is a common approach to address domain shift?",
+    "options": [
+      "Reducing the size of the training dataset",
+      "Ignoring the test distribution during training",
+      "Data augmentation to make the training data more diverse",
+      "Increasing the model complexity to fit the training data better"
+    ],
+    "correct": [2],
+    "explanation": "Data augmentation is a widely used technique to simulate variations and improve the model's ability to handle domain shifts.",
+    "level": "advanced"
+  },
+  {
+    "id": 13,
+    "question": "What is the primary benefit of transfer learning?",
+    "options": [
+      "Improving generalization by using larger models",
+      "Reducing the computational cost of training from scratch",
+      "Automatically adapting to unseen data distributions without any retraining",
+      "Eliminating the need for labeled data in the target domain"
+    ],
+    "correct": [1],
+    "explanation": "Transfer learning leverages knowledge from a pretrained model to reduce computational costs and improve performance on related tasks without training from scratch.",
+    "level": "basic"
+  },
+  {
+    "id": 14,
+    "question": "How does fine-tuning differ from transfer learning?",
+    "options": [
+      "Fine-tuning updates the weights of a pretrained model, while transfer learning uses the pretrained model as-is",
+      "Fine-tuning does not require labeled data, while transfer learning does",
+      "Transfer learning is limited to computer vision, while fine-tuning applies to any task",
+      "Fine-tuning is the process of generating new samples based on the pretrained model"
+    ],
+    "correct": [0],
+    "explanation": "Fine-tuning involves updating the weights of a pretrained model to adapt it to a specific task or domain, while transfer learning may involve freezing pretrained weights for feature extraction.",
+    "level": "advanced"
+  },
+  {
+    "id": 15,
+    "question": "Which of the following is an example of pretraining in natural language processing?",
+    "options": [
+      "Adapting a language model to sentiment analysis using a labeled dataset",
+      "Training a transformer model on a large corpus of unlabeled text",
+      "Clustering similar documents in an unsupervised manner",
+      "Using reinforcement learning to fine-tune a chatbot"
+    ],
+    "correct": [1],
+    "explanation": "Pretraining in NLP often involves training a model on a large corpus of unlabeled text to capture language patterns, which can then be fine-tuned for specific downstream tasks.",
+    "level": "basic"
+  },
+  {
+    "id": 16,
+    "question": "In transfer learning, why is the choice of the source domain important?",
+    "options": [
+      "Because the source domain must always match the target domain exactly",
+      "Because knowledge from a source domain unrelated to the target domain may not transfer effectively",
+      "Because the source domain determines the model architecture",
+      "Because the source domain eliminates the need for labeled data in the target domain"
+    ],
+    "correct": [1],
+    "explanation": "The source domain should share relevant features or patterns with the target domain; otherwise, the knowledge transfer may be ineffective or even harmful.",
+    "level": "advanced"
+  },
+  {
+    "id": 17,
+    "question": "What is a potential pitfall of fine-tuning a pretrained model?",
+    "options": [
+      "It requires a large amount of labeled data",
+      "It eliminates the need for domain-specific training",
+      "It can lead to catastrophic forgetting of knowledge from the pretrained model",
+      "It reduces the flexibility of the model"
+    ],
+    "correct": [2],
+    "explanation": "Fine-tuning can cause catastrophic forgetting, where the model loses some of the general knowledge learned during pretraining as it adapts to the target task.",
+    "level": "advanced"
+  },
+  {
+    "id": 18,
+    "question": "What distinguishes domain adaptation from general transfer learning?",
+    "options": [
+      "Domain adaptation assumes the source and target domains have identical data distributions",
+      "Domain adaptation specifically focuses on handling domain shifts between the source and target",
+      "Domain adaptation requires retraining the model from scratch",
+      "Domain adaptation is limited to unsupervised learning scenarios"
+    ],
+    "correct": [1],
+    "explanation": "Domain adaptation is a type of transfer learning that explicitly handles domain shifts between the source and target domains, often modifying the model or training process to improve performance.",
+    "level": "advanced"
+  },
+  {
+    "id": 19,
+    "question": "Why is pretraining on a large-scale dataset beneficial for generalization?",
+    "options": [
+      "It reduces overfitting by using more training epochs",
+      "It improves performance on all tasks without the need for fine-tuning",
+      "It helps the model capture general features that transfer well to downstream tasks",
+      "It eliminates the need for task-specific training"
+    ],
+    "correct": [2],
+    "explanation": "Pretraining on a large-scale dataset helps models learn general features that are applicable to various downstream tasks, improving generalization.",
+    "level": "basic"
+  },
+  {
+    "id": 20,
+    "question": "Which of the following scenarios best exemplifies transfer learning?",
+    "options": [
+      "Using a language model pretrained on Wikipedia to classify sentiment in tweets",
+      "Training a model from scratch on a large dataset of labeled images",
+      "Using data augmentation to expand the training dataset",
+      "Applying a clustering algorithm to group similar customer profiles"
+    ],
+    "correct": [0],
+    "explanation": "Transfer learning involves leveraging a pretrained model, such as one trained on Wikipedia, and adapting it to a new task like sentiment classification in tweets.",
+    "level": "basic"
+  },
+  {
+    "id": 21,
+    "question": "What is the primary goal of generalization in machine learning?",
+    "options": [
+      "To achieve 100% accuracy on training data",
+      "To minimize training time",
+      "To perform well on unseen data",
+      "To maximize the number of features used"
+    ],
+    "correct": [2],
+    "explanation": "Generalization is the ability of a model to perform well on unseen data by capturing the underlying patterns in the data.",
+    "level": "basic"
+  },
+  {
+    "id": 22,
+    "question": "What is hierarchical labeling in machine learning?",
+    "options": [
+      "A process where labels are organized in a tree-like structure",
+      "A technique to convert regression problems into classification problems",
+      "A clustering method for unsupervised learning",
+      "A method to generate labels automatically from data"
+    ],
+    "correct": [0],
+    "explanation": "Hierarchical labeling involves organizing labels into a tree-like structure, where higher-level categories branch into more specific subcategories.",
+    "level": "advanced"
+  },
+  
+  
+  {
+    "id": 23,
+    "question": "What is the primary distinction between single-label and multi-label classification?",
+    "options": [
+      "Single-label is unsupervised, while multi-label is supervised",
+      "Single-label works only for numeric data, while multi-label works for textual data",
+      "Single-label assigns one label per instance, while multi-label assigns multiple labels per instance",
+      "Single-label requires labeled data, while multi-label does not"
+    ],
+    "correct": [2],
+    "explanation": "Single-label classification assigns one label per instance, while multi-label classification allows multiple labels for each instance.",
+    "level": "basic"
+  },
+  
+  {
+    "id": 24,
+    "question": "In the One-vs-One (OVO) method for multiclass classification, how many binary classifiers are required for   K   classes?",
+    "options": [
+      "K",
+      "2K",
+      "sqrt(K)",
+      "K(K-1)/2"
+    ],
+    "correct": [3],
+    "explanation": "In the OVO method, one binary classifier is trained for every pair of classes, requiring K(K-1)/2 classifiers.",
+    "level": "basic"
+  },
+  
+  {
+    "id": 25,
+    "question": "Which of the following statements correctly describe the characteristics of discriminative and generative models? (Circle all that are true.)",
+    "options": [
+      "Discriminative models focus on modeling the decision boundary between classes.",
+      "Generative models estimate the joint probability distribution of the input data and the labels.",
+      "Discriminative models generate data samples from each class.",
+      "Generative models estimate the conditional probability of labels given input data."
+    ],
+    "correct": [0, 1],
+    "explanation": "Discriminative models aim to learn the decision boundary directly, while generative models estimate the joint probability distribution to model data generation.",
+    "level": "advanced"
+  }
+  ]

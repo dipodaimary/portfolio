@@ -1,0 +1,225 @@
+[
+  {
+    "id": 1,
+    "question": "What is the primary purpose of the Expectation-Maximization (EM) algorithm?",
+    "options": [
+      "To estimate parameters in models with latent variables",
+      "To solve linear regression problems",
+      "To minimize overfitting in deep learning models",
+      "To cluster data points in high dimensions"
+    ],
+    "correct": [0],
+    "explanation": "The EM algorithm is used to estimate parameters of statistical models, particularly those with latent variables.",
+    "level": "basic"
+  },
+  {
+    "id": 2,
+    "question": "During the Expectation step (E-step) of the EM algorithm, which operation is performed?",
+    "options": [
+      "Model parameters are updated",
+      "Latent variable probabilities are calculated given the observed data",
+      "The likelihood function is maximized",
+      "Clusters are assigned to data points"
+    ],
+    "correct": [1],
+    "explanation": "In the E-step, the algorithm computes the expected value of latent variables given the observed data and current parameter estimates.",
+    "level": "basic"
+  },
+  {
+    "id": 3,
+    "question": "What is the goal of the Maximization step (M-step) in the EM algorithm?",
+    "options": [
+      "Maximizing the likelihood function with respect to the parameters",
+      "Reducing the dimensionality of the data",
+      "Calculating the posterior probabilities",
+      "Minimizing the reconstruction error"
+    ],
+    "correct": [0],
+    "explanation": "The M-step updates model parameters to maximize the likelihood function based on expected latent variable values.",
+    "level": "basic"
+  },
+  {
+    "id": 4,
+    "question": "Which of the following problems can be solved using the EM algorithm? (Multiple answers are allowed)",
+    "options": [
+      "Clustering with Gaussian Mixture Models",
+      "Missing data imputation",
+      "Supervised classification",
+      "Hidden Markov Model parameter estimation"
+    ],
+    "correct": [0, 1, 3],
+    "explanation": "EM is commonly used for GMMs, missing data imputation, and HMM parameter estimation, but not directly for supervised classification.",
+    "level": "advanced"
+  },
+  {
+    "id": 5,
+    "question": "What is the main purpose of Gaussian Mixture Models (GMMs)?",
+    "options": [
+      "To create a decision boundary for classification tasks",
+      "To model data as a mixture of Gaussian distributions",
+      "To estimate parameters for supervised learning",
+      "To optimize deep neural networks"
+    ],
+    "correct": [1],
+    "explanation": "GMMs model data as a weighted mixture of Gaussian distributions, often used for clustering and density estimation.",
+    "level": "basic"
+  }, 
+  {
+    "id": 6,
+    "question": "Which algorithm is typically used to estimate the parameters of a GMM?",
+    "options": [
+      "Expectation-Maximization (EM)",
+      "K-Means clustering",
+      "Gradient Descent",
+      "Principal Component Analysis (PCA)"
+    ],
+    "correct": [0],
+    "explanation": "The EM algorithm is commonly used to estimate the parameters of GMMs iteratively.",
+    "level": "basic"
+  },
+  {
+    "id": 7,
+    "question": "What are the primary parameters learned in a GMM? (Multiple answers are allowed)",
+    "options": [
+      "Means of Gaussian components",
+      "Covariance matrices of Gaussian components",
+      "Weights of Gaussian components",
+      "Decision boundaries for classification"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "GMMs learn the means, covariance matrices, and weights of the Gaussian components to model the data distribution.",
+    "level": "advanced"
+  },
+  {
+    "id": 8,
+    "question": "What is the primary objective of K-Means clustering?",
+    "options": [
+      "To partition data into K clusters minimizing within-cluster variance",
+      "To maximize the likelihood of Gaussian components",
+      "To classify data points into predefined categories",
+      "To estimate latent variables in a probabilistic model"
+    ],
+    "correct": [0],
+    "explanation": "K-Means aims to partition data into K clusters by minimizing the sum of squared distances between data points and their cluster centroids.",
+    "level": "basic"
+  },
+  {
+    "id": 9,
+    "question": "What is a limitation of K-Means clustering?",
+    "options": [
+      "It assumes clusters are spherical",
+      "It is computationally expensive for large datasets",
+      "It cannot handle categorical data",
+      "It cannot find overlapping clusters"
+    ],
+    "correct": [0, 3],
+    "explanation": "K-Means assumes clusters are spherical and cannot model overlapping clusters effectively.",
+    "level": "advanced"
+  },
+  {
+    "id": 10,
+    "question": "How does K-Means clustering initialize the centroids? (Multiple answers are allowed)",
+    "options": [
+      "Random initialization",
+      "Using K-Means++ initialization",
+      "Using hierarchical clustering",
+      "Based on kernel density estimation"
+    ],
+    "correct": [0, 1],
+    "explanation": "K-Means typically initializes centroids randomly or uses the improved K-Means++ method for better convergence.",
+    "level": "basic"
+  },
+  {
+    "id": 11,
+    "question": "What is the primary difference between Mean-Shift clustering and K-Means?",
+    "options": [
+      "K-Means uses density estimation",
+      "Mean-Shift is a supervised learning algorithm",
+      "K-Means works only with non-overlapping clusters",
+      "Mean-Shift does not require the number of clusters to be specified in advance"
+    ],
+    "correct": [3],
+    "explanation": "Unlike K-Means, Mean-Shift identifies clusters based on local density maxima and does not require specifying the number of clusters.",
+    "level": "basic"
+  },   
+  
+  {
+    "id": 12,
+    "question": "What is clustering in unsupervised learning?",
+    "options": [
+      "Grouping data points into similar clusters based on their features",
+      "Assigning labels to data points based on a trained model",
+      "Predicting a continuous output for input features",
+      "Reducing the dimensionality of the data"
+    ],
+    "correct": [0],
+    "explanation": "Clustering is an unsupervised learning technique that groups data points into clusters based on their similarities.",
+    "level": "basic"
+  },
+  {
+    "id": 13,
+    "question": "In Gaussian Mixture Models (GMM), what does the covariance matrix represent?",
+    "options": [
+      "The distance between clusters",
+      "The mean of the data points in a cluster",
+      "The shape and orientation of the clusters",
+      "The likelihood of a point belonging to a cluster"
+    ],
+    "correct": [2],
+    "explanation": "The covariance matrix in GMM represents the shape and orientation of the clusters.",
+    "level": "basic"
+  }, 
+  {
+    "id": 14,
+    "question": "In a Gaussian Mixture Model (GMM), each data point is assumed to be generated by:",
+    "options": [
+      "A uniform distribution over all clusters.",
+      "A single Gaussian distribution with a specific mean and covariance.",
+      "A weighted sum of several Gaussian distributions, each corresponding to a different cluster.",
+      "A deterministic process that assigns it to one cluster."
+    ],
+    "correct": [2],
+    "explanation": "Each data point in a GMM is modeled as being generated from a weighted sum of Gaussian distributions.",
+    "level": "basic"
+  },
+   {
+    "id": 15,
+    "question": "How does the K-means algorithm update cluster centers?",
+    "options": [
+      "By randomly reassigning them after each iteration.",
+      "By computing the mean of the points assigned to each cluster.",
+      "By selecting the point that is farthest from the current center.",
+      "By selecting the median of the points assigned to each cluster."
+    ],
+    "correct": [1],
+    "explanation": "The K-means algorithm updates cluster centers by computing the mean of the points assigned to each cluster.",
+    "level": "basic"
+  },
+  
+  {
+    "id": 16,
+    "question": "Why is the initialization of cluster centers important in the K-means algorithm?",
+    "options": [
+      "It determines the final clustering solution, as K-means can converge to different local minima.",
+      "It guarantees that the algorithm will find the global optimum.",
+      "It ensures that all clusters are the same size.",
+      "It has no effect on the final outcome."
+    ],
+    "correct": [0],
+    "explanation": "The initialization of cluster centers in K-means is critical because it determines the final clustering solution due to convergence to local minima.",
+    "level": "basic"
+  }, 
+{
+  "id": 17,
+  "question": "How does the Expectation-Maximization (EM) algorithm use the log-expectation transformation and Jensen's inequality?",
+  "options": [
+    "It approximates the log of a sum by converting it into a weighted sum of logs using Jensen's inequality",
+    "It approximates the sum of logarithms by converting it into a logarithm of products using Jensen's inequality",
+    "It converts the expectation of a log into the log of an expectation, simplifying optimization",
+    "It approximates the log-likelihood directly by ignoring latent variables"
+  ],
+  "correct": [0],
+  "explanation": "In the E-step, the EM algorithm uses Jensen's inequality to derive a lower bound on the log-likelihood. This lower bound, often referred to as the Evidence Lower Bound (ELBO) in variational contexts, is then maximized in the M-step, making the problem tractable by turning the log of a sum into a weighted sum of logs.",
+  "level": "advanced"
+}
+]

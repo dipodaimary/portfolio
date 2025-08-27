@@ -1,0 +1,342 @@
+[
+  {
+    "id": 1,
+    "question": "What is the primary assumption of the Naive Bayes algorithm?",
+    "options": [
+      "Features are dependent on each other",
+      "Features are independent given the class",
+      "All features have the same distribution",
+      "The dataset must be balanced"
+    ],
+    "correct": [1],
+    "explanation": "Naive Bayes assumes that all features are independent given the class.",
+    "level": "basic"
+  },
+  {
+    "id": 2,
+    "question": "Which of the following are types of Naive Bayes classifiers? (Multiple answers are allowed)",
+    "options": [
+      "Gaussian Naive Bayes",
+      "Multinomial Naive Bayes",
+      "Bernoulli Naive Bayes",
+      "Bayesian Network Classifier"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "Gaussian, Multinomial, and Bernoulli Naive Bayes are common types of Naive Bayes classifiers.",
+    "level": "basic"
+  },
+  {
+    "id": 3,
+    "question": "What does the 'naive' in Naive Bayes refer to?",
+    "options": [
+      "The algorithm assumes feature independence",
+      "It is a non-parametric method",
+      "It uses Bayesian probabilities without training",
+      "It does not require labeled data"
+    ],
+    "correct": [0],
+    "explanation": "'Naive' refers to the assumption of feature independence in Naive Bayes.",
+    "level": "basic"
+  },
+  {
+    "id": 4,
+    "question": "In Naive Bayes, how is the class probability P(Y|X) computed?",
+    "options": [
+      "Using Bayes' theorem",
+      "By counting occurrences of Y",
+      "Using gradient descent",
+      "By summing feature probabilities"
+    ],
+    "correct": [0],
+    "explanation": "Class probabilities in Naive Bayes are computed using Bayes' theorem.",
+    "level": "basic"
+  },
+  {
+  "id": 5,
+  "question": "What is Bayes' Theorem?",
+  "options": [
+    "P(A given B) = [P(B given A) * P(A)] / P(B)",
+    "P(A given B) = P(A) * P(B)",
+    "P(A given B) = P(A) + P(B)",
+    "P(A given B) = [P(A) * P(B)] / P(A and B)"
+  ],
+  "correct": 0,
+  "explanation": "Bayes' Theorem states that P(A given B) = [P(B given A) * P(A)] / P(B). It describes how to update the probability of an event A based on evidence B and prior probabilities.",
+  "level": "basic"
+},
+  {
+    "id": 6,
+    "question": "What type of data is best suited for Multinomial Naive Bayes?",
+    "options": [
+      "Continuous data",
+      "Categorical data",
+      "Text data represented as word counts",
+      "Boolean data"
+    ],
+    "correct": [2],
+    "explanation": "Multinomial Naive Bayes is ideal for text data represented as word counts or frequencies.",
+    "level": "basic"
+  },
+  {
+    "id": 7,
+    "question": "Which of the following are advantages of Naive Bayes? (Multiple answers are allowed)",
+    "options": [
+      "Handles high-dimensional data well",
+      "Is computationally efficient",
+      "Provides probabilistic outputs",
+      "Makes no assumptions about feature independence"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "Naive Bayes handles high-dimensional data, is computationally efficient, and provides probabilistic outputs.",
+    "level": "basic"
+  },
+  {
+    "id": 8,
+    "question": "Which assumption of Naive Bayes often fails in real-world data?",
+    "options": [
+      "The class prior probabilities are uniform",
+      "The features are independent given the class",
+      "The features are Gaussian-distributed",
+      "The dataset is balanced"
+    ],
+    "correct": [1],
+    "explanation": "The independence assumption often fails in real-world data.",
+    "level": "basic"
+  },
+  {
+    "id": 9,
+    "question": "What does the likelihood term P(X|Y) represent in Naive Bayes?",
+    "options": [
+      "The probability of a feature given the class",
+      "The probability of a class given the feature",
+      "The probability of the class occurring",
+      "The joint probability of all features"
+    ],
+    "correct": [0],
+    "explanation": "The likelihood term P(X|Y) represents the probability of a feature given the class.",
+    "level": "basic"
+  },
+  {
+    "id": 10,
+    "question": "What is Laplace smoothing used for in Naive Bayes?",
+    "options": [
+      "To normalize feature probabilities",
+      "To handle zero probabilities in feature likelihoods",
+      "To improve computational efficiency",
+      "To adjust the prior probabilities"
+    ],
+    "correct": [1],
+    "explanation": "Laplace smoothing addresses zero probabilities in feature likelihoods by adding a small constant.",
+    "level": "basic"
+  },
+  {
+    "id": 11,
+    "question": "In Bayesian inference, what is the prior probability?",
+    "options": [
+      "The likelihood of the data given the hypothesis",
+      "The initial belief about a hypothesis before seeing the data",
+      "The posterior probability after updating with data",
+      "The marginal probability of the data"
+    ],
+    "correct": [1],
+    "explanation": "The prior is the initial belief about a hypothesis before observing data.",
+    "level": "basic"
+  },
+{
+  "id": 12,
+  "question": "What is the role of the posterior in Bayesian inference?",
+  "options": [
+    "It represents the updated belief about the hypothesis after observing data",
+    "It quantifies the prior belief before observing any data",
+    "It represents the probability of observing the data under the hypothesis",
+    "It normalizes the likelihood and prior to ensure probabilities sum to one"
+  ],
+  "correct": [0],
+  "explanation": "The posterior, P(Hypothesis given Data), represents the updated belief about the hypothesis after observing data. It is calculated using Bayes' theorem: P(Hypothesis given Data) = [P(Data given Hypothesis) * P(Hypothesis)] / P(Data).",
+  "level": "basic"
+},
+  {
+    "id": 13,
+    "question": "In Bayesian inference, what does the likelihood represent?",
+    "options": [
+      "The probability of data given the hypothesis",
+      "The probability of the hypothesis given the data",
+      "The prior belief about the hypothesis",
+      "The marginal probability of the hypothesis"
+    ],
+    "correct": [0],
+    "explanation": "Likelihood represents the probability of data given a specific hypothesis.",
+    "level": "basic"
+  },
+  {
+    "id": 14,
+    "question": "Which of the following are challenges in Bayesian inference? (Multiple answers are allowed)",
+    "options": [
+      "Choosing an appropriate prior",
+      "Computational cost for high-dimensional data",
+      "Handling unbalanced datasets",
+      "Normalizing the posterior distribution"
+    ],
+    "correct": [0, 1, 3],
+    "explanation": "Challenges include selecting an appropriate prior, computational cost, and normalizing the posterior.",
+    "level": "advanced"
+  },
+  {
+    "id": 15,
+    "question": "What is the difference between MAP (Maximum A Posteriori) and MLE (Maximum Likelihood Estimation)?",
+    "options": [
+      "MAP includes the prior, while MLE does not",
+      "MLE maximizes the prior probability",
+      "MAP ignores the likelihood term",
+      "MAP is computationally less expensive than MLE"
+    ],
+    "correct": [0],
+    "explanation": "MAP includes the prior, while MLE does not consider it.",
+    "level": "advanced"
+  },
+  
+
+  {
+    "id": 18,
+    "question": "How does Naive Bayes handle missing data?",
+    "options": [
+      "It removes rows with missing values",
+      "It imputes missing data using mean or mode",
+      "It ignores the missing feature for probability computation",
+      "It cannot handle missing data"
+    ],
+    "correct": [2],
+    "explanation": "Naive Bayes ignores the missing feature and computes probabilities based on available features.",
+    "level": "advanced"
+  },
+  {
+    "id": 20,
+    "question": "How does the structure of a Directed Acyclic Graph (DAG) affect sampling complexity?",
+    "options": [
+      "The sparser the DAG, the higher the sampling complexity.",
+      "The more connected the DAG, the lower the sampling complexity.",
+      "The sparser the DAG, the lower the sampling complexity.",
+      "The DAG structure does not affect sampling complexity."
+    ],
+    "correct": [2],
+    "explanation": "A sparse DAG reduces sampling complexity as fewer dependencies exist, simplifying the sampling process.",
+    "level": "advanced"
+  },
+  {
+    "id": 21,
+    "question": "What does the Markov property state about a random process A_1, A_2, ...?",
+    "options": [
+      "A_t is independent of all previous states.",
+      "A_t depends on all previous states A_1, ..., A_t−1.",
+      "A_t is independent of A_t−1 but depends on A_t−2.",
+      "A_t depends only on the immediately preceding state A_t−1."
+    ],
+    "correct": [3],
+    "explanation": "The Markov property states that the future state depends only on the current state and not on any earlier states.",
+    "level": "basic"
+  },
+  {
+    "id": 22,
+    "question": "What distinguishes a Hidden Markov Model (HMM) from a simple Markov chain?",
+    "options": [
+      "HMMs have observable states only.",
+      "HMMs have hidden states that are independent of each other.",
+      "HMMs have both hidden (Markovian) and observed states.",
+      "HMMs do not use transition probabilities."
+    ],
+    "correct": [2],
+    "explanation": "HMMs include both hidden states governed by the Markov property and observed states influenced by these hidden states.",
+    "level": "basic"
+  },
+  {
+    "id": 23,
+    "question": "What does a graphical model represent in the context of Bayesian networks?",
+    "options": [
+      "The physical connections between variables",
+      "The conditional dependencies between variables",
+      "The hierarchical structure of data",
+      "The sequence of computational operations"
+    ],
+    "correct": [1],
+    "explanation": "Graphical models represent the conditional dependencies between variables in Bayesian networks.",
+    "level": "basic"
+  },
+  {
+    "id": 24,
+    "question": "What role does the 'prior' play in the Bayes classifier?",
+    "options": [
+      "It serves as the base rate in absence of other information.",
+      "It adjusts the likelihood based on historical data.",
+      "It is used to compute the posterior probability directly.",
+      "It determines the conditional dependencies between features."
+    ],
+    "correct": [0],
+    "explanation": "The prior acts as a base rate probability before observing any evidence, influencing posterior probability calculations.",
+    "level": "advanced"
+  },
+    {
+    "id": 25,
+    "question": "What makes the Bayes classifier computationally expensive?",
+    "options": [
+      "The need for large datasets",
+      "The assumption of feature independence",
+      "The use of non-parametric methods",
+      "The complexity of calculating joint probabilities for all features"
+    ],
+    "correct": [3],
+    "explanation": "Bayes classifier is computationally expensive due to the complexity of calculating joint probabilities for all features.",
+    "level": "advanced"
+  },
+  {
+    "id": 26,
+    "question": "Bayes' classifier is used to:",
+    "options": [
+      "Increase the speed of classification",
+      "Approximate Pr(label | data)",
+      "Reduce the need for labeled data",
+      "Eliminate the influence of outliers"
+    ],
+    "correct": [1],
+    "explanation": "Bayes' classifier calculates posterior probabilities to approximate Pr(label | data), enabling probabilistic predictions.",
+    "level": "basic"
+  },
+  {
+    "id": 27,
+    "question": "What does the term Pr(A | B) represent?",
+    "options": [
+      "Probability of A and B occurring together",
+      "Probability of A given B has occurred",
+      "Probability of B given A has occurred",
+      "Probability of A or B occurring"
+    ],
+    "correct": [1],
+    "explanation": "Pr(A | B) represents the conditional probability of A occurring given that B has occurred.",
+    "level": "basic"
+  },
+  {
+    "id": 28,
+    "question": "If events A and B are independent, what is true?",
+    "options": [
+      "Pr(A, B) = Pr(A) * Pr(B)",
+      "Pr(A, B) = Pr(A) + Pr(B)",
+      "Pr(A | B) = Pr(B | A)",
+      "Pr(A | B) = Pr(A) + Pr(B)"
+    ],
+    "correct": [0],
+    "explanation": "For independent events, the joint probability Pr(A, B) is equal to the product of their individual probabilities.",
+    "level": "basic"
+  },
+  {
+    "id": 29,
+    "question": "What does Bayes' rule help to find?",
+    "options": [
+      "Pr(A or B)",
+      "Pr(A and B)",
+      "Pr(B|A) using Pr(A|B)",
+      "Pr(A|B) using Pr(B, A)"
+    ],
+    "correct": [2],
+    "explanation": "Bayes' rule uses Pr(A|B) to compute Pr(B|A), enabling reverse conditional probability calculations.",
+    "level": "basic"
+  }
+  ]

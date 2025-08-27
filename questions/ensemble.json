@@ -1,0 +1,303 @@
+[
+{
+  "id": 1,
+  "question": "What are ensemble methods in machine learning?",
+  "options": [
+    "Techniques that combine multiple models to improve performance",
+    "Algorithms that focus on increasing the complexity of a single model",
+    "Methods that reduce the number of features used in training",
+    "Techniques that use unsupervised learning to label data"
+  ],
+  "correct": [0],
+  "explanation": "Ensemble methods combine predictions from multiple models to improve accuracy and robustness. Examples include bagging (e.g., random forests) and boosting (e.g., AdaBoost).",
+  "level": "basic"
+},
+  {
+    "id": 2,
+    "question": "Which of the following techniques are considered ensemble methods? (Multiple answers are allowed)",
+    "options": [
+      "Bagging",
+      "Boosting",
+      "Support Vector Machines",
+      "Stacking"
+    ],
+    "correct": [0, 1, 3],
+    "explanation": "Bagging, Boosting, and Stacking are popular ensemble methods.",
+    "level": "basic"
+  },
+  {
+    "id": 3,
+    "question": "How does bagging reduce overfitting?",
+    "options": [
+    "By increasing the regularization strength of each model",
+    "By reducing the size of the training dataset",
+    "By averaging predictions from multiple models to reduce variance",
+    "By focusing on difficult-to-classify examples during training"
+    ],
+    "correct": [2],
+  "explanation": "Bagging (Bootstrap Aggregating) reduces overfitting by training multiple models on different bootstrap samples and averaging their predictions, which decreases variance without significantly increasing bias.",
+    "level": "basic"
+  },
+  {
+    "id": 4,
+    "question": "What is the main difference between bagging and boosting?",
+    "options": [
+      "Bagging trains models independently, while boosting trains them sequentially",
+      "Boosting uses bootstrapping, while bagging does not",
+      "Bagging focuses on weak learners, while boosting does not",
+      "Boosting reduces variance, while bagging reduces bias"
+    ],
+    "correct": [0],
+    "explanation": "Bagging trains models independently, whereas boosting trains them sequentially to focus on correcting errors.",
+    "level": "basic"
+  },
+  {
+    "id": 5,
+    "question": "Which of the following algorithms are examples of boosting? (Multiple answers are allowed)",
+    "options": [
+      "AdaBoost",
+      "Gradient Boosting",
+      "Random Forest",
+      "XGBoost"
+    ],
+    "correct": [0, 1, 3],
+    "explanation": "AdaBoost, Gradient Boosting, and XGBoost are boosting algorithms.",
+    "level": "basic"
+  },
+  {
+    "id": 6,
+    "question": "What is a key characteristic of Random Forest?",
+    "options": [
+      "It uses bagging (with learned weights) to combine multiple decision trees",
+      "It combines (with learned weights) linear models to make predictions",
+      "It uses sequential training of models",
+      "It cannot handle overfitting"
+    ],
+    "correct": [0],
+    "explanation": "Random Forest uses bagging to combine multiple decision trees and reduces overfitting.",
+    "level": "basic"
+  },
+  {
+    "id": 7,
+    "question": "Which of the following are advantages of ensemble learning? (Multiple answers are allowed)",
+    "options": [
+      "It reduces variance",
+      "It reduces bias",
+      "It is computationally inexpensive",
+      "It is more robust to noise"
+    ],
+    "correct": [0, 1, 3],
+    "explanation": "Ensemble learning reduces variance, bias, and is robust to noise but is computationally expensive.",
+    "level": "basic"
+  },
+  {
+    "id": 8,
+    "question": "What is the primary drawback of boosting algorithms?",
+    "options": [
+      "They are prone to overfitting",
+      "They are computationally expensive",
+      "They require large datasets",
+      "They do not work with weak learners"
+    ],
+    "correct": [0, 1],
+    "explanation": "Boosting algorithms are prone to overfitting and computationally expensive due to sequential training.",
+    "level": "basic"
+  },
+  {
+    "id": 9,
+    "question": "What is feature bagging in Random Forest?",
+    "options": [
+      "Using a subset of features at each split",
+      "Randomly excluding features during training",
+      "Averaging predictions across features",
+      "Using PCA to reduce feature dimensions"
+    ],
+    "correct": [0],
+    "explanation": "Feature bagging involves using a random subset of features at each split in a Random Forest.",
+    "level": "basic"
+  },
+  {
+    "id": 10,
+    "question": "In ensemble learning, what is stacking?",
+    "options": [
+      "Combining models sequentially",
+      "Using meta-learners to combine predictions from base models",
+      "Training models on different data subsets",
+      "Combining multiple decision trees"
+    ],
+    "correct": [1],
+    "explanation": "Stacking combines predictions from base models using a meta-learner for improved performance.",
+    "level": "basic"
+  }, 
+  {
+    "id": 11,
+    "question": "What is bootstrap sampling in bagging?",
+    "options": [
+      "Using the entire dataset without replacement",
+      "Randomly selecting features at each step",
+      "Sampling subsets of data with replacement",
+      "Combining predictions from multiple datasets"
+    ],
+    "correct": [2],
+    "explanation": "Bootstrap sampling involves sampling subsets of data with replacement to train individual models in bagging.",
+    "level": "basic"
+  },
+  {
+    "id": 12,
+    "question": "What is the effect of a high learning rate in boosting?",
+    "options": [
+      "Faster convergence but risk of overshooting",
+      "Slower convergence but more stability",
+      "Increased model complexity",
+      "Reduced bias"
+    ],
+    "correct": [0],
+    "explanation": "A high learning rate can cause faster convergence but risks overshooting and instability.",
+    "level": "advanced"
+  },
+  {
+    "id": 13,
+    "question": "Which of the following are differences between Random Forest and XGBoost? (Multiple answers are allowed)",
+    "options": [
+      "Random Forest uses bagging, XGBoost uses boosting",
+      "Random Forest trains trees sequentially, XGBoost trains independently",
+      "XGBoost includes regularization, Random Forest does not",
+      "Random Forest uses feature bagging, XGBoost does not"
+    ],
+    "correct": [0, 2, 3],
+    "explanation": "Random Forest uses bagging and feature bagging, while XGBoost uses boosting and includes regularization.",
+    "level": "advanced"
+  },
+  {
+    "id": 14,
+    "question": "What is the primary advantage of using ensembling in decision trees?",
+    "options": [
+    "It eliminates the need for hyperparameter tuning",
+    "It improves computational efficiency during training",
+    "It guarantees perfect accuracy on the training dataset",
+      "They are unstable and can be improved by ensemble methods"
+    ],
+    "correct": [3],
+    "explanation": "Decision trees are unstable and benefit from ensemble methods to improve stability and accuracy.",
+    "level": "basic"
+  },
+  {
+    "id": 15,
+    "question": "How does AdaBoost assign weights to misclassified samples?",
+    "options": [
+      "Increases weights for misclassified samples",
+      "Decreases weights for misclassified samples",
+      "Removes misclassified samples",
+      "Randomly changes weights"
+    ],
+    "correct": [0],
+    "explanation": "AdaBoost assigns higher weights to misclassified samples to focus on difficult examples.",
+    "level": "basic"
+  },
+  {
+    "id": 16,
+    "question": "What is the main idea behind bagging?",
+    "options": [
+      "To sequentially improve the model by focusing on the errors of the previous model.",
+      "To build multiple models independently on random subsets of data and average their predictions.",
+      "To use a single strong model and improve it iteratively.",
+      "To combine models using weighted averages based on their performance."
+    ],
+    "correct": [1],
+    "explanation": "Bagging combines predictions of models trained on random subsets to improve performance and reduce variance.",
+    "level": "basic"
+  },
+  {
+    "id": 17,
+    "question": "What is the key assumption for the ensemble of weak learners to converge to the correct answer?",
+    "options": [
+      "The weak learners must be dependent on each other.",
+      "The weak learners must be independent and each slightly better than random guessing.",
+      "The weak learners must be trained on the same dataset.",
+      "The weak learners must all be of the same type."
+    ],
+    "correct": [1],
+    "explanation": "Ensemble methods assume that weak learners are independent and slightly better than random, ensuring their combined accuracy.",
+    "level": "basic"
+  },
+  {
+    "id": 18,
+    "question": "How does boosting differ from bagging?",
+    "options": [
+      "Boosting builds models sequentially, while bagging builds them independently.",
+      "Boosting uses decision trees, while bagging uses neural networks.",
+      "Boosting reduces bias, while bagging reduces variance.",
+      "Boosting is faster to train than bagging."
+    ],
+    "correct": [0],
+    "explanation": "Boosting focuses on sequentially improving weak learners by correcting errors of previous models, unlike bagging's independent approach.",
+    "level": "basic"
+  },
+    
+  {
+    "id": 19,
+    "question": "Which of the following is one of the SOTA methods for classifying tabular data?",
+    "options": [
+      "ResNets",
+      "Linear regression",
+      "XGBoost",
+      "BERT transformer"
+    ],
+    "correct": [2],
+    "explanation": "XGBoost is considered one of the state-of-the-art methods for tabular data due to its robustness, scalability, and efficiency in handling structured data.",
+    "level": "basic"
+  },
+
+  {
+    "id": 20,
+    "question": "What is a 'weak learner' in the context of ensemble learning?",
+    "options": [
+      "A model with a high bias",
+      "A model that performs slightly better than random guessing",
+      "A model with a high variance",
+      "A model that overfits the training data"
+    ],
+    "correct": [1],
+    "explanation": "A weak learner is a model that performs slightly better than random guessing. Ensemble methods like boosting combine weak learners to create a strong learner.",
+    "level": "basic"
+  },
+  {
+    "id": 21,
+    "question": "Which of the following is an example of a weak learner?",
+    "options": [
+      "Deep neural network",
+      "Decision stump",
+      "Random forest",
+      "Support vector machine"
+    ],
+    "correct": [1],
+    "explanation": "A decision stump, which is a one-level decision tree, is a classic example of a weak learner used in ensemble methods like boosting.",
+    "level": "basic"
+  },
+  {
+    "id": 22,
+    "question": "In bagging, what is the key method used to create multiple training datasets?",
+    "options": [
+      "Sampling without replacement",
+      "Data augmentation",
+      "Sampling with replacement",
+      "Cross-validation"
+    ],
+    "correct": [2],
+    "explanation": "Bagging involves creating multiple training datasets by sampling with replacement, allowing models to train on slightly different data subsets.",
+    "level": "basic"
+  },
+  {
+    "id": 23,
+    "question": "Which of the following is a correct description of the Adaboost algorithm?",
+    "options": [
+      "It combines multiple models by averaging their predictions",
+      "It focuses on misclassified samples by reweighting them in each iteration",
+      "It uses deep neural networks to improve accuracy",
+      "It applies cross-validation to improve model generalization"
+    ],
+    "correct": [1],
+    "explanation": "Adaboost focuses on misclassified samples by increasing their weights in subsequent iterations, allowing the model to correct errors iteratively.",
+    "level": "basic"
+  }
+  ]

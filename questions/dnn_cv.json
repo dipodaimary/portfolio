@@ -1,0 +1,223 @@
+[
+  {
+    "id": 1,
+    "question": "What was the purpose of the ImageNet dataset introduced in 2009?",
+    "options": [
+      "To test language models",
+      "To benchmark speech recognition models",
+      "To enable large-scale image classification",
+      "To curate adversarial examples"
+    ],
+    "correct": [2],
+    "explanation": "ImageNet was designed to enable large-scale image classification and became a benchmark for CV research.",
+    "level": "basic"
+  },
+  {
+    "id": 2,
+    "question": "Which model won the 2012 ImageNet competition, revolutionizing computer vision?",
+    "options": [
+      "VGGNet",
+      "ResNet",
+      "AlexNet",
+      "InceptionNet"
+    ],
+    "correct": [2],
+    "explanation": "AlexNet's success in the 2012 ImageNet competition demonstrated the power of deep learning for image classification.",
+    "level": "basic"
+  },
+  {
+    "id": 3,
+    "question": "What architectural feature did AlexNet introduce to improve training?",
+    "options": [
+      "Dropout",
+      "Residual connections",
+      "Attention mechanisms",
+      "Batch normalization"
+    ],
+    "correct": [0],
+    "explanation": "AlexNet introduced dropout to prevent overfitting during training.",
+    "level": "basic"
+  },
+  {
+    "id": 4,
+    "question": "What problem was solved by ResNet in 2015?",
+    "options": [
+      "Improving sequence modeling",
+      "Vanishing gradients in deep networks",
+      "Handling large datasets efficiently",
+      "Modeling temporal data"
+    ],
+    "correct": [1],
+    "explanation": "ResNet addressed the vanishing gradient problem in deep networks using residual connections.",
+    "level": "basic"
+  },
+  {
+    "id": 5,
+    "question": "Which dataset is commonly used for object detection tasks?",
+    "options": [
+      "MNIST",
+      "CIFAR-10",
+      "SQuAD",
+      "COCO"
+    ],
+    "correct": [3],
+    "explanation": "The COCO dataset is widely used for benchmarking object detection algorithms.",
+    "level": "basic"
+  },
+  {
+    "id": 6,
+    "question": "What is the primary focus of the YOLO (You Only Look Once) model?",
+    "options": [
+      "Image classification",
+      "Semantic segmentation",
+      "Real-time object detection",
+      "Pose estimation"
+    ],
+    "correct": [2],
+    "explanation": "YOLO is a real-time object detection model designed to predict bounding boxes and class labels in one pass.",
+    "level": "basic"
+  },
+  {
+    "id": 7,
+    "question": "Which dataset is most commonly used for training object detection models like YOLO?",
+    "options": [
+      "COCO",
+      "CIFAR-10",
+      "ImageNet",
+      "ADE20K"
+    ],
+    "correct": [0],
+    "explanation": "COCO (Common Objects in Context) is widely used for training and benchmarking object detection models.",
+    "level": "basic"
+  },  
+  {
+    "id": 10,
+    "question": "What innovation does DenseNet bring to convolutional networks?",
+    "options": [
+      "Residual connections between blocks",
+      "Use of depthwise separable convolutions",
+      "Direct connections between all layers",
+      "Introduction of self-attention"
+    ],
+    "correct": [2],
+    "explanation": "DenseNet introduces direct connections between all layers, improving feature reuse and reducing parameters.",
+    "level": "advanced"
+  },
+  {
+    "id": 11,
+    "question": "What is the primary advantage of MobileNet over traditional CNNs?",
+    "options": [
+      "Improved accuracy on large datasets",
+      "Efficient computation on mobile devices",
+      "Better handling of large input images",
+      "Enhanced performance on zero-shot tasks"
+    ],
+    "correct": [1],
+    "explanation": "MobileNet uses depthwise separable convolutions to optimize computation for mobile and embedded devices.",
+    "level": "basic"
+  },
+  {
+    "id": 12,
+    "question": "Which architecture is designed specifically for image-to-image translation tasks?",
+    "options": [
+      "AlexNet",
+      "U-Net",
+      "YOLOv3",
+      "ResNet"
+    ],
+    "correct": [1],
+    "explanation": "U-Net is widely used for image-to-image tasks such as medical image segmentation and denoising.",
+    "level": "basic"
+  },
+  {
+    "id": 13,
+    "question": "What is the primary difference between semantic segmentation and instance segmentation?",
+    "options": [
+      "Semantic segmentation is for videos, and instance segmentation is for images",
+      "Instance segmentation works only on 3D data",
+      "Semantic segmentation classifies pixels, while instance segmentation distinguishes individual objects",
+      "Semantic segmentation is a supervised task, while instance segmentation is unsupervised"
+    ],
+    "correct": [2],
+    "explanation": "Semantic segmentation classifies all pixels into categories, while instance segmentation identifies individual objects within the categories.",
+    "level": "basic"
+  }, 
+  {
+    "id": 15,
+    "question": "What advantage do Vision Transformers (ViTs) hope to leverage over traditional CNNs?",
+    "options": [
+      "Improved performance on small datasets",
+      "Faster training on small GPUs",
+      "Better global context understanding",
+      "Use of unsupervised learning exclusively"
+    ],
+    "correct": [2],
+    "explanation": "Vision Transformers leverage self-attention mechanisms to capture global context, outperforming CNNs on many vision tasks.",
+    "level": "advanced"
+  },
+  {
+    "id": 16,
+    "question": "Which model is most commonly associated with real-time pose estimation?",
+    "options": [
+      "ResNet-50",
+      "OpenPose",
+      "YOLOv5",
+      "MobileNet"
+    ],
+    "correct": [1],
+    "explanation": "OpenPose is widely used for real-time pose estimation, particularly for detecting keypoints in human poses.",
+    "level": "basic"
+  },
+  {
+    "id": 17,
+    "question": "What is a common application of self-supervised learning in computer vision?",
+    "options": [
+      "Real-time tracking of moving objects",
+      "Segmentation of medical images",
+      "Reducing computational complexity in inference",
+      "Learning robust feature representations from unlabeled data"
+    ],
+    "correct": [3],
+    "explanation": "Self-supervised learning enables models to learn robust representations from unlabeled data, often used for pretraining.",
+    "level": "advanced"
+  },
+  {
+    "id": 18,
+    "question": "What is the primary purpose of RetinaNet?",
+    "options": [
+      "Addressing class imbalance in object detection",
+      "Real-time segmentation",
+      "Improving model interpretability",
+      "Handling multi-modal data"
+    ],
+    "correct": [0],
+    "explanation": "RetinaNet introduced the focal loss to address class imbalance in object detection tasks.",
+    "level": "advanced"
+  },
+  {
+    "id": 19,
+    "question": "Which dataset is widely used for fine-grained action recognition?",
+    "options": [
+      "COCO",
+      "Cityscapes",
+      "Kinetics",
+      "ADE20K"
+    ],
+    "correct": [2],
+    "explanation": "The Kinetics dataset is a benchmark for fine-grained action recognition in videos.",
+    "level": "basic"
+  },
+  {
+    "id": 20,
+    "question": "What is the main challenge of applying DNNs to medical imaging tasks?",
+    "options": [
+      "Excessive computational requirements",
+      "Limited labeled data and domain-specific knowledge",
+      "Overfitting on large datasets",
+      "Lack of hardware for deployment"
+    ],
+    "correct": [1],
+    "explanation": "Medical imaging tasks often suffer from limited labeled data and require domain-specific knowledge.",
+    "level": "basic"
+  }
+]

@@ -1,0 +1,236 @@
+[
+  {
+    "id": 1,
+    "question": "Which of the following best describes the Bayes’ learner in statistical decision theory?",
+    "options": [
+      "A learner that always knows the true label.",
+      "A learner that minimizes empirical risk.",
+      "An ideal learner that minimizes expected risk based on the true distribution.",
+      "A learner that uses a small hypothesis class to avoid overfitting."
+    ],
+    "correct": [2],
+    "explanation": "The Bayes learner minimizes the expected risk using the true probability distribution, making it the ideal learner.",
+    "level": "advanced"
+  },
+  {
+    "id": 2,
+    "question": "What is the key difference between empirical risk LS(h) and expected risk LD(h)?",
+    "options": [
+      "Empirical risk is calculated on the training data, while expected risk is calculated on unseen data.",
+      "Expected risk is always greater than empirical risk.",
+      "Empirical risk considers only the most complex models.",
+      "Expected risk is minimized before empirical risk."
+    ],
+    "correct": [0],
+    "explanation": "Empirical risk measures error on the training dataset, while expected risk estimates error on the entire data distribution.",
+    "level": "basic"
+  },
+  {
+    "id": 3,
+    "question": "Which of the following best describes a PAC-learnable hypothesis class?",
+    "options": [
+      "A hypothesis class that always finds the perfect model with infinite data.",
+      "A hypothesis class where the error can be made arbitrarily small with high probability, given enough training data.",
+      "A hypothesis class that can always perfectly classify the training data.",
+      "A hypothesis class that requires minimal data for training."
+    ],
+    "correct": [1],
+    "explanation": "PAC learning ensures that with enough data, the error can be reduced to an arbitrarily small value with high probability.",
+    "level": "advanced"
+  },
+  {
+    "id": 4,
+    "question": "Why is the Bayes classifier computationally expensive?",
+    "options": [
+      "Because it requires calculating the posterior probability for all possible combinations of features and classes.",
+      "Because it ignores the dependency between features.",
+      "Because it assumes that features are independent.",
+      "Because it uses a simple sum of probabilities."
+    ],
+    "correct": [0],
+    "explanation": "The Bayes classifier is computationally expensive as it calculates the posterior probability for all feature and class combinations.",
+    "level": "advanced"
+  },
+  {
+    "id": 5,
+    "question": "What does statistical decision theory fundamentally address in machine learning?",
+    "options": [
+      "The computational complexity of training models",
+      "The relationship between model complexity and generalization",
+      "The ease of training models on real-world datasets",
+      "The impact of hardware limitations on model performance"
+    ],
+    "correct": [1],
+    "explanation": "Statistical decision theory focuses on the relationship between model complexity and generalization to unseen data.",
+    "level": "basic"
+  },
+  {
+    "id": 6,
+    "question": "In statistical learning theory, what is the primary goal of the empirical risk minimizer (ERM)?",
+    "options": [
+      "To minimize the expected risk across the entire data distribution",
+      "To minimize the loss over the training set",
+      "To find the Bayes-optimal model",
+      "To handle out-of-distribution data"
+    ],
+    "correct": [1],
+    "explanation": "The ERM minimizes the loss function over the training data, serving as a proxy for the expected risk.",
+    "level": "basic"
+  },
+  {
+    "id": 7,
+    "question": "Which of the following are assumptions in PAC learning? (Multiple answers may apply)",
+    "options": [
+      "Training data is i.i.d. sampled from the distribution",
+      "The model class is realizable",
+      "The input features are linearly independent",
+      "The output labels are deterministic"
+    ],
+    "correct": [0, 1],
+    "explanation": "PAC learning assumes i.i.d. samples and realizability to provide guarantees on generalization.",
+    "level": "basic"
+  },
+  {
+  "id": 8,
+  "question": "What does it mean for a model class to be 'realizable' in the context of learning theory?",
+  "options": [
+    "The model class contains a function that perfectly fits the training data",
+    "The model class has infinite VC dimension",
+    "The data distribution is deterministic and noise-free",
+    "The hypothesis class is finite and easy to compute"
+  ],
+  "correct": [0],
+  "explanation": "A model class is 'realizable' if there exists at least one hypothesis within the class that can perfectly explain the training data, assuming no noise in the labels.",
+  "level": "basic"
+},
+{
+  "id": 9,
+  "question": "What does it mean for a hypothesis class to 'shatter' a set of points in the context of learning theory?",
+  "options": [
+    "The hypothesis class can classify the points with zero error",
+    "The hypothesis class can represent every possible labeling of the points",
+    "The hypothesis class overfits the points",
+    "The hypothesis class fails to generalize to new data"
+  ],
+  "correct": [1],
+  "explanation": "A hypothesis class 'shatters' a set of points if it can represent every possible labeling (classification) of those points. This is a key concept in defining the VC dimension.",
+  "level": "basic"
+},
+{
+  "id": 10,
+  "question": "Why can the ability of a hypothesis class to shatter many points be problematic?",
+  "options": [
+    "It indicates that the model is likely to overfit the training data",
+    "It reduces the VC dimension of the hypothesis class",
+    "It guarantees poor performance on unseen data",
+    "It implies the model is too simple to generalize"
+  ],
+  "correct": [0],
+  "explanation": "The ability to shatter many points often indicates high model complexity, which can lead to overfitting. While the model fits the training data perfectly, it may fail to generalize to unseen data.",
+  "level": "advanced"
+},
+  {
+    "id": 11,
+    "question": "What is the definition of the VC dimension of a model class?",
+    "options": [
+      "The number of parameters in the model",
+      "The maximum size of a dataset it can shatter",
+      "The total number of possible functions it can represent",
+      "The smallest training error achievable"
+    ],
+    "correct": [1],
+    "explanation": "The VC dimension measures the largest set of points that can be classified in all possible ways by the model class.",
+    "level": "basic"
+  },
+  {
+    "id": 12,
+    "question": "What is the significance of the Bayes-optimal model in statistical learning?",
+    "options": [
+      "It minimizes the empirical risk",
+      "It achieves the lowest possible expected risk",
+      "It is always realizable in practice",
+      "It requires no prior knowledge of the data distribution"
+    ],
+    "correct": [1],
+    "explanation": "The Bayes-optimal model minimizes the expected risk, making it the theoretical best solution under statistical learning theory.",
+    "level": "advanced"
+  },
+  {
+  "id": 13,
+  "question": "What makes the Bayes optimal classifier challenging to implement in practice? (Multiple answers may apply)",
+  "options": [
+    "It requires knowledge of the true data distribution",
+    "It is computationally expensive to train",
+    "It depends on having infinite sample data",
+    "It may not generalize well to unseen data"
+  ],
+  "correct": [0, 2],
+  "explanation": "The Bayes optimal classifier is theoretical because it requires knowledge of the true data distribution, which is usually unknown, and assumes infinite sample data to estimate probabilities perfectly. In practice, these assumptions are rarely met.",
+  "level": "advanced"
+},
+{
+  "id": 14,
+  "question": "Which scenarios make a model class PAC-unlearnable? (Multiple answers may apply)",
+  "options": [
+    "Infinite model complexity",
+    "Infinite VC dimension",
+    "Non-realizable data",
+    "Insufficient training samples"
+  ],
+  "correct": [0, 1],
+  "explanation": "PAC learning becomes impossible with infinite model complexity or infinite VC dimension, as these lead to unbounded hypothesis spaces. However, non-realizable data is accommodated in agnostic PAC learning, and insufficient training samples can impact generalization but do not make the problem inherently unlearnable.",
+  "level": "advanced"
+},
+  {
+    "id": 15,
+    "question": "What role does the realizability assumption play in PAC learning?",
+    "options": [
+      "It ensures the data is perfectly labeled",
+      "It guarantees a function in the hypothesis class fits the data",
+      "It assumes noise-free data",
+      "It assumes the model class is infinite"
+    ],
+    "correct": [1],
+    "explanation": "Realizability assumes that there exists a function in the hypothesis class that can perfectly explain the data.",
+    "level": "basic"
+  },
+  {
+    "id": 16,
+    "question": "Which of the following best describes agnostic PAC learning?",
+    "options": [
+      "It applies only to realizable data distributions",
+      "It allows for noisy or unrealizable data",
+      "It is limited to finite hypothesis classes",
+      "It cannot be used for regression tasks"
+    ],
+    "correct": [1],
+    "explanation": "Agnostic PAC learning extends the PAC framework to handle noisy or unrealizable data distributions.",
+    "level": "basic"
+  },
+  {
+    "id": 17,
+    "question": "Why is the VC dimension considered a critical metric in learning theory?",
+    "options": [
+      "It directly correlates with computational complexity",
+      "It determines the number of training samples required for generalization",
+      "It measures the maximum accuracy achievable by a model",
+      "It guarantees convergence to the true model"
+    ],
+    "correct": [1],
+    "explanation": "The VC dimension provides an upper bound on the sample complexity needed for a model class to generalize.",
+    "level": "advanced"
+  },
+  {
+    "id": 18,
+    "question": "What is the primary challenge of the Bayes-optimal model in practical scenarios?",
+    "options": [
+      "High computational cost of training",
+      "Inaccessibility of the true data distribution",
+      "Inability to handle noisy data",
+      "Dependence on linear separability of features"
+    ],
+    "correct": [1],
+    "explanation": "The Bayes-optimal model is theoretical because it requires full knowledge of the true data distribution, which is often unavailable.",
+    "level": "advanced"
+  }
+]

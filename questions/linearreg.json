@@ -1,0 +1,366 @@
+[
+{
+    "id": 1,
+    "question": "What is the primary objective of Linear Regression?",
+    "options": [
+        "To linearly classify data into predefined categories",
+        "To model a relationship between variables with a linear equation",
+        "To reduce the linear dimensionality of the dataset",
+        "To group similar data points into linear clusters"
+    ],
+    "correct": [1],
+    "explanation": "Linear Regression models the relationship between dependent and independent variables using a linear equation.",
+    "level": "basic"
+},
+  {
+    "id": 2,
+    "question": "If x is data features and y is a label, Which of the following represents the equation of a simple Linear Regression model?",
+    "options": [
+      "y = m log(x)",
+      "y = wx + b",
+      "y = wx^2 + b",
+      "y = ax + by + c"
+    ],
+    "correct": [1],
+    "explanation": "The equation of a simple Linear Regression model is y = wx + b, where w is the weight and b is the bias.",
+    "level": "basic"
+  },
+  {
+    "id": 3,
+    "question": "What is the loss function commonly used in Linear Regression?",
+    "options": [
+      "Mean Squared Error (MSE)",
+      "Log Loss",
+      "Hinge Loss",
+      "Cross-Entropy Loss"
+    ],
+    "correct": [0],
+    "explanation": "Mean Squared Error (MSE) is the most commonly used loss function in Linear Regression.",
+    "level": "basic"
+  },
+  {
+    "id": 4,
+    "question": "Which of the following assumptions are made in Linear Regression? (Multiple answers are allowed)",
+    "options": [
+      "Linear relationship between features and target",
+      "Homoscedasticity (constant variance of errors)",
+      "Multicollinearity among features",
+      "Normal distribution of residuals"
+    ],
+    "correct": [0, 1, 3],
+    "explanation": "Linear Regression assumes a linear relationship, homoscedasticity, and normal distribution of residuals.",
+    "level": "basic"
+  },
+{
+  "id": 5,
+  "question": "How are the parameters of a Linear Regression model typically estimated? (Multiple answers are allowed)",
+  "options": [
+    "Sampling and estimating",
+    "Solving the normal equations",
+    "Gradient Descent",
+    "Thoughts and prayers"
+  ],
+  "correct": [1, 2],
+  "explanation": "Linear Regression parameters are typically estimated using the normal equations (a closed-form solution for Ordinary Least Squares) or iterative methods like Gradient Descent, particularly for large datasets where solving the normal equations is computationally expensive.",
+  "level": "basic"
+},
+  {
+    "id": 6,
+    "question": "What does the R-squared value represent in Linear Regression?",
+    "options": [
+      "The proportion of variance explained by the model",
+      "The root of the Mean Squared Error",
+      "The likelihood of the model being correct",
+      "The strength of the relationship between features"
+    ],
+    "correct": [0],
+    "explanation": "R-squared measures the proportion of variance in the dependent variable that is explained by the model.",
+    "level": "basic"
+  },
+  {
+    "id": 7,
+    "question": "Which of the following regularization techniques are sometimes used in Linear Regression? (Multiple answers are allowed)",
+    "options": [
+      "Lasso (L1 regularization)",
+      "Ridge (L2 regularization)",
+      "Elastic Net",
+      "Dropout"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "Lasso, Ridge, and Elastic Net are regularization techniques used in Linear Regression to prevent overfitting.",
+    "level": "basic"
+  },
+  {
+    "id": 8,
+    "question": "What is multicollinearity in the context of Linear Regression?",
+    "options": [
+      "When the dependent variable is categorical",
+      "When residuals have constant variance",
+      "When independent variables are highly correlated",
+      "When the model overfits the training data"
+    ],
+    "correct": [2],
+    "explanation": "Multicollinearity occurs when independent variables are highly correlated, affecting the model's interpretability.",
+    "level": "basic"
+  },
+  {
+    "id": 9,
+    "question": "What does heteroscedasticity indicate in Linear Regression?",
+    "options": [
+      "Non-linear relationship between features and target",
+      "Unequal variance of residuals across the range of predictors",
+      "Multicollinearity among features",
+      "Normal distribution of residuals"
+    ],
+    "correct": [1],
+    "explanation": "Heteroscedasticity indicates that the variance of residuals is not constant across the range of predictors.",
+    "level": "basic"
+  },
+{
+  "id": 10,
+  "question": "What is a limitation of standard Linear Regression when applied to complex datasets?",
+  "options": [
+    "It cannot model non-linear relationships directly without using specialized bases functions.",
+    "It requires a large number of features to perform well on most datasets",
+    "It is computationally expensive for even moderately-sized datasets due to matrix operations (SGD doesn't work.)",
+    "It assumes that target variables must be categorical, limiting its use for numeric prediction"
+  ],
+  "correct": [0],
+  "explanation": "Standard Linear Regression is inherently limited to modeling linear relationships. To handle non-linear relationships, specialized basis functions (e.g., polynomial or exponential transformations) are often applied to the features, allowing the linear model to approximate non-linear patterns.",
+  "level": "basic"
+},
+{
+  "id": 11,
+  "question": "How can Linear Regression be adapted to handle non-linear relationships?",
+  "options": [
+    "By introducing non-linear basis functions and modeling their linear combination",
+    "By increasing the number of training samples to cover all possible input variations",
+    "By converting it into a probabilistic framework such as Bayesian Regression",
+    "By using normalization techniques to ensure all feature distributions are identical"
+  ],
+  "correct": [0],
+  "explanation": "Linear Regression can model non-linear relationships by applying non-linear transformations (e.g., polynomial, exponential) to the features and modeling their linear combinations.",
+  "level": "basic"
+},
+  {
+    "id": 12,
+    "question": "Which of the following are methods to detect multicollinearity? (Multiple answers are allowed)",
+    "options": [
+      "Variance Inflation Factor (VIF)",
+      "Condition Number",
+      "Log-Loss Analysis",
+      "PCA for feature reduction"
+    ],
+    "correct": [0, 1],
+    "explanation": "Variance Inflation Factor (VIF) and Condition Number are common methods to detect multicollinearity.",
+    "level": "advanced"
+  },
+  {
+    "id": 13,
+    "question": "Which of the following are advantages of Linear Regression? (Multiple answers are allowed)",
+    "options": [
+      "Easy to interpret",
+      "Handles non-linear relationships effectively",
+      "Computationally efficient",
+      "Requires no feature scaling"
+    ],
+    "correct": [0, 2],
+    "explanation": "Linear Regression is easy to interpret and computationally efficient but does not handle non-linear relationships.",
+    "level": "basic"
+  },
+  {
+    "id": 14,
+    "question": "How does Ridge Regression differ from Ordinary Linear Regression?",
+    "options": [
+      "Ridge Regression adds a penalty on the magnitude of coefficients",
+      "Ridge Regression does not assume a linear relationship",
+      "Ridge Regression minimizes the Mean Absolute Error",
+      "Ridge Regression can handle multicollinearity"
+    ],
+    "correct": [0, 3],
+    "explanation": "Ridge Regression adds an L2 penalty on coefficients and handles multicollinearity effectively.",
+    "level": "advanced"
+  },
+  {
+    "id": 15,
+    "question": "What is the role of feature scaling in Linear Regression?",
+    "options": [
+      "It improves interpretability",
+      "It ensures features contribute equally to the prediction",
+      "It reduces computational cost",
+      "It makes the model more complex"
+    ],
+    "correct": [1],
+    "explanation": "Feature scaling ensures that all features contribute equally to the prediction in models with regularization.",
+    "level": "basic"
+  },
+  {
+    "id": 16,
+    "question": "What does the intercept term represent in a Linear Regression model?",
+    "options": [
+      "The slope of the regression line",
+      "The value of the dependent variable when all independent variables are zero",
+      "The error term in the model",
+      "The variance of the residuals"
+    ],
+    "correct": [1],
+    "explanation": "The intercept represents the value of the dependent variable when all independent variables are zero.",
+    "level": "basic"
+  },
+  {
+  "id": 17,
+  "question": "Can Linear Regression overfit, and if so, why?",
+  "options": [
+    "Yes, it can overfit in high-dimensional data where the number of features is close to or exceeds the number of samples.",
+    "Yes, it can overfit to nonlinear noise.",
+    "No, it cannot overfit because it assumes a strictly linear relationship between features and targets.",
+    "No, overfitting is only a concern for non-linear models."
+  ],
+  "correct": [0],
+  "explanation": "Linear Regression can overfit in high-dimensional data because, with many features relative to samples, it has the flexibility to fit random noise in the training data. Proper regularization techniques such as Ridge or Lasso regression can mitigate this issue. However, it does not inherently model non-linear noise, as it assumes a strictly linear relationship between inputs and outputs.",
+  "level": "advanced"
+},
+  {
+    "id": 18,
+    "question": "What is Elastic Net regularization?",
+    "options": [
+      "A combination of L1 and L2 regularization",
+      "An advanced version of Ridge Regression",
+      "A feature selection technique",
+      "A penalty based on Mean Squared Error"
+    ],
+    "correct": [0],
+    "explanation": "Elastic Net combines L1 (Lasso) and L2 (Ridge) regularization techniques.",
+    "level": "advanced"
+  },
+{
+  "id": 19,
+  "question": "How is the Normal Equation used in Linear Regression?",
+  "options": [
+    "To minimize the sum of squared errors by solving a closed-form equation",
+    "To regularize the model coefficients",
+    "To compute the optimal weights through an iterative approach, e.g. SGD",
+    "To handle non-linear relationships in the data"
+  ],
+  "correct": [0],
+  "explanation": "The Normal Equation is a closed-form solution used in Linear Regression to minimize the sum of squared errors.",
+  "level": "advanced"
+},
+  {
+    "id": 20,
+    "question": "What is a common way to handle non-linear relationships in Linear Regression?",
+    "options": [
+      "Applying one-hot encoding",
+      "Using polynomial features",
+      "Reducing dimensions using PCA",
+      "Adding more training data"
+    ],
+    "correct": [1],
+    "explanation": "Polynomial features allow Linear Regression to model non-linear relationships.",
+    "level": "advanced"
+  },
+{
+    "id": 21,
+    "question": "In linear regression, the goal is to minimize which of the following?",
+    "options": [
+      "The sum of absolute differences between predicted and actual values.",
+      "The sum of squared differences between predicted and actual values.",
+      "The product of predicted and actual values.",
+      "The ratio of predicted to actual values."
+    ],
+    "correct": [1],
+    "explanation": "Linear regression minimizes the sum of squared differences between predicted and actual values.",
+    "level": "basic"
+  },
+  {
+    "id": 22,
+    "question": "What is the gradient of the quadratic function (f(theta) = 1/2||X theta - y||_2^2 in terms of X and y?",
+    "options": [
+      "X^TX",
+      "X^Ty",
+      "X^T(X theta - y)",
+      "theta^TX"
+    ],
+    "correct": [2],
+    "explanation": "The gradient of f(theta) is X^T(X theta - y), representing the direction of steepest ascent.",
+    "level": "advanced"
+  },
+  {
+    "id": 23,
+    "question": "What does the condition number of a matrix A = X^TX indicate?",
+    "options": [
+      "The size of the dataset.",
+      "The stability and sensitivity of the linear system to numerical errors.",
+      "The number of features in the dataset.",
+      "The inverse of the feature matrix."
+    ],
+    "correct": [1],
+    "explanation": "The condition number indicates the stability and sensitivity of a linear system to numerical errors.",
+    "level": "advanced"
+  },
+  {
+    "id": 24,
+    "question": "What methods can be used to train a linear regression model? Circle all that apply.",
+    "options": [
+      "Gradient descent",
+      "Solving a system of linear equations",
+      "Draw a line between the data",
+      "Draw a curve through the points"
+    ],
+    "correct": [0, 1],
+    "explanation": "Linear regression can be trained using gradient descent or by solving a system of linear equations derived from the normal equations.",
+    "level": "basic"
+  },
+   {
+    "id": 25,
+    "question": "In a linear regression model, the model weights are optimal if which condition is true? (Circle all that apply.)",
+    "options": [
+      "The cost function reaches its maximum value.",
+      "The cost function reaches its minimum value.",
+      "The gradient is zero for all weights.",
+      "The model is underfitting the data."
+    ],
+    "correct": [1, 2],
+    "explanation": "Optimal weights in linear regression occur when the cost function reaches its minimum value, and the gradient of the cost function is zero.",
+    "level": "advanced"
+  },
+  {
+    "id": 26,
+    "question": "What does the term 'Generalized Linear Regression' imply?",
+    "options": [
+      "The model is linear in terms of coefficients, even if the functions of the predictors are nonlinear.",
+      "The model includes non-linear transformations of predictors, such as polynomials, enabling modeling of non-linear relationships using linear techniques.",
+      "The regression model allows for categorical as well as continuous outputs using transformations like link functions.",
+      "The method extends traditional linear regression to include error distributions other than normal."
+    ],
+    "correct": [0, 1],
+    "explanation": "Generalized linear regression models remain linear in their coefficients but may use non-linear transformations of predictors to model complex relationships.",
+    "level": "advanced"
+  },
+  {
+    "id": 27,
+    "question": "What problem does adding a regularization term in ridge regression primarily solve?",
+    "options": [
+      "Overfitting due to the model being too simple",
+      "Underfitting due to the model being too complex",
+      "Overfitting due to excessive model complexity",
+      "Bias in the estimation of regression coefficients due to outliers"
+    ],
+    "correct": [2],
+    "explanation": "Ridge regression adds a regularization term to penalize large coefficients, reducing overfitting caused by excessive model complexity.",
+    "level": "basic"
+  }, 
+  {
+    "id": 28,
+    "question": "In a regression model, applying l_2 -norm regularization (also known as Ridge regularization) has several benefits. Which of the following statements describe potential benefits of l_2-norm regularization? (Circle all that apply.)",
+    "options": [
+      "It improves the condition number of the problem, making it more numerically stable.",
+      "It helps reduce overfitting by penalizing large parameter values.",
+      "It makes the problem strongly convex, ensuring a unique global minimum.",
+      "It makes the problem smoother by reducing sharp changes in the solution."
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "Ridge regularization improves numerical stability by improving the condition number, penalizes large coefficients to reduce overfitting, and ensures a unique global minimum in convex problems.",
+    "level": "advanced"
+  }
+  ]

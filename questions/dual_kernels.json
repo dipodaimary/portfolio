@@ -1,0 +1,235 @@
+[
+  {
+    "id": 1,
+    "question": "What is the primary advantage of solving the dual problem in SVMs compared to the primal problem?",
+    "options": [
+      "The dual problem is always convex",
+      "The dual problem directly incorporates kernel functions",
+      "The constraints of the dual problem are easier to project onto than those of the primal problem",
+      "The dual problem has fewer parameters to optimize"
+    ],
+"correct": [1, 2],
+  "explanation": "The dual problem allows direct incorporation of kernel functions, enabling efficient handling of non-linear feature transformations. Additionally, the constraints of the dual problem are box  constrants, and are easier to project onto than those of the primal problem.",
+     "level": "advanced"
+  },
+  {
+    "id": 2,
+    "question": "In the dual formulation of SVM, what does the solution for the primal variable theta depend on?",
+    "options": [
+      "The regularization parameter",
+      "The support vectors and their dual coefficients",
+      "The kernel matrix only",
+      "The slack variables"
+    ],
+    "correct": [1],
+    "explanation": "The primal variable theta is recovered using the support vectors and their dual coefficients, as theta = sum_i u_i y_i x_i.",
+    "level": "advanced"
+  },
+  {
+    "id": 3,
+    "question": "What is the main role of the Lagrange multipliers in the optimization of the dual formulation of SVM?",
+    "options": [
+      "They ensure the constraints in the primal problem are satisfied through penalization",
+      "They ensure each point is always classified correctly",
+      "They directly compute the kernel matrix",
+      "They ensure the problem is convex"
+    ],
+    "correct": [0],
+    "explanation": "The Lagrange multipliers help transform primal constraints into penalties, making it easier to solve the primal problem.",
+    "level": "advanced"
+  },
+  {
+    "id": 4,
+    "question": "What is the main role of the Lagrange multipliers in the dual formulation of SVM final classifier? (Multiple answers may apply)",
+    "options": [
+      "They identify the support vectors",
+      "They identify if slack values have been activated",
+      "They identify the nonlinear points",
+      "They measure the contribution of each training point to the decision boundary"
+    ],
+    "correct": [0,1,3],
+  "explanation": "The Lagrange multipliers are non-zero only for support vectors, highlighting their role in defining the decision boundary. For points with slack, the multipliers indicate activation of slack variables, allowing for margin violations. Additionally, they measure the contribution of each training point to the classifier's decision boundary, providing insights into its influence on the model.",
+    "level": "advanced"
+  },
+  {
+    "id": 5,
+    "question": "What is the kernel trick in SVMs?",
+    "options": [
+      "A method to reduce the number of support vectors",
+      "A technique to compute inner products in high-dimensional feature spaces without explicitly mapping data",
+      "A way to improve the sparsity of the solution",
+      "A mechanism for selecting hyperparameters efficiently"
+    ],
+    "correct": [1],
+    "explanation": "The kernel trick computes inner products in high-dimensional spaces using kernel functions without explicitly performing the transformation.",
+    "level": "basic"
+  },
+  {
+    "id": 6,
+    "question": "Which of the following are valid kernel functions which are positive semi-definite? (Multiple answers are allowed)",
+    "options": [
+    "Linear kernel: K(x, y) = x^T y",
+    "Polynomial kernel: K(x, y) = (x^T y + 1)^d",
+    "Radial Basis Function (RBF): K(x, y) = exp(-||x - y||^2 / (2 * sigma^2))",
+    "Tanh kernel: K(x, y) = tanh(eta * x^T y + c)"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "Linear, polynomial, and RBF kernels are valid and widely used, while the tanh kernel is not positive semi-definite.",
+    "level": "basic"
+  },
+  {
+    "id": 7,
+    "question": "How is the dual optimization problem for kernel SVM expressed?",
+    "options": [
+  "Minimize ||theta||^2 / 2 + rho sum_i s_i, subject to s_i >= 0",
+  "Maximize sum_i y_i x_i - sum_i  log(1 + exp(-y_i x_i theta))",
+  "Minimize ||u||^2 + lambda sum_(i,j) K(x_i, x_j)",
+  "Maximize sum_i u_i - 1/2 sum_(i,j) u_i u_j y_i y_j K(x_i, x_j), subject to 0 <= u_i <= rho"
+    ],
+    "correct": [3],
+    "explanation": "The dual optimization problem uses the kernel matrix K(x_i, x_j) and constraints on u_i.",
+    "level": "advanced"
+  },
+  {
+    "id": 8,
+  "question": "What conditions must a kernel function satisfy to ensure the dual problem is convex and represents a valid inner product in the feature space?",
+    "options": [
+      "It must be differentiable",
+      "It must be positive semi-definite",
+      "It must be symmetric",
+      "It must have a finite range"
+    ],
+    "correct": [1, 2],
+  "explanation": "For a kernel function to represent a valid inner product in a feature space and ensure the dual problem is convex, it must be both positive semi-definite and symmetric.",
+    "level": "basic"
+  },
+  {
+    "id": 9,
+    "question": "What is the purpose of the radial basis function (RBF) kernel?",
+    "options": [
+      "To measure polynomial similarity",
+      "To measure local similarity based on Euclidean distance",
+      "To enforce sparsity in the solution",
+      "To reduce the feature space dimensionality"
+    ],
+    "correct": [1],
+    "explanation": "The RBF kernel measures similarity based on Euclidean distance, effectively inducing a Euclidean topology in the feature space.",
+    "level": "basic"
+  },
+{
+  "id": 10,
+  "question": "What happens when the hyperparameter sigma in the RBF kernel is too small?",
+  "options": [
+    "The kernel function approximates a Dirac delta function",
+    "The kernel values become almost uniform, reducing the model's ability to differentiate",
+    "The margin becomes smaller",
+    "Overfitting occurs"
+  ],
+  "correct": [0, 3],
+  "explanation": "When sigma is too small, the kernel function behaves like a Dirac delta function, focusing only on very close points. This can lead to overfitting, as the model may become overly sensitive to individual data points and fail to generalize.",
+  "level": "advanced"
+},
+  {
+    "id": 11,
+    "question": "What is the computational complexity of forming a kernel matrix in SVMs? Here, n is the number of features and m the number of datapoints",
+    "options":  [
+      "O(n)",
+      "O(m log n)",
+      "O(m^2)",
+      "O(m^2 n)"
+    ],
+    "correct": [3],
+    "explanation": "Forming a kernel matrix involves computing pairwise similarities between vectors of length n, which has O(m^2 n) complexity.",
+    "level": "basic"
+  },
+  {
+    "id": 12,
+    "question": "What is the Nystrom approximation used for in kernel SVMs?",
+    "options": [
+      "To approximate kernel matrices with lower-rank matrices",
+      "To reduce the number of support vectors",
+      "To improve the sparsity of the kernel function",
+      "To calculate Lagrange multipliers more efficiently"
+    ],
+    "correct": [0],
+    "explanation": "The Nystrom approximation reduces computational complexity by approximating large kernel matrices with low-rank approximations.",
+    "level": "advanced"
+  },
+  {
+    "id": 13,
+    "question": "How does duality theory contribute to solving SVM optimization problems?",
+    "options": [
+      "By reducing the number of variables in the problem",
+      "By allowing the use of kernel functions in the optimization",
+      "By ensuring convexity of the optimization problem",
+      "By producing an equivalent problem which is sometimes easier to solve"
+    ],
+    "correct": [1, 3],
+    "explanation": "Duality theory allows the use of kernels and produces an equivalent problem which is sometimes easier to solve.",
+    "level": "advanced"
+  },
+  {
+    "id": 14,
+    "question": "The Lagrangian function   is used in optimization to:",
+    "options": [
+      "Solve linear equations.",
+      "Transform an unconstrained problem into a constrained one.",
+      "Express a constrained problem as an unconstrained one.",
+      "Minimize the dual problem directly."
+    ],
+    "correct": [2],
+    "explanation": "The Lagrangian function transforms a constrained optimization problem into an unconstrained one by incorporating constraints using Lagrange multipliers.",
+    "level": "advanced"
+  },
+  {
+    "id": 15,
+    "question": "Which of the following statements accurately describe the role and effects of kernels in Support Vector Machines (SVMs)? (Circle all that apply.)",
+    "options": [
+      "Kernels allow SVMs to find non-linear decision boundaries by mapping data to a higher-dimensional space.",
+      "The radial basis function (RBF) kernel always results in a linear decision boundary in the transformed feature space.",
+      "Kernels enable SVMs to find decision boundaries with a margin that depends only on the number of features, not the number of samples.",
+      "Kernels allow SVMs to represent similarities between data points without explicitly computing the coordinates in the transformed space."
+    ],
+    "correct": [0, 3],
+    "explanation": "Kernels in SVMs map data to a higher-dimensional space to allow non-linear decision boundaries and represent similarities using kernel functions without explicit computation in the transformed space.",
+    "level": "advanced"
+  },
+  {
+    "id": 16,
+    "question": "How does kernelization help SVMs?",
+    "options": [
+      "By reducing the number of support vectors",
+      "By increasing the margin width",
+      "By improving computational efficiency in large datasets",
+      "By allowing the separation of data which may not be linearly separable"
+    ],
+    "correct": [3],
+    "explanation": "Kernelization allows SVMs to map data to a higher-dimensional space, making non-linear problems linearly separable.",
+    "level": "basic"
+  },
+  {
+    "id": 17,
+    "question": "What does the kernel matrix K  represent in the context of SVMs?",
+    "options": [
+      "A matrix containing the distances between all pairs of training samples.",
+      "A matrix containing the similarity values between all pairs of training samples using a kernel function.",
+      "A matrix used to store the primal variables of the SVM.",
+      "A matrix that is always diagonal."
+    ],
+    "correct": [1],
+    "explanation": "The kernel matrix  K  in SVMs contains similarity values computed using the kernel function for all pairs of training samples.",
+    "level": "advanced"
+  },
+  {
+    "id": 18,
+    "question": "Why are kernels used in SVMs to create nonlinear decision boundaries?",
+    "options": [
+      "Kernels automatically optimize the objective function.",
+      "Kernels reduce the dimensionality of the data.",
+      "Kernels map data into a higher-dimensional space where a linear separator may exist.",
+      "Kernels eliminate the need for support vectors."
+    ],
+    "correct": [2],
+    "explanation": "Kernels enable SVMs to handle non-linear problems by mapping the input data to a higher-dimensional space where a linear decision boundary can be found.",
+    "level": "advanced"
+  }]

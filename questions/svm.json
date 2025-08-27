@@ -1,0 +1,171 @@
+[
+  {
+    "id": 1,
+    "question": "What does the minimum margin represent in a Support Vector Machine (SVM)?",
+    "options": [
+      "The distance between data points and the hyperplane",
+      "The width of the separation between the nearest points of different classes and the hyperplane",
+      "The number of support vectors used",
+      "The degree of the polynomial kernel"
+    ],
+    "correct": [1],
+    "explanation": "The minimum margin in SVM is the width of the separation between the closest points (support vectors) of different classes and the hyperplane.",
+    "level": "basic"
+  },
+  {
+    "id": 2,
+    "question": "What is the objective of a hard-margin SVM?",
+    "options": [
+      "To maximize the margin while perfectly separating the data",
+      "To minimize hinge loss on training data",
+      "To allow some misclassifications for better generalization",
+      "To use kernel functions for nonlinear decision boundaries"
+    ],
+    "correct": [0],
+    "explanation": "Hard-margin SVM aims to maximize the margin while perfectly separating the data without any misclassification.",
+    "level": "basic"
+  },
+  {
+    "id": 3,
+    "question": "What is the role of slack variables in a soft-margin SVM?",
+    "options": [
+      "To increase the margin width",
+      "To introduce a penalty for misclassified points",
+      "To allow for kernelization of the decision boundary",
+      "To reduce computational complexity"
+    ],
+    "correct": [1],
+    "explanation": "Slack variables in soft-margin SVMs introduce a penalty for misclassified points to handle non-separable datasets.",
+    "level": "basic"
+  },
+  {
+    "id": 4,
+    "question": "What is the hinge loss function used for in SVM?",
+    "options": [
+      "To minimize the training error",
+      "To calculate the Euclidean distance between data points",
+      "To penalize data points that are misclassified or within the margin",
+      "To optimize the regularization parameter"
+    ],
+    "correct": [2],
+    "explanation": "Hinge loss penalizes data points that are misclassified or lie within the margin, ensuring better generalization.",
+    "level": "basic"
+  },
+  {
+    "id": 5,
+    "question": "Which of the following is the optimization problem for a hard-margin SVM? (Multiple answers may apply.)",
+    "options": [
+  "Minimize 1/2 ||theta||^2 subject to y_i (x_i^T theta) >= 1 for all i",
+  "Minimize ||y - X theta||^2 subject to ||theta|| < lambda",
+  "Maximize ||theta||^2 subject to y_i (x_i^T theta) < 1 for all i",
+  "Minimize sum_i hinge_loss(y_i x_i^T theta) + lambda ||theta||"
+    ],
+    "correct": [0,3],
+    "explanation": "The optimization problem for a hard-margin SVM minimizes the norm of θ while ensuring all points are correctly classified.",
+    "level": "advanced"
+  },
+  {
+    "id": 6,
+    "question": "What is the role of the penalty weight in soft-margin SVM?",
+    "options": [
+      "It controls the tradeoff between margin width and misclassification",
+      "It determines the degree of the polynomial kernel",
+      "It regulates the dimensionality of the feature space",
+      "It specifies the type of kernel to be used"
+    ],
+    "correct": [0],
+    "explanation": "The penalty weight controls the tradeoff between maximizing the margin and minimizing the misclassification error.",
+    "level": "basic"
+  },
+  {
+    "id": 7,
+    "question": "What is the prediction rule in an SVM model?",
+    "options": [
+  "y_pred = sign(x^T theta)",
+  "y_pred = theta^T x + b",
+  "y_pred = argmax(x^T theta)",
+  "yy_pred = ||x^T theta||^2"
+    ],
+    "correct": [0],
+    "explanation": "The prediction rule in SVM is y_pred = sign(x^T theta), where theta is the optimal hyperplane.",
+    "level": "basic"
+  },
+  {
+    "id": 8,
+    "question": "What does the support vector refer to in SVMs?",
+    "options": [
+      "All correctly classified data points",
+      "All misclassified data points",
+      "Data points that lie closest to the hyperplane",
+      "The kernel function used in optimization"
+    ],
+    "correct": [2],
+    "explanation": "Support vectors are the data points closest to the hyperplane, determining the margin.",
+    "level": "basic"
+  },
+  {
+    "id": 9,
+    "question": "Which of the following are limitations of SVMs? (Multiple answers are allowed)",
+    "options": [
+      "High computational cost for large datasets",
+      "Difficulty in handling noisy data",
+      "Only works on regression problems",
+      "Sensitivity to the choice of hyperparameters"
+    ],
+    "correct": [0, 1, 3],
+    "explanation": "SVMs face challenges like computational cost for large datasets, noisy data, and hyperparameter sensitivity.",
+    "level": "advanced"
+  },
+  {
+    "id": 10,
+    "question": "In the context of Support Vector Machines (SVM), what is the margin distance?",
+    "options": [
+      "The angle between the decision boundary and the data points.",
+      "The perpendicular distance from a data point to the decision boundary.",
+      "The number of misclassified points.",
+      "The total sum of the weights assigned to each feature."
+    ],
+    "correct": [1],
+    "explanation": "The margin distance in SVM is the perpendicular distance from a data point to the decision boundary.",
+    "level": "advanced"
+  },
+  {
+    "id": 11,
+    "question": "In SVM, if the classification margin  (y_i x_i^T theta) / ||theta||_2 is negative for a given training sample, what does this indicate?",
+    "options": [
+      "The point is correctly classified and far from the margin.",
+      "The point is correctly classified but close to the margin.",
+      "The point is misclassified.",
+      "The point is irrelevant to the classification boundary."
+    ],
+    "correct": [2],
+    "explanation": "A negative classification margin indicates that the sample is misclassified because it lies on the wrong side of the decision boundary.",
+    "level": "advanced"
+  },
+  {
+    "id": 12,
+    "question": "What happens if the data is not separable in a hard margin SVM?",
+    "options": [
+      "The minimum margin will be positive.",
+      "The minimum margin will be zero.",
+      "The minimum margin will be negative, making the constraint infeasible.",
+      "The model automatically switches to logistic regression."
+    ],
+    "correct": [2],
+    "explanation": "In a hard margin SVM, non-separable data leads to a negative margin, making the constraints infeasible.",
+    "level": "advanced"
+  },
+  {
+    "id": 13,
+    "question": "In the context of SVMs, what is a 'soft margin'?",
+    "options": [
+      "A boundary that strictly classifies all training samples correctly.",
+      "A margin that allows for some misclassifications to achieve better generalization.",
+      "A type of kernel that softens the decision surface.",
+      "The minimum distance between any data point and the decision boundary."
+    ],
+    "correct": [1],
+    "explanation": "A soft margin allows for some misclassified points to balance between achieving good classification and better generalization.",
+    "level": "intermediate"
+  }
+  ]

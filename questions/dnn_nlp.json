@@ -1,0 +1,158 @@
+[
+  {
+    "id": 1,
+    "question": "What was the primary purpose of the Word2Vec model introduced in 2013?",
+    "options": [
+      "To classify text",
+      "To generate word embeddings",
+      "To improve image segmentation",
+      "To model sequences in time series data"
+    ],
+    "correct": [1],
+    "explanation": "Word2Vec was designed to generate word embeddings that capture semantic meaning.",
+    "level": "basic"
+  },
+  {
+    "id": 2,
+    "question": "Which deep learning architecture introduced in 2017 replaced RNNs for NLP tasks, primarily leveraging the attention mechanism?",
+    "options": [
+      "Transformers",
+      "LSTMs",
+      "GRUs",
+      "Convolutional Neural Networks"
+    ],
+    "correct": [0],
+    "explanation": "Transformers replaced RNNs for NLP tasks by using self-attention mechanisms.",
+    "level": "basic"
+  },
+  {
+    "id": 3,
+    "question": "What is the key advantage of the self-attention mechanism in transformers?",
+    "options": [
+      "Ability to model long-range dependencies",
+      "Parallelizable computations",
+      "Improved interpretability",
+      "Faster convergence"
+    ],
+    "correct": [0, 1],
+    "explanation": "Self-attention enables parallel computations and effectively models long-range dependencies in sequences.",
+    "level": "advanced"
+  },
+  {
+    "id": 4,
+    "question": "Which dataset is commonly used to benchmark question-answering models?",
+    "options": [
+      "COCO",
+      "SQuAD",
+      "ImageNet",
+      "CIFAR-10"
+    ],
+    "correct": [1],
+    "explanation": "The SQuAD dataset is a standard benchmark for question-answering models.",
+    "level": "basic"
+  },
+  {
+    "id": 5,
+    "question": "What was the key contribution of BERT in 2018?",
+    "options": [
+      "Use of convolutional layers for NLP tasks",
+      "Bidirectional context representation",
+      "Improved training on small datasets",
+      "Reinforcement learning for text generation"
+    ],
+    "correct": [2],
+    "explanation": "BERT introduced bidirectional context representation, significantly improving NLP tasks.",
+    "level": "basic"
+  },
+{
+  "id": 6,
+  "question": "What was the primary role of Hidden Markov Models (HMMs) in early speech recognition systems?",
+  "options": [
+    "Learning deep representations of phonemes",
+    "Modeling the sequential nature of speech signals",
+    "Replacing acoustic features with end-to-end learning",
+    "Directly translating audio into text using neural networks"
+  ],
+  "correct": [1],
+  "explanation": "Hidden Markov Models (HMMs) were foundational in early speech recognition systems, modeling the sequential and probabilistic nature of speech signals. They were paired with Gaussian Mixture Models (GMMs) for acoustic modeling before neural networks became dominant.",
+  "level": "advanced"
+},
+{
+  "id": 7,
+  "question": "Why were Bidirectional LSTMs a significant breakthrough in speech recognition?",
+  "options": [
+    "They replaced convolutional networks entirely in speech tasks",
+    "They eliminated the need for feature engineering in speech recognition",
+    "They can process sequential data in both forward and backward directions, improving context understanding",
+    "They allowed for real-time speech recognition without pre-processing"
+  ],
+  "correct": [2],
+  "explanation": "Bidirectional LSTMs revolutionized speech recognition by processing data in both forward and backward directions, capturing long-term dependencies and improving contextual understanding. This made them particularly effective for tasks involving sequential data like speech.",
+  "level": "advanced"
+},
+{
+  "id": 8,
+  "question": "How do phonemes contribute to speech recognition models?",
+  "options": [
+    "Phonemes serve as the basic units of sound, enabling models to map audio to linguistic representations",
+    "Phonemes are used to train end-to-end models directly on text data",
+    "Phonemes replace attention mechanisms in speech recognition systems",
+    "Phonemes are only relevant in unsupervised learning approaches"
+  ],
+  "correct": [0],
+  "explanation": "Phonemes, the smallest units of sound in a language, play a crucial role in speech recognition. Early models often used phonemes to map acoustic signals to linguistic representations, which were then decoded into words.",
+  "level": "basic"
+},
+{
+  "id": 9,
+  "question": "Why are convolutional neural networks (CNNs) sometimes used in speech processing?",
+  "options": [
+    "To model long-term dependencies in sequential data",
+    "To replace phoneme-based systems in end-to-end learning",
+    "To extract local features from spectrogram representations of audio",
+    "To eliminate noise from raw audio signals directly"
+  ],
+  "correct": [2],
+  "explanation": "CNNs are used in speech processing to extract local features from spectrograms, which are visual representations of audio. This helps models capture temporal and frequency patterns effectively.",
+  "level": "basic"
+},
+{
+  "id": 10,
+  "question": "How do Transformer-based models like Wav2Vec 2.0 advance speech recognition?",
+  "options": [
+    "By learning context-aware representations directly from raw audio",
+    "By improving the efficiency of HMM-GMM frameworks",
+    "By introducing phoneme-level labels as input",
+    "By reducing the need for spectrogram preprocessing"
+  ],
+  "correct": [0],
+  "explanation": "Wav2Vec 2.0 leverages Transformer-based architectures to learn context-aware representations directly from raw audio, reducing the reliance on traditional feature extraction like spectrograms and improving end-to-end speech recognition.",
+  "level": "advanced"
+},
+{
+  "id": 11,
+  "question": "What is the main challenge of using end-to-end deep learning for speech recognition?",
+  "options": [
+    "The inability to model phonemes effectively",
+    "The need for large amounts of labeled data",
+    "The dependence on HMMs for accurate results",
+    "The requirement for manual feature engineering"
+  ],
+  "correct": [1],
+  "explanation": "End-to-end deep learning for speech recognition requires large amounts of labeled data to train effectively, which can be challenging to collect for underrepresented languages and domains.",
+  "level": "basic"
+},
+{
+  "id": 12,
+  "question": "What breakthrough allowed recurrent neural networks (RNNs) to overcome vanishing gradient issues in speech recognition?",
+  "options": [
+    "The introduction of Long Short-Term Memory (LSTM) cells",
+    "The use of Hidden Markov Models (HMMs)",
+    "The development of spectrogram preprocessing",
+    "The application of dropout for regularization"
+  ],
+  "correct": [0],
+  "explanation": "The introduction of Long Short-Term Memory (LSTM) cells allowed RNNs to overcome vanishing gradient issues, enabling them to capture long-term dependencies in sequential data like speech.",
+  "level": "advanced"
+}
+]

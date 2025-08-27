@@ -1,0 +1,392 @@
+[
+  {
+    "id": 1,
+    "question": "What type of problem is Logistic Regression typically used for?",
+    "options": [
+      "Regression problems",
+      "Classification problems",
+      "Clustering problems",
+      "Dimensionality reduction"
+    ],
+    "correct": [1],
+    "explanation": "Logistic Regression is primarily used for classification problems.",
+    "level": "basic"
+  },
+  {
+    "id": 2,
+    "question": "Which of the following is the activation function used in Logistic Regression?",
+    "options": [
+      "ReLU",
+      "Sigmoid",
+      "Softmax",
+      "Tanh"
+    ],
+    "correct": [1],
+    "explanation": "Logistic Regression uses the sigmoid activation function to map values to probabilities.",
+    "level": "basic"
+  },
+  {
+    "id": 3,
+    "question": "What does the sigmoid function output in Logistic Regression?",
+    "options": [
+      "Raw values of the input features",
+      "Probabilities between 0 and 1",
+      "Class labels",
+      "Negative values only"
+    ],
+    "correct": [1],
+    "explanation": "The sigmoid function outputs probabilities between 0 and 1.",
+    "level": "basic"
+  },
+  {
+    "id": 4,
+    "question": "What is the primary optimization algorithm used in Logistic Regression?",
+    "options": [
+      "Gradient Descent",
+      "Matrix inversion",
+      "Regularization",
+      "Thinking really hard"
+    ],
+    "correct": [0],
+    "explanation": "Gradient Descent is the primary optimization algorithm used in Logistic Regression.",
+    "level": "basic"
+  },
+  {
+    "id": 5,
+    "question": "Which of the following are common evaluation metrics for Logistic Regression? (Multiple answers are allowed)",
+    "options": [
+      "Accuracy",
+      "Precision",
+      "Recall",
+      "Mean Squared Error"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "Accuracy, precision, and recall are commonly used to evaluate Logistic Regression models.",
+    "level": "basic"
+  },
+  {
+    "id": 6,
+    "question": "What is the loss function used in Logistic Regression?",
+    "options": [
+      "Mean Squared Error",
+      "Log Loss (Cross-Entropy Loss)",
+      "Hinge Loss",
+      "Mean Absolute Error"
+    ],
+    "correct": [1],
+    "explanation": "Logistic Regression uses Log Loss, also known as Cross-Entropy Loss, as its loss function.",
+    "level": "basic"
+  },
+  {
+    "id": 7,
+    "question": "What is the relationship modeled by Logistic Regression?",
+    "options": [
+      "Linear relationship between input features and output labels",
+      "Linear relationship between input features and log-odds of the output",
+      "Non-linear relationship between input features and probabilities",
+      "Exponential relationship between input features and output labels"
+    ],
+    "correct": [1],
+    "explanation": "Logistic Regression models a linear relationship between input features and the log-odds of the output.",
+    "level": "basic"
+  },
+  {
+    "id": 8,
+    "question": "What does the decision boundary of Logistic Regression represent?",
+    "options": [
+      "The region where probabilities are exactly 0.5",
+      "The region where the model predicts maximum accuracy",
+      "The line separating the two classes in feature space",
+      "The mean value of all features"
+    ],
+    "correct": [0, 2],
+    "explanation": "The decision boundary represents where probabilities are exactly 0.5 and separates the two classes.",
+    "level": "basic"
+  },
+  {
+    "id": 9,
+    "question": "How can Logistic Regression handle multi-class classification problems?",
+    "options": [
+      "Using one-vs-all (OvA)",
+      "Using one-vs-one (OvO)",
+      "Using Softmax function",
+      "Using Support Vector Machines"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "Logistic Regression handles multi-class problems using one-vs-all or Softmax Regression. Though less common, it can also use one-vs-one.",
+    "level": "advanced"
+  },
+  {
+    "id": 10,
+    "question": "What is the role of the bias term in Logistic Regression?",
+    "options": [
+      "To adjust the decision boundary so that it need not be horizontal or vertical",
+      "To adjust the decision boundary so that it can be nonlinear",
+      "To adjust the decision boundary so that it need not pass through the origin", 
+      "To penalize overfitting"
+    ],
+    "correct": [2],
+  "explanation": "The bias term in Logistic Regression allows the decision boundary to shift so that it does not need to pass through the origin, providing flexibility in positioning the boundary for better fit to the data. It does not affect the linearity of the decision boundary or penalize overfitting.",
+  "level": "advanced"
+  },
+  {
+    "id": 11,
+    "question": "Which of the following methods can be used to optimize Logistic Regression models? (Multiple answers are allowed)",
+    "options": [
+      "Stochastic Gradient Descent (SGD)",
+      "Batch Gradient Descent",
+      "Newton's Method",
+      "Expectation maximization"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "SGD, Batch Gradient Descent, and Newton's Method are optimization methods for Logistic Regression.",
+    "level": "advanced"
+  },
+  {
+    "id": 12,
+    "question": "What is the significance of the log-odds in Logistic Regression?",
+    "options": [
+      "It represents the exponential of the output",
+      "It minimizes the Log Loss function",
+      "It maps probabilities to a linear scale",
+      "It computes class probabilities"
+    ],
+    "correct": [2],
+    "explanation": "Log-odds maps probabilities to a linear scale, making them easier to model linearly.",
+    "level": "advanced"
+  },
+  {
+    "id": 13,
+    "question": "How does regularization affect Logistic Regression?",
+    "options": [
+      "It increases the likelihood of correct predictions",
+      "It reduces overfitting by penalizing large coefficients",
+      "It improves training speed",
+      "It increases the flexibility of the model"
+    ],
+    "correct": [1],
+    "explanation": "Regularization reduces overfitting by penalizing large coefficients in Logistic Regression.",
+    "level": "advanced"
+  },
+  {
+    "id": 14,
+    "question": "What is the effect of an extremely high learning rate in Logistic Regression?",
+    "options": [
+      "Faster convergence",
+      "Divergence of the optimization algorithm",
+      "Better accuracy",
+      "More stable training"
+    ],
+    "correct": [1],
+    "explanation": "An extremely high learning rate can cause the optimization algorithm to diverge.",
+    "level": "advanced"
+  },
+  {
+    "id": 15,
+    "question": "Which scenarios are ideal for using Logistic Regression? (Multiple answers are allowed)",
+    "options": [
+      "When the dataset is linearly separable",
+      "When interpretability is important",
+      "For datasets with a large number of categorical features",
+      "For high-dimensional non-linear data"
+    ],
+    "correct": [0, 1],
+    "explanation": "Logistic Regression is ideal for linearly separable data and when interpretability is important.",
+    "level": "basic"
+  },
+  {
+    "id": 16,
+    "question": "What is the key difference between Logistic Regression and Linear Regression? (Multiple answers may apply.)",
+    "options": [
+      "Logistic Regression predicts probabilities, Linear Regression predicts continuous values",
+      "Logistic Regression uses the sigmoid function, Linear Regression uses no activation function",
+      "Logistic Regression is for classification, Linear Regression is for regression",
+      "Logistic Regression cannot handle multi-class problems"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "Logistic Regression predicts probabilities using the sigmoid function and is used for classification, unlike Linear Regression.",
+    "level": "basic"
+  },
+{
+    "id": 17,
+    "question": "What methods can be used to train a logistic regression model? (Circle all that apply.)",
+    "options": [
+      "Solving a system of linear equations",
+      "Draw a line between the data",
+      "Draw a curve through the points",
+      "Gradient descent"
+    ],
+    "correct": [3],
+    "explanation": "Logistic regression is typically trained using gradient descent to optimize the likelihood function.",
+    "level": "basic"
+  },
+  {
+    "id": 18,
+    "question": "In logistic regression, what does minimizing the cost function achieve?",
+    "options": [
+      "It maximizes the likelihood that the Gaussian model fits the data.",
+      "It maximizes the likelihood that the logistic model fits the data.",
+      "It increases the distance between the points and the discriminator.",
+      "It minimizes the distance between the points and the best-fit curve."
+    ],
+    "correct": [1,2],
+  "explanation": "Minimizing the cost function in logistic regression maximizes the likelihood that the logistic model fits the observed data, ensuring that the predicted probabilities align with the actual labels. Additionally, it increases the separation between classes, effectively optimizing the placement of the decision boundary (the discriminator) in feature space. The other options are incorrect because logistic regression is not based on Gaussian models or explicitly minimizing distances to a best-fit curve.",
+    "level": "advanced"
+  },
+  {
+    "id": 19,
+    "question": "We say a logistic regression model is sufficiently trained if (Multiple answers may apply.)",
+    "options": [
+      "The sum of squared errors is minimized.",
+      "The misclassification rate over the data is no longer increasing.",
+      "The misclassification rate over the data is no longer decreasing.",
+      "The gradient values are sufficiently small."
+    ],
+    "correct": [2, 3],
+    "explanation": "A logistic regression model is sufficiently trained when the misclassification rate stabilizes, and the gradient values are small.",
+    "level": "advanced"
+  },
+    {
+    "id": 20,
+    "question": "In logistic regression, what does the coefficient (weight) indicate about a feature?",
+    "options": [
+      "It shows the feature's variance.",
+      "It indicates the importance and direction of the relationship between the feature and the outcome.",
+      "It represents the covariance with other features.",
+      "It is irrelevant to the prediction."
+    ],
+    "correct": [1],
+    "explanation": "In logistic regression, the coefficient indicates the strength and direction of the relationship between a feature and the predicted outcome.",
+    "level": "basic"
+  },
+ {
+    "id": 21,
+    "question": "What is the primary goal of logistic regression?",
+    "options": [
+      "Classify data into binary categories.",
+      "Predict continuous values.",
+      "Maximize the maximum margin between classes.",
+      "Minimize the error in linear regression."
+    ],
+    "correct": [0],
+    "explanation": "Logistic regression is designed to classify data into binary categories by modeling the probability of one class using a logistic function.",
+    "level": "basic"
+  },
+  {
+    "id": 22,
+    "question": "Why is logistic regression considered a maximum margin classifier?",
+    "options": [
+      "It directly maximizes the margin between classes.",
+      "It minimizes the hinge loss.",
+      "It penalizes small margins through its loss function.",
+      "It uses a quadratic loss function."
+    ],
+    "correct": [2],
+    "explanation": "Logistic regression indirectly encourages larger margins by penalizing small margins in its loss function.",
+    "level": "advanced"
+  },
+  {
+    "id": 23,
+    "question": "Which of the following best describes the output of the sigmoid function?",
+    "options": [
+      "A probability value between 0 and 1.",
+      "A continuous value ranging from -1 to 1.",
+      "A discrete binary output.",
+      "A linear combination of input features."
+    ],
+    "correct": [0],
+    "explanation": "The sigmoid function maps input values to a range between 0 and 1, making it suitable for probability estimation.",
+    "level": "basic"
+  },
+  {
+    "id": 24,
+    "question": "In the context of logistic regression, what does the term 'maximum likelihood estimation' (MLE) mean?",
+    "options": [
+      "Finding the parameter values that minimize the classification error.",
+      "Estimating the probability distribution of the features.",
+      "Estimating the parameters that maximize the likelihood of observing the given data.",
+      "Calculating the probability of the most likely outcome."
+    ],
+    "correct": [2],
+    "explanation": "Maximum likelihood estimation finds the parameters that maximize the probability of observing the given data.",
+    "level": "advanced"
+  },
+  {
+    "id": 25,
+    "question": "Which of the following statements is true about the decision boundary in logistic regression? (Circle all that are true.)",
+    "options": [
+      "It is always non-linear.",
+      "It is a hyperplane that separates the classes.",
+      "It is defined by the maximum likelihood estimate.",
+      "It is invariant to scaling of individual input features."
+    ],
+    "correct": [1, 2],
+    "explanation": "The decision boundary in logistic regression is a hyperplane defined by the maximum likelihood estimate.",
+    "level": "advanced"
+  },
+  {
+    "id": 26,
+    "question": "What is the purpose of adding a bias term in logistic regression?",
+    "options": [
+      "To improve the model's ability to generalize to new data.",
+      "To reduce overfitting by increasing bias.",
+      "To regularize the model.",
+      "To allow for models that can fit data that does not pass through the origin."
+    ],
+    "correct": [3],
+    "explanation": "The bias term allows the model to fit data that does not pass through the origin, improving its flexibility.",
+    "level": "basic"
+  },
+  {
+    "id": 27,
+    "question": "What is the flaw in the logistic regression loss function when data is perfectly separable?",
+    "options": [
+      "It always leads to overfitting.",
+      "It allows |theta|_2 to go to infinity without improving the classifier.",
+      "It does not guarantee a solution.",
+      "It does not account for the distance between classes."
+    ],
+    "correct": [1],
+    "explanation": "When data is perfectly separable, the logistic regression loss function allows |theta|_2  to grow indefinitely, as the loss function does not penalize the increase in parameter magnitude.",
+    "level": "advanced"
+  },
+  {
+    "id": 28,
+    "question": "In a multiclass logistic regression model, which of the following expressions are modeled by the parameters of the model? (Circle all that are true.)",
+    "options": [
+      "log ( p_k / p_j) = theta_k^T x - theta_j^T x ",
+      "log ( p_k / (1 - p_k) ) = theta_k^T x ",
+      "p_k / p_j = exp(theta_k^T x - theta_j^T x) ",
+      "p_k = exp(theta_k^T x) / sum_{j=1}^K exp(theta_j^T x) "
+    ],
+    "correct": [0, 2, 3],
+    "explanation": "Multiclass logistic regression models probabilities using expressions such as the softmax function and pairwise log odds ratios. The modeled parameters enable computation of probabilities and comparisons between classes.",
+    "level": "advanced"
+  },
+  {
+    "id": 29,
+    "question": "In the derivation of multiclass logistic regression, how is the probability P(Y=k) expressed?",
+    "options": [
+      "P(Y=k) = log(theta_k^TX)",
+      "P(Y=k) = exp(theta_k^TX) / sum_{j=1}^K exp(theta_j^TX)",
+      "P(Y=k) = 1 / K",
+      "P(Y=k) =  theta_k^TX / sum_{j=1}^K theta_j^TX"
+    ],
+    "correct": [1],
+    "explanation": "In multiclass logistic regression, the probability P(Y=k) is computed using the softmax function, which normalizes exponential logits.",
+    "level": "advanced"
+  },
+  {
+    "id": 30,
+    "question": "What is the role of the softmax function in multiclass logistic regression?",
+    "options": [
+      "It calculates the maximum value among the logits.",
+      "It ensures that all weights are positive.",
+      "It converts logits into probabilities that sum to 1.",
+      "It minimizes the mean squared error directly."
+    ],
+    "correct": [2],
+    "explanation": "The softmax function converts logits into normalized probabilities, ensuring they sum to 1, making them interpretable as probabilities.",
+    "level": "basic"
+  }
+  ]

@@ -1,0 +1,332 @@
+[
+  {
+    "id": 1,
+    "question": "What does SGD stand for in optimization?",
+    "options": [
+      "Sequential Gradient Descent",
+      "Stochastic Gradient Descent",
+      "Structured Gradient Descent",
+      "Simultaneous Gradient Descent"
+    ],
+    "correct": [1],
+    "explanation": "SGD stands for Stochastic Gradient Descent, which updates weights using random samples from the dataset.",
+    "level": "basic"
+  },
+  {
+    "id": 2,
+    "question": "Which of the following are benefits of using a larger mini-batch in SGD? (Multiple answers are allowed)",
+    "options": [
+    "Reduced variance in gradient estimation",
+    "Faster convergence in early stages of training",
+    "Better utilization of parallel computing resources",
+    "Improved generalization due to noisier updates"
+    ],
+  "correct": [0, 1, 2],
+  "explanation": "Using a larger mini-batch in SGD reduces the variance of gradient estimates, leading to more stable updates. It also allows for faster convergence in the early stages of training, as the updates are more consistent. Additionally, larger mini-batches make better use of parallel computing resources like GPUs. However, larger mini-batches tend to reduce noise in updates, which can sometimes negatively impact generalization.",
+    "level": "basic"
+  },
+{
+  "id": 3,
+  "question": "What is the main difference between SGD and Batch Gradient Descent? (Multiple answers may apply)",
+  "options": [
+    "SGD updates weights using a single data point or a mini-batch, whereas Batch Gradient Descent uses the entire dataset for updates",
+    "Batch Gradient Descent updates weights after every data point, whereas SGD updates weights after each mini-batch or data point",
+    "SGD introduces stochasticity in updates, whereas Batch Gradient Descent computes exact gradients using the entire dataset",
+    "Batch Gradient Descent is deterministic in nature, whereas SGD is inherently stochastic"
+  ],
+  "correct": [0, 2, 3],
+  "explanation": "SGD updates weights using a single data point or a mini-batch, whereas Batch Gradient Descent uses the entire dataset. This introduces stochasticity in SGD, whereas Batch Gradient Descent computes exact gradients and is deterministic.",
+  "level": "basic"
+},
+  {
+    "id": 4,
+    "question": "Which of the following learning rate schedules can improve convergence in SGD? (Multiple answers are allowed)",
+    "options": [
+      "Constant learning rate",
+      "Exponential decay",
+      "Step decay",
+      "Adaptive learning rates (e.g., Adam)"
+    ],
+    "correct": [1, 2, 3],
+    "explanation": "Exponential decay, step decay, and adaptive learning rates are common techniques for improving SGD convergence.",
+    "level": "basic"
+  },
+  {
+    "id": 5,
+    "question": "What does it mean for a function to be convex?",
+    "options": [
+      "The function has a unique global minimum",
+      "The function is differentiable",
+      "The function satisfies the inequality  f(lambda x + (1-lambda)y) <= lambda f(x) + (1-lambda)f(y) ",
+      "The gradient of the function is zero everywhere"
+    ],
+    "correct": [2],
+    "explanation": "A convex function satisfies the convex inequality. However, it does not have to have a unique global minimum; it can have multiple (but they will form a convex set).",
+    "level": "basic"
+  },
+  {
+    "id": 6,
+    "question": "Which of the following methods are step size or direction modifications used to accelerate convergence in convex optimization? (Multiple answers are allowed)",
+    "options": [
+      "Momentum",
+      "Nesterov Acceleration",
+      "Newton's Method",
+      "Mini-batching"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "Momentum, Nesterov Acceleration, and Newton's Method are commonly used for accelerating convergence in convex optimization.",
+    "level": "advanced"
+  },
+  {
+  "id": 7,
+  "question": "What is an epoch in machine learning?",
+  "options": [
+    "One forward pass through the entire dataset",
+    "One backward pass through the entire dataset",
+    "One complete cycle of forward and backward passes through the entire dataset",
+    "A single iteration of updating the model parameters using one mini-batch"
+  ],
+  "correct": [2],
+  "explanation": "An epoch refers to one complete cycle of forward and backward passes through the entire dataset during training.",
+  "level": "basic"
+},
+{
+  "id": 8,
+  "question": "What is typically used to measure the complexity of a machine learning algorithm?",
+  "options": [
+    "Number of epochs to convergence",
+    "Number of iterations to convergence",
+    "Number of gradient calls to convergence",
+    "Runtime to convergence"
+  ],
+  "correct": [0, 1, 2, 3],
+  "explanation": "Any of these measures can indicate the complexity of a specific algorithm.",
+  "level": "basic"
+},
+  {
+    "id": 9,
+    "question": "What is the typical convergence rate of vanilla SGD for convex problems? (t is the number of iterations)",
+    "options": [
+      "O(1/t)",
+      "O(1/t^2)",
+      "O(log(t))",
+      "O(1)"
+    ],
+    "correct": [0],
+    "explanation": "For convex problems, vanilla SGD typically converges at a rate of  O(1/t), where  t  is the number of iterations.",
+    "level": "advanced"
+  },
+  {
+    "id": 10,
+    "question": "What does it mean for a function to be smooth in optimization?",
+    "options": [
+      "The function is convex",
+      "The gradient of the function is Lipschitz continuous",
+      "The function has no local minima",
+      "The function is  differentiable everywhere"
+    ],
+    "correct": [1],
+    "explanation": "A smooth function has a Lipschitz continuous gradient, which bounds the change in gradient values.",
+    "level": "basic"
+  },
+  {
+    "id": 11,
+    "question": "What is the role of momentum in SGD?",
+    "options": [
+      "Increases stability in gradient direction",
+      "Speeds up convergence on convex functions",
+      "Avoids local minima in non-convex problems",
+      "Improves interpretability of the model"
+    ],
+    "correct": [1],
+    "explanation": "Momentum  can speed up convergence in ill-conditioned problems.",
+    "level": "basic"
+  },
+  {
+    "id": 12,
+    "question": "Which of the following optimization algorithms uses adaptive learning rates? (Multiple answers are allowed)",
+    "options": [
+      "Adam",
+      "RMSprop",
+      "AdaGrad",
+      "Batch Gradient Descent"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "Adam, RMSprop, and AdaGrad are optimization algorithms that adapt learning rates based on gradients.",
+    "level": "basic"
+  },
+  {
+    "id": 13,
+    "question": "What is the purpose of regularization in optimization problems?",
+    "options": [
+      "To prevent overfitting",
+      "To improve conditioning",
+      "To reduce the learning rate dynamically",
+      "To add noise to gradients"
+    ],
+    "correct": [0, 1],
+    "explanation": "Regularization can improve problem conditioning and can help prevent overfitting by penalizing large weights.",
+    "level": "basic"
+  },
+  {
+    "id": 14,
+    "question": "What does the term 'variance reduction' refer to in the context of SGD?",
+    "options": [
+      "Reducing the variance of the dataset",
+      "Reducing stochasticity in gradient estimates",
+      "Decreasing the model's complexity",
+      "Reducing oscillations in loss function values"
+    ],
+    "correct": [1],
+    "explanation": "Variance reduction techniques aim to reduce stochasticity in gradient estimates, improving convergence.",
+    "level": "advanced"
+  },
+  {
+    "id": 15,
+    "question": "What is the convergence rate of Nesterov Accelerated Gradient (NAG) for convex problems?",
+    "options": [
+      "O(1/t)",
+      "O(1/t^2)",
+      "O(log(t))",
+      "O(1)"
+    ],
+    "correct": [1],
+    "explanation": "Nesterov Accelerated Gradient achieves a convergence rate of O(1/t^2) for convex problems.",
+    "level": "advanced"
+  },
+{
+  "id": 16,
+  "question": "Why is Nesterov Accelerated Gradient (NAG) considered an optimal method for convex problems?",
+  "options": [
+    "Because no other method can possibly perform better than NAG in practice.",
+    "Because no method, using only first-order information, can possibly converge faster than O(1/t^2) on any problem, which is also the convergence rate of NAG.",
+    "Because there exists a convex, L-smooth function in which it is proven that no method, using only first-order information, can converge faster than O(1/t^2), which is also the convergence rate of NAG.",
+    "Because NAG is secretly a second-order method, disguised as a first-order method."
+  ],
+  "correct": [2],
+  "explanation": "Nesterov Accelerated Gradient (NAG) is considered optimal for convex problems because it achieves the theoretical lower bound for convergence rates (O(1/t^2)) among first-order optimization methods. It is also proven that, over a specific problem,  using only first-order information, can converge faster on certain convex, L-smooth functions, solidifying NAG's optimality. However, it is not clear whether over a more restricted subset of problems, there may exist a method that can do better than NAG.",
+  "level": "advanced"
+},
+  {
+    "id": 17,
+    "question": "What is the role of Lipschitz smoothness in convergence analysis?",
+    "options": [
+      "Ensures the function is convex",
+      "Bounds the gradient's change with respect to the inputs",
+      "Guarantees a unique global minimum",
+      "Allows faster learning rate schedules"
+    ],
+    "correct": [1],
+    "explanation": "Lipschitz smoothness bounds the gradient's change, which is crucial for analyzing convergence rates.",
+    "level": "advanced"
+  },
+  {
+    "id": 18,
+    "question": "What does the learning rate control in optimization algorithms?",
+    "options": [
+      "The direction of the gradient update",
+      "The magnitude of the gradient step",
+      "The number of iterations to converge",
+      "The batch size used in updates"
+    ],
+    "correct": [1],
+    "explanation": "The learning rate controls the magnitude of the gradient step in optimization algorithms.",
+    "level": "basic"
+  },
+  {
+    "id": 19,
+    "question": "Which conditions are necessary for strong convexity? (Multiple answers are allowed)",
+    "options": [
+      "The function is differentiable",
+      "The Hessian matrix is positive definite",
+      "The gradient norm is always decreasing",
+      "The function has a unique global minima"
+    ],
+    "correct": [1, 3],
+    "explanation": "Strong convexity requires a positive definite Hessian and has a unique global minima.",
+    "level": "advanced"
+  },
+  {
+    "id": 20,
+    "question": "What is a typical effect of using a small batch size in SGD?",
+    "options": [
+      "Faster convergence",
+      "Higher variance in gradient updates",
+      "Increased computational cost",
+      "More stable updates"
+    ],
+    "correct": [1],
+    "explanation": "A small batch size increases the variance of gradient updates, potentially leading to slower convergence.",
+    "level": "basic"
+  },
+{
+  "id": 21,
+  "question": "Why do we use gradient clipping? (Multiple answers are allowed)",
+  "options": [
+    "To prevent exploding gradients during training of deep neural networks",
+    "To ensure the gradients remain within a specified range, improving stability",
+    "To increase the learning rate without causing instability",
+    "To avoid vanishing gradients in deep networks"
+  ],
+  "correct": [0, 1, 2],
+  "explanation": "Gradient clipping is used to prevent exploding gradients, which can destabilize training, especially in deep networks or recurrent neural networks. By keeping gradients within a specified range, it ensures stability in updates and allows for larger learning rates without causing instability. However, gradient clipping does not directly address the issue of vanishing gradients, which is a separate problem.",
+  "level": "basic"
+}, 
+
+  {
+    "id": 22,
+    "question": "What is the role of smoothness in optimization? Circle all that apply.",
+    "options": [
+      "It controls the existence of gradients at different parameter points.",
+      "It controls how fast the method can converge by placing an upper limit on the step size to avoid divergence.",
+      "It improves generalization error; the less smooth the function, the better it generalizes.",
+      "It provides acceleration by interacting better with momentum."
+    ],
+    "correct": [0, 1, 3],
+    "explanation": "Smoothness ensures gradient existence, controls convergence rates, and interacts well with momentum for acceleration.",
+    "level": "advanced"
+  },
+  {
+    "id": 23,
+    "question": "Which of the following is true for a convex function f? (Circle all that are true.)",
+    "options": [
+      "f(alpha x + (1 - alpha) y) >= alpha f(x) + (1 - alpha) f(y) for all 0 <= alpha <= 1.",
+      "The Hessian of f is always negative definite.",
+      "The line connecting any two points on the graph of f lies above the graph.",
+      "f(alpha x + (1 - alpha) y) <= alpha f(x) + (1 - alpha) f(y) for all 0 <= alpha <= 1."
+    ],
+    "correct": [2, 3],
+    "explanation": "For convex functions, the line connecting two points lies above the graph of the function, and the inequality f(alpha x + (1 - alpha) y) <= alpha f(x) + (1 - alpha) f(y) holds.",
+    "level": "advanced"
+  },
+   
+  
+  {
+    "id": 24,
+    "question": "Which of the following statements is true about convex optimization in the context of machine learning? (Multiple answers may apply.)",
+    "options": [
+      "Convex optimization guarantees that any stationary point is a global minimum.",
+      "A nonconvex problem is different from a convex problem, in that more than one global minimum may occur.",
+      "Usually, a neural network trained on fewer data is convex, and one trained on more data is nonconvex.",
+      "If a problem is nonconvex, then the gradient usually does not exist."
+    ],
+    "correct": [0],
+    "explanation": "In convex optimization, any stationary point is guaranteed to be a global minimum, making it easier to solve.",
+    "level": "advanced"
+  },
+  
+  
+  {
+    "id": 25,
+    "question": "Which of the following statements about gradient descent is true, when it is desired to reach an exact global optimum?",
+    "options": [
+      "The step size of gradient descent is upper bounded by its strong convexity.",
+      "The step size of gradient descent is upper bounded by its smoothness.",
+      "Gradient descent only guarantees convergence to a global minimum in convex functions.",
+      "Gradient descent always converges to the global minimum in non-convex optimization problems."
+    ],
+    "correct": [1],
+    "explanation": "The step size in gradient descent is upper bounded by the smoothness of the objective function. ",
+    "level": "advanced"
+  }
+] 

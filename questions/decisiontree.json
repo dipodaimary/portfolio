@@ -1,0 +1,224 @@
+[
+{
+    "id": 1,
+    "question": "What is the primary action performed at a node in a decision tree?",
+    "options": [
+        "Calculating probabilities",
+        "Dividing the dataset into smaller subsets",
+        "Clustering data points",
+        "Visualizing data distributions"
+    ],
+    "correct": 1,
+    "explanation": "At each node, a decision tree divides the dataset into smaller subsets based on decision rules."
+},
+  {
+    "id": 2,
+    "question": "Which of the following metrics are used for splitting in decision trees? (Multiple answers are allowed)",
+    "options": [
+      "Gini Index",
+      "Entropy",
+      "Mean Absolute Error",
+      "Information Gain"
+    ],
+    "correct": [0, 1, 3],
+    "explanation": "Gini Index, Entropy, and Information Gain are commonly used splitting criteria in decision trees."
+  },
+  {
+    "id": 3,
+    "question": "What is the role of leaf nodes in a decision tree?",
+    "options": [
+      "To represent final decisions or outcomes",
+      "To split the data further",
+      "To calculate errors",
+      "To store intermediate predictions"
+    ],
+    "correct": 0,
+    "explanation": "Leaf nodes represent the final decisions or predictions made by the tree."
+  },
+  {
+    "id": 4,
+    "question": "Which algorithm is commonly used to construct decision trees?",
+    "options": [
+      "CART",
+      "Gradient Descent",
+      "Linear Regression",
+      "Backpropagation"
+    ],
+    "correct": 0,
+    "explanation": "CART (Classification and Regression Trees) is a widely used algorithm for constructing decision trees."
+  },
+  {
+    "id": 5,
+    "question": "Which of the following can lead to overfitting in a decision tree? (Multiple answers are allowed)",
+    "options": [
+      "Allowing unlimited tree depth",
+      "Not pruning the tree",
+      "Using a small dataset",
+      "Choosing a small maximum depth"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "Unlimited tree depth, lack of pruning, and small datasets can make a decision tree overfit the training data."
+  },
+  {
+    "id": 6,
+    "question": "How can overfitting in a decision tree be mitigated? (Multiple answers are allowed)",
+    "options": [
+      "Increasing tree depth",
+      "Pruning the tree",
+      "Using cross-validation",
+      "Reducing the size of the dataset"
+    ],
+    "correct": [1, 2],
+    "explanation": "Pruning the tree and using cross-validation are effective ways to reduce overfitting in decision trees."
+  }, 
+{
+  "id": 8,
+  "question": "Which of the following are advantages of decision trees? (Multiple answers are allowed)",
+  "options": [
+    "Easy to interpret and visualize",
+    "Robust to noisy data",
+    "Handles both classification and regression tasks",
+    "Handles features on different scales without requiring normalization"
+  ],
+  "correct": [0, 2, 3],
+  "explanation": "Decision trees are easy to interpret and visualize, can handle both classification and regression tasks, and work effectively with features of different scales without requiring normalization.",
+  "level": "basic"
+},
+  {
+    "id": 9,
+    "question": "What is the difference between classification and regression trees?",
+    "options": [
+      "Classification trees predict continuous values, regression trees predict classes",
+      "Classification trees predict classes, regression trees predict continuous values",
+      "There is no difference",
+      "Both predict probabilities"
+    ],
+    "correct": 1,
+    "explanation": "Classification trees predict classes, while regression trees predict continuous values."
+  },
+  {
+    "id": 10,
+    "question": "What is the primary disadvantage of decision trees?",
+    "options": [
+      "They are computationally expensive to train",
+      "They are prone to overfitting",
+      "They cannot handle large datasets",
+      "They are difficult to interpret"
+    ],
+    "correct": 1,
+    "explanation": "Decision trees are prone to overfitting, especially when they are very deep."
+  },
+  {
+    "id": 11,
+    "question": "Which of the following methods can improve decision tree performance? (Multiple answers are allowed)",
+    "options": [
+      "Bagging",
+      "Random Forests",
+      "Boosting",
+      "Gradient Descent"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "Bagging, Random Forests, and Boosting are ensemble methods that improve decision tree performance."
+  },
+  {
+    "id": 12,
+    "question": "What is a potential stopping criterion to pre-emptively prevent further splitting of a decision tree?",
+    "options": [
+      "No more splits can improve accuracy",
+      "All features have been used",
+      "The maximum depth is reached",
+      "The number of samples in a node falls below a threshold"
+    ],
+    "correct": 3,
+    "explanation": "A common stopping criterion is when the number of samples in a node falls below a specified threshold."
+  },
+{
+  "id": 13,
+  "question": "What is a potential issue with using too many features in a decision tree?",
+  "options": [
+    "It increases interpretability",
+    "It decreases the risk of overfitting",
+    "It can lead to unnecessary splits",
+    "It can make the tree shallow"
+  ],
+  "correct": [2],
+  "explanation": "Using too many features can lead to unnecessary splits because the tree may create overly specific decision rules to account for minor variations in the data. This can increase the model's complexity, reduce its ability to generalize to unseen data, and result in overfitting. Simplifying the feature set or using techniques like feature selection can help mitigate this issue."
+},
+  {
+    "id": 14,
+    "question": "What is the role of pruning in decision trees? (Multiple answers are allowed)",
+    "options": [
+      "To reduce overfitting",
+      "To increase the tree's depth",
+      "To make the tree more complex",
+      "To remove decision rules with low importance"
+    ],
+    "correct": [0, 3],
+    "explanation": "Pruning reduces overfitting by removing decision rules or branches with low importance."
+  },
+  {
+    "id": 15,
+    "question": "Which ensemble methods are built on decision trees? (Multiple answers are allowed)",
+    "options": [
+      "Random Forest",
+      "AdaBoost",
+      "Gradient Boosting",
+      "Support Vector Machines"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "Random Forest, AdaBoost, and Gradient Boosting are ensemble methods that use decision trees as base models."
+  },
+{
+    "id": 16,
+    "question": "Which criterion is commonly used to decide where to split a node in a decision tree?",
+    "options": [
+      "The number of leaves",
+      "The height of the tree",
+      "The feature with the smallest value",
+      "The feature that provides the highest information gain"
+    ],
+    "correct": [3],
+    "explanation": "In decision trees, the feature that provides the highest information gain is chosen for splitting, as it helps reduce uncertainty the most.",
+    "level": "basic"
+  },
+  {
+    "id": 17,
+    "question": "What is the role of entropy in decision trees?",
+    "options": [
+      "It quantifies the uncertainty or impurity in a set of labels.",
+      "It measures the likelihood of overfitting.",
+      "It determines the optimal number of splits.",
+      "It helps in pruning the decision tree."
+    ],
+    "correct": [0],
+    "explanation": "Entropy measures the impurity or uncertainty of labels at a node and is used to determine splits.",
+    "level": "basic"
+  },
+{
+    "id": 18,
+    "question": "How does increasing the depth of a decision tree typically affect its performance on the training data?",
+    "options": [
+      "It decreases the model’s accuracy.",
+      "It reduces overfitting.",
+      "It increases the model’s accuracy but may lead to overfitting.",
+      "It has no effect on the model’s performance."
+    ],
+    "correct": [2],
+    "explanation": "Increasing the depth of a decision tree can improve training accuracy but risks overfitting the training data.",
+    "level": "basic"
+  },
+    {
+    "id": 19,
+    "question": "What is the primary goal of using a decision tree in machine learning?",
+    "options": [
+      "To create a linear model for regression.",
+      "To classify data by making a sequence of decisions based on feature values.",
+      "To reduce the dimensionality of the dataset.",
+      "To cluster data into different groups."
+    ],
+    "correct": [1],
+    "explanation": "Decision trees classify data by recursively splitting the data based on feature values to reach decisions.",
+    "level": "basic"
+  }
+]
+
