@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MCQ Quiz - Fixed</title>
+  <title>MCQ Quiz</title>
   <style>
     :root{ --accent:#2b7cff; --bg:#f6f8fb; --card:#fff; --muted:#666 }
     *{box-sizing:border-box}
     body{font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;background:var(--bg);color:#111}
-    .app{display:grid;grid-template-columns:300px 1fr;min-height:100vh}
+    .app{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
     .sidebar{padding:18px;background:#fff;border-right:1px solid #e6e9ef}
     .logo{font-weight:700;color:var(--accent);margin-bottom:12px}
-    .file-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;max-height:60vh;overflow:auto}
+    .file-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;max-height:70vh;overflow:auto}
     .file-item{padding:10px;border-radius:8px;border:1px solid #eef2f7;cursor:pointer;background:#fff}
     .file-item:hover{box-shadow:0 2px 8px rgba(36,55,98,0.06)}
     .file-item.active{background:linear-gradient(90deg,rgba(43,124,255,0.08),#fff);border-color:var(--accent)}
@@ -31,34 +31,22 @@
     .explanation{margin-top:12px;padding:12px;border-radius:8px;border:1px dashed #e6edf9;background:#fcfeff}
     .correct{background:#dff7dc;border-color:#b7e2b0}
     .wrong{background:#ffe7e6;border-color:#ffbfbd}
-    .hint{font-size:13px;color:var(--muted)}
     .center{display:flex;align-items:center;justify-content:center;height:100%}
     @media(max-width:780px){.app{grid-template-columns:1fr} .sidebar{order:2}}
-    pre.server-snippet{background:#f8f9fc;padding:8px;border-radius:6px;border:1px solid #eef2f7;white-space:pre-wrap;font-size:12px}
-    .small{font-size:13px;color:var(--muted)}
-    .download-btn{display:inline-block;margin-top:8px;padding:6px 10px;border-radius:6px;background:#f3f7ff;color:var(--accent);border:1px solid #dbe9ff;cursor:pointer}
   </style>
 </head>
 <body>
   <div class="app">
     <aside class="sidebar card">
       <div class="logo">MCQ Quiz</div>
-      <div class="small">This app attempts (in order): /questions/list, /questions/index.json, /questions/ directory listing, ?file=..., then embedded fallback.</div>
-      <hr style="margin:8px 0 12px 0;border:none;border-top:1px solid #f0f3f7" />
-      <div style="display:flex;gap:8px;align-items:center;margin-bottom:10px">
-        <button id="downloadIndex" class="ghost">Download index.json</button>
-        <button id="useEmbedded" class="ghost">Use embedded list now</button>
-      </div>
       <ul id="fileList" class="file-list"></ul>
-      <div style="margin-top:12px;font-size:13px;color:var(--muted)">If server cannot be changed, download <code>index.json</code> and upload to <code>questions/</code>.</div>
     </aside>
 
     <main class="main">
       <div id="mainCard" class="card center">
-        <div style="max-width:920px;width:100%">
+        <div style="max-width:900px;width:100%">
           <div id="empty" class="center" style="flex-direction:column;min-height:220px">
-            <div style="font-weight:600;font-size:18px;margin-bottom:8px">Select a question file to start the quiz</div>
-            <div style="color:var(--muted)">Make sure your files are accessible at <code>/questions/*.json</code>.</div>
+            <div style="font-weight:600;font-size:18px;margin-bottom:8px">Select a question file to start</div>
           </div>
 
           <div id="quizArea" style="display:none">
@@ -94,7 +82,7 @@
 
 <script>
 (async function(){
-  // embedded list you gave (fallback)
+  // Embedded fallback list (your provided filenames)
   const EMBEDDED_FILES = [
     "decisiontree.json",
     "embeddings.json",
@@ -116,42 +104,41 @@
     "misc.json"
   ];
 
-  // state & dom
-  const state = { files: [], questions: [], current: 0, revealed: false, filename: '' }
-  const fileListEl = document.getElementById('fileList')
-  const emptyEl = document.getElementById('empty')
-  const quizArea = document.getElementById('quizArea')
-  const fileTitle = document.getElementById('fileTitle')
-  const qProgress = document.getElementById('qProgress')
-  const qTitle = document.getElementById('qTitle')
-  const qText = document.getElementById('qText')
-  const optionsEl = document.getElementById('options')
-  const explainEl = document.getElementById('explain')
-  const prevBtn = document.getElementById('prevBtn')
-  const nextBtn = document.getElementById('nextBtn')
-  const showAnsBtn = document.getElementById('showAnsBtn')
-  const restartBtn = document.getElementById('restartBtn')
-  const downloadIndexBtn = document.getElementById('downloadIndex')
-  const useEmbeddedBtn = document.getElementById('useEmbedded')
+  const state = { files: [], questions: [], current: 0, revealed: false, filename: '' };
+
+  // DOM refs
+  const fileListEl = document.getElementById('fileList');
+  const emptyEl = document.getElementById('empty');
+  const quizArea = document.getElementById('quizArea');
+  const fileTitle = document.getElementById('fileTitle');
+  const qProgress = document.getElementById('qProgress');
+  const qTitle = document.getElementById('qTitle');
+  const qText = document.getElementById('qText');
+  const optionsEl = document.getElementById('options');
+  const explainEl = document.getElementById('explain');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const showAnsBtn = document.getElementById('showAnsBtn');
+  const restartBtn = document.getElementById('restartBtn');
 
   function setLoadingFiles(names){
-    fileListEl.innerHTML = ''
+    fileListEl.innerHTML = '';
     names.forEach(n=>{
-      const li = document.createElement('li')
-      li.className = 'file-item'
-      li.textContent = n
-      li.onclick = ()=> selectFile(n, li)
-      fileListEl.appendChild(li)
-    })
+      const li = document.createElement('li');
+      li.className = 'file-item';
+      li.textContent = n;
+      li.onclick = ()=> selectFile(n, li);
+      fileListEl.appendChild(li);
+    });
   }
 
-  // robust UID for input group names: prefer crypto
+  // robust unique id
   function uniqueId() {
     try {
       if (typeof crypto !== 'undefined' && crypto.getRandomValues) {
         return crypto.getRandomValues(new Uint32Array(1))[0].toString(36);
       }
-    } catch(e) { /* ignore */ }
+    } catch(e) {}
     return Date.now().toString(36) + '_' + Math.floor(Math.random()*1e6).toString(36);
   }
 
@@ -162,9 +149,8 @@
       if(!res.ok) throw new Error(`${url} returned ${res.status}`);
       const ct = (res.headers.get('content-type')||'').toLowerCase();
       if(!ct.includes('application/json') && !ct.includes('text/json')) {
-        // try to parse anyway but inform user
         const body = await res.text();
-        throw new Error(`${url} returned content-type ${ct || 'unknown'}; expected JSON. Response preview: ${body.slice(0,200)}`);
+        throw new Error(`${url} returned content-type ${ct || 'unknown'}. Preview: ${body.slice(0,200)}`);
       }
       const j = await res.json();
       return Array.isArray(j) ? j : null;
@@ -201,80 +187,40 @@
     }
   }
 
-  // init: try several listing mechanisms
+  // init attempts: endpoint -> index.json -> directory HTML -> embedded
   async function initFileList(){
-    // 1) /questions/list
     let files = await fetchJsonArray('/questions/list');
-    if(Array.isArray(files) && files.length){
-      state.files = files; setLoadingFiles(files); return;
-    }
+    if(Array.isArray(files) && files.length){ state.files = files; setLoadingFiles(files); return; }
 
-    // 2) /questions/index.json
     files = await fetchJsonArray('/questions/index.json');
-    if(Array.isArray(files) && files.length){
-      state.files = files; setLoadingFiles(files); return;
-    }
+    if(Array.isArray(files) && files.length){ state.files = files; setLoadingFiles(files); return; }
 
-    // 3) parse directory listing HTML at /questions/
     const parsed = await parseDirectoryListingHTML('/questions/');
-    if(Array.isArray(parsed) && parsed.length){
-      state.files = parsed; setLoadingFiles(parsed); return;
-    }
+    if(Array.isArray(parsed) && parsed.length){ state.files = parsed; setLoadingFiles(parsed); return; }
 
-    // 4) embedded fallback
-    if(Array.isArray(EMBEDDED_FILES) && EMBEDDED_FILES.length){
-      state.files = EMBEDDED_FILES.slice();
-      setLoadingFiles(state.files);
-      const note = document.createElement('li');
-      note.style.opacity = 0.85; note.style.fontSize = '12px'; note.style.marginTop = '8px';
-      note.innerHTML = 'Using embedded file list (client-side fallback). You can download <strong>index.json</strong> to install on the server.';
-      fileListEl.appendChild(note);
-      return;
-    }
-
-    fileListEl.innerHTML = '<li style="opacity:0.7">No programmatic listing available. Enable /questions/list, create /questions/index.json, or open ?file=your_file.json</li>';
+    // fallback to embedded
+    state.files = EMBEDDED_FILES.slice();
+    setLoadingFiles(state.files);
   }
 
-  // download helper
-  function downloadIndexJson(list){
-    const blob = new Blob([JSON.stringify(list, null, 2)], {type: 'application/json'});
-    const a = document.createElement('a');
-    a.href = URL.createObjectURL(blob);
-    a.download = 'index.json';
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-    setTimeout(()=> URL.revokeObjectURL(a.href), 2000);
-  }
-  downloadIndexBtn.addEventListener('click', ()=> downloadIndexJson(state.files.length ? state.files : EMBEDDED_FILES));
-  useEmbeddedBtn.addEventListener('click', ()=> { state.files = EMBEDDED_FILES.slice(); setLoadingFiles(state.files); });
-
-  // select file (improved error messages)
+  // load file and parse JSON; improved error messages
   async function selectFile(filename, liEl){
     Array.from(fileListEl.children).forEach(ch=>ch.classList.remove('active'));
     if(liEl) liEl.classList.add('active');
 
     try{
       const res = await fetch('/questions/'+filename, {cache: 'no-store'});
-      if(!res.ok){
-        throw new Error(`Server responded ${res.status} for /questions/${filename}`);
-      }
-      const ct = (res.headers.get('content-type')||'').toLowerCase();
+      if(!res.ok) throw new Error(`Server responded ${res.status} for /questions/${filename}`);
       const bodyText = await res.text();
-      // Try to parse JSON safely
       let data;
-      try {
-        data = JSON.parse(bodyText);
-      } catch(parseErr) {
-        // helpful error when JSON invalid / server returned HTML or text
-        throw new Error(`Failed to parse JSON for /questions/${filename}. Server returned content-type: ${ct || 'unknown'}. Response preview: ${bodyText.slice(0,400)}`);
+      try { data = JSON.parse(bodyText); }
+      catch(parseErr) {
+        throw new Error(`Failed to parse JSON for /questions/${filename}. Response preview: ${bodyText.slice(0,400)}`);
       }
 
       let questions = Array.isArray(data) ? data : (data.questions || []);
-      if(!questions || questions.length===0){
-        alert('No questions found in '+filename);
-        return;
-      }
+      if(!questions || questions.length===0){ alert('No questions found in '+filename); return; }
+
       state.questions = questions;
       state.current = 0;
       state.revealed = false;
@@ -284,12 +230,10 @@
       quizArea.style.display = 'block';
       renderQuestion();
     }catch(err){
-      // show a helpful modal-like alert with suggestions
-      alert('Error loading file: ' + err.message + '\\nTip: verify the file exists at /questions/' + filename + ' and that it is valid JSON.');
+      alert('Error loading file: ' + err.message + '\nTip: verify the file exists at /questions/' + filename + ' and that it is valid JSON.');
     }
   }
 
-  // render a question (robust UID here)
   function renderQuestion(){
     const q = state.questions[state.current];
     qTitle.textContent = `Q${state.current+1}: ${q.id ? '(id '+q.id+')' : ''}`;
@@ -298,7 +242,6 @@
     const isMultiple = Array.isArray(q.correct);
     optionsEl.innerHTML = '';
 
-    // robust unique name per question using crypto or fallback
     const uid = uniqueId();
     const name = 'opt_' + uid + '_' + state.current;
 
@@ -329,7 +272,6 @@
     showAnsBtn.disabled = false;
   }
 
-  // reveal answer
   function revealAnswer(){
     const q = state.questions[state.current];
     const isMultiple = Array.isArray(q.correct);
@@ -339,17 +281,13 @@
       const idx = Number(label.dataset.idx);
       const input = label.querySelector('input');
       label.classList.remove('correct','wrong');
-      if(correctIdxs.includes(idx)){
-        label.classList.add('correct');
-      } else if(input.checked){
-        label.classList.add('wrong');
-      }
+      if(correctIdxs.includes(idx)) label.classList.add('correct');
+      else if(input.checked) label.classList.add('wrong');
     });
 
     explainEl.style.display = 'block';
     const explanation = q.explanation || 'No explanation provided.';
-    const selected = Array.from(optionsEl.querySelectorAll('input'))
-      .map((inp,i)=> inp.checked ? i : -1).filter(i=>i>=0);
+    const selected = Array.from(optionsEl.querySelectorAll('input')).map((inp,i)=> inp.checked ? i : -1).filter(i=>i>=0);
 
     let status = '';
     if(selected.length===0) status = '<div style="margin-bottom:6px;color:#555">You did not select an answer.</div>';
@@ -367,20 +305,15 @@
     showAnsBtn.disabled = true;
   }
 
-  // nav handlers
   prevBtn.addEventListener('click', ()=>{ if(state.current>0){ state.current--; renderQuestion(); }});
   nextBtn.addEventListener('click', ()=>{ if(state.current < state.questions.length-1){ state.current++; renderQuestion(); }});
   showAnsBtn.addEventListener('click', ()=> revealAnswer());
   restartBtn.addEventListener('click', ()=> { if(state.filename) selectFile(state.filename); });
 
-  // start
   await initFileList();
 
   const params = new URLSearchParams(location.search);
-  if(params.has('file')){
-    const f = params.get('file');
-    setTimeout(()=> selectFile(f), 300);
-  }
+  if(params.has('file')) setTimeout(()=> selectFile(params.get('file')), 300);
 
 })();
 </script>
