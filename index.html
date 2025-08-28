@@ -32,6 +32,21 @@
     .correct{background:#dff7dc;border-color:#b7e2b0}
     .wrong{background:#ffe7e6;border-color:#ffbfbd}
     .center{display:flex;align-items:center;justify-content:center;height:100%}
+    
+    /* Level tag styles */
+    .level-tag {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-left: 10px;
+      text-transform: uppercase;
+    }
+    .level-basic { background-color: #e3f2fd; color: #1976d2; }
+    .level-intermediate { background-color: #fff3e0; color: #f57c00; }
+    .level-advanced { background-color: #ffebee; color: #d32f2f; }
+    
     @media(max-width:780px){.app{grid-template-columns:1fr} .sidebar{order:2}}
   </style>
 </head>
@@ -241,7 +256,15 @@
 
   function renderQuestion(){
     const q = state.questions[state.current];
-    qTitle.textContent = `Q${state.current+1}: ${q.id ? '(id '+q.id+')' : ''}`;
+    const qIdText = q.id ? '(id '+q.id+')' : '';
+    
+    // Create level tag if level exists
+    let levelTag = '';
+    if (q.level) {
+      levelTag = `<span class="level-tag level-${q.level.toLowerCase()}">${q.level}</span>`;
+    }
+    
+    qTitle.innerHTML = `Q${state.current+1}: ${qIdText}${levelTag}`;
     qText.textContent = q.question || 'Question text missing';
 
     const isMultiple = Array.isArray(q.correct);
