@@ -121,6 +121,9 @@
   const showAnsBtn = document.getElementById('showAnsBtn');
   const restartBtn = document.getElementById('restartBtn');
 
+  // Use relative paths for GitHub Pages compatibility
+  const QUESTIONS_PATH = 'questions';
+
   function setLoadingFiles(names){
     fileListEl.innerHTML = '';
     names.forEach(n=>{
@@ -189,13 +192,13 @@
 
   // init attempts: endpoint -> index.json -> directory HTML -> embedded
   async function initFileList(){
-    let files = await fetchJsonArray('/questions/list');
+    let files = await fetchJsonArray(`${QUESTIONS_PATH}/list`);
     if(Array.isArray(files) && files.length){ state.files = files; setLoadingFiles(files); return; }
 
-    files = await fetchJsonArray('/questions/index.json');
+    files = await fetchJsonArray(`${QUESTIONS_PATH}/index.json`);
     if(Array.isArray(files) && files.length){ state.files = files; setLoadingFiles(files); return; }
 
-    const parsed = await parseDirectoryListingHTML('/questions/');
+    const parsed = await parseDirectoryListingHTML(`${QUESTIONS_PATH}/`);
     if(Array.isArray(parsed) && parsed.length){ state.files = parsed; setLoadingFiles(parsed); return; }
 
     // fallback to embedded
@@ -209,13 +212,15 @@
     if(liEl) liEl.classList.add('active');
 
     try{
-      const res = await fetch('/questions/'+filename, {cache: 'no-store'});
-      if(!res.ok) throw new Error(`Server responded ${res.status} for /questions/${filename}`);
+      const url = `${QUESTIONS_PATH}/${filename}`;
+      console.log("Fetching:", url); // Debug log
+      const res = await fetch(url, {cache: 'no-store'});
+      if(!res.ok) throw new Error(`Server responded ${res.status} for ${url}`);
       const bodyText = await res.text();
       let data;
       try { data = JSON.parse(bodyText); }
       catch(parseErr) {
-        throw new Error(`Failed to parse JSON for /questions/${filename}. Response preview: ${bodyText.slice(0,400)}`);
+        throw new Error(`Failed to parse JSON for ${url}. Response preview: ${bodyText.slice(0,400)}`);
       }
 
       let questions = Array.isArray(data) ? data : (data.questions || []);
@@ -230,7 +235,7 @@
       quizArea.style.display = 'block';
       renderQuestion();
     }catch(err){
-      alert('Error loading file: ' + err.message + '\nTip: verify the file exists at /questions/' + filename + ' and that it is valid JSON.');
+      alert('Error loading file: ' + err.message + '\nTip: verify the file exists at ' + QUESTIONS_PATH + '/' + filename + ' and that it is valid JSON.');
     }
   }
 
