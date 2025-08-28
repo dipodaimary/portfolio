@@ -119,6 +119,28 @@
     "misc.json"
   ];
 
+  // Human readable names mapping
+  const FILE_NAME_MAP = {
+    "decisiontree.json": "Decision Tree",
+    "embeddings.json": "Embeddings",
+    "intro_ml.json": "Introduction to ML",
+    "optimization.json": "Optimization",
+    "dnn_cv.json": "DNN CV",
+    "ensemble.json": "Ensemble Methods",
+    "knn.json": "K-Nearest Neighbors",
+    "stat_decision_theory.json": "Statistical Decision Theory",
+    "dnn_intro.json": "DNN Introduction",
+    "expect_max.json": "Expectation Maximization",
+    "linearreg.json": "Linear Regression",
+    "svm.json": "Support Vector Machines",
+    "dnn_nlp.json": "DNN NLP",
+    "generalization.json": "Generalization",
+    "logreg.json": "Logistic Regression",
+    "dual_kernels.json": "Dual and Kernels",
+    "graphical_models.json": "Graphical Models",
+    "misc.json": "Miscellaneous"
+  };
+
   const state = { files: [], questions: [], current: 0, revealed: false, filename: '' };
 
   // DOM refs
@@ -139,12 +161,17 @@
   // Use relative paths for GitHub Pages compatibility
   const QUESTIONS_PATH = 'questions';
 
+  function getHumanReadableName(filename) {
+    return FILE_NAME_MAP[filename] || filename.replace('.json', '').replace(/_/g, ' ');
+  }
+
   function setLoadingFiles(names){
     fileListEl.innerHTML = '';
     names.forEach(n=>{
       const li = document.createElement('li');
       li.className = 'file-item';
-      li.textContent = n;
+      li.textContent = getHumanReadableName(n);
+      li.dataset.filename = n; // Store actual filename
       li.onclick = ()=> selectFile(n, li);
       fileListEl.appendChild(li);
     });
@@ -245,7 +272,7 @@
       state.current = 0;
       state.revealed = false;
       state.filename = filename;
-      fileTitle.textContent = filename;
+      fileTitle.textContent = getHumanReadableName(filename);
       emptyEl.style.display = 'none';
       quizArea.style.display = 'block';
       renderQuestion();
